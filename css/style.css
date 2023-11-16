@@ -116,7 +116,7 @@ html, body {
 .nav-links .search-div {
     width: 100%;
 
-    display: flex;
+    /* display: flex; */
     align-items: center;
     gap: 1rem;
 
@@ -124,9 +124,6 @@ html, body {
     border-radius: 10px;
 }
 
-.search-div.hidden {
-    display: none;
-}
 
 .search-div .search-input {
     background-color: transparent;
@@ -163,6 +160,14 @@ html, body {
     border: none;
     outline: none;
     border-radius: 10px;
+}
+
+.dropdown-item {
+    display: none;
+}
+
+.active {
+    display: block;
 }
 
 /** NAV LOWER **/
@@ -476,9 +481,7 @@ html, body {
     margin-bottom: 1rem;
 }
 
-/* .dropdown-content {
-    display: none;
-} */
+
 
 .dropdown-container .dropdown-btn {
     background-color: var(--bgGlass);
@@ -879,6 +882,10 @@ html, body {
 
     .standing-list-btn button {
         width: auto;
+    }
+
+    .notification {
+        display: block; /* show on mobile */
     }
     
 }

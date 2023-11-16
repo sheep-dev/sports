@@ -1,30 +1,45 @@
-// MULTIPLE DROPDOWN
-const dropdowns = document.querySelectorAll('.dropdown');
-
-function closeDropdowns() {
-  dropdowns.forEach(dropdown => {
-    dropdown.querySelector('.dropdown-content').style.display = 'none';
-  });
-}
+// STANDING DROPDOWN
+const dropdowns = document.querySelectorAll('.dropdown-container');
 
 dropdowns.forEach(dropdown => {
-  const btn = dropdown.querySelector('.dropbtn');
-  const content = dropdown.querySelector('.dropdown-content');
+  const btn = dropdown.querySelector('.standing-btn');
+  const content = dropdown.querySelector('.dropdown-standing-content');
+
+  // Set initial display style to 'block'
+  content.style.display = 'block';
+
   btn.addEventListener('click', function() {
     if (content.style.display === 'block') {
       content.style.display = 'none';
     } else {
-      closeDropdowns();
       content.style.display = 'block';
     }
   });
 });
 
-document.addEventListener('click', function(event) {
-  if (!event.target.closest('.dropdown-content') && !event.target.matches('.dropbtn')) {
-    closeDropdowns();
+
+
+// MULTIPLE DROPDOWN
+let activeItem = null;
+
+const toggleDropdown = (itemId) => {
+  const selectedItem = document.getElementById(itemId);
+
+  // TOGGLE
+  if (selectedItem.classList.contains('active')) {
+    selectedItem.classList.remove('active');
+    activeItem = null;
+  } else {
+    // CLOSE
+    if (activeItem) {
+      activeItem.classList.remove('active');
+    }
+
+    // OPEN
+    selectedItem.classList.add('active');
+    activeItem = selectedItem;
   }
-});
+};
 
 
 // MULTIPLE TABS
@@ -71,9 +86,50 @@ modals.forEach(modal => {
 });
 
 
-const searchBtn = document.querySelector('.searchBtn')
-const searchWrapper = document.querySelector('.search-hidden')
+// DATE
+let currentDate = new Date();
 
-searchBtn.addEventListener('click', ()=> {
-  searchWrapper.classList.toggle('search-hidden')
-})
+function displayDate() {
+  const dateDisplay = document.getElementById('dateDisplay');
+  dateDisplay.textContent = currentDate.toDateString();
+}
+
+function previousDate() {
+  currentDate.setDate(currentDate.getDate() - 1);
+  displayDate();
+}
+
+function nextDate() {
+  currentDate.setDate(currentDate.getDate() + 1);
+  displayDate();
+}
+
+// Initial display
+displayDate();
+
+
+$(document).ready(function() {
+  // Show notification on desktop refresh
+  if ($(window).width() > 600) {
+      $('#notification').show();
+  }
+
+  // Hide notification on close button click
+  $('#closeBtn').click(function() {
+      $('#notification').hide();
+  });
+
+  // Show notification on scroll for mobile
+  if ($(window).width() <= 600) {
+      $(window).scroll(function() {
+          $('#notification').show();
+      });
+  }
+});
+
+
+// NOTIFICATION
+function closeParagraph() {
+  var paragraph = document.getElementById('notification');
+  paragraph.style.display = 'none';
+}

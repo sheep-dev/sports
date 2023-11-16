@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="/img/logo/filbet_logo.png">
-    <title>Sports</title>
+    <title>Filbet Live Sports</title>
 </head>
 <body>
     <!---T O P  N A V-->
@@ -30,13 +30,16 @@
             </div>
 
             <div class="nav-links">
-                <div class="search-div hidden">
+                <div class="search-div dropdown-item" id="item1">
                     <input type="search" class="search-input" placeholder="search">
                 </div>
                 <div class="navBtn-wrapper">
-                    <button class="nav-btn searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="nav-btn toggle-btn" onclick="toggleDropdown('item1')"><i class="fa-solid fa-magnifying-glass"></i></button>
                     <button class="nav-btn"><i class="fa-regular fa-user"></i><p>Login</p></button>
-                    <button class="nav-btn"><i class="fa-solid fa-bars"></i></button>
+                    <button class="nav-btn toggle-btn" onclick="toggleDropdown('item2')"><i class="fa-solid fa-bars"></i></button>
+                </div>
+                <div class="dropdown-item " id="item2">
+                    menu content
                 </div>
             </div>
         </nav>
@@ -83,14 +86,14 @@
                 <!-- C O N T E N T -->
                 <div class="main-content">
                     <!-- N O T I F I C A T I O N  B A R-->
-                    <div class="notification-wrapper">
+                    <div class="notification-wrapper" id="notification">
                         <div class="notif-div">
                             <div class="notif-img">
                                 <img src="/img/flags/philippines.png" alt="flags_img" class="img-fluid">
                             </div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!</p>
                         </div>
-                        <button class="notif-btn"><i class="fa-solid fa-xmark"></i></button>
+                        <button class="notif-btn" id="closeButton" onclick="closeParagraph()"><i class="fa-solid fa-xmark"></i></button>
                     </div>
 
                     <!-- C O N T E N T  W R A P P E R-->
@@ -105,8 +108,10 @@
                                 <button class="tab-btn">Schedule</button>
                             </div>
 
-                            <div class="date-container" style="display: none;">
-                                date
+                            <div class="date-container">
+                                <div id="dateDisplay"></div>
+                                <button onclick="previousDate()">Previous</button>
+                                <button onclick="nextDate()">Next</button>
                             </div>
                         </div>
 
@@ -115,7 +120,7 @@
                             <div class="standing-wrapper">
 
                                 <!--DROPDOWN CONTAINER-->
-                                <div class="dropdown-container dropdown">
+                                <div class="dropdown-container">
 
                                     <!--- D R O P D O W N  B U T T O N-->
                                     <div class="dropdown-btn">
@@ -132,12 +137,11 @@
                                         </div>
 
                                         <!--standing button-->
-                                        <button class="standing-btn dropbtn">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
                                     </div>
 
-
                                     <!--NESTED STANDING LIST-->
-                                    <div class="standing-list-box dropdown-content">
+                                    <div class="standing-list-box dropdown-standing-content">
                                         <div class="standing-list">
                                             <!--favorite button-->
                                             <div class="standing-favorite">
@@ -199,6 +203,89 @@
                                 </div>
 
                                 <!--ADD ANOTHER DROPDOWN BELOW-->
+
+                                <!--DROPDOWN CONTAINER-->
+                                <div class="dropdown-container">
+
+                                    <!--- D R O P D O W N  B U T T O N-->
+                                    <div class="dropdown-btn">
+                                        <!--favorite button-->
+                                        <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                        <!--team name-->
+                                        <div class="team-div">
+                                            <div class="team-logo">
+                                                <img src="/img/team/black_water.png" alt="team_logo" class="img-fluid">
+                                            </div>
+                                            <p class="team-name">Black Water</p>
+                                            <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                        </div>
+
+                                        <!--standing button-->
+                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                    </div>
+
+                                    <!--NESTED STANDING LIST-->
+                                    <div class="standing-list-box dropdown-standing-content">
+                                        <div class="standing-list">
+                                            <!--favorite button-->
+                                            <div class="standing-favorite">
+                                                <button><i class="fa-regular fa-star"></i></button>
+                                            </div>
+
+                                            <!--quarter-->
+                                            <div class="standing-quarter">
+                                                <p>4th Quarter</p>
+                                            </div>
+
+                                            <!--team-->
+                                            <div class="standing-team">
+
+                                                <div class="first-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/team/rain_or_shine.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">Rain or Shine</p>
+                                                </div>
+
+                                                <div class="second-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/team/genebra.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">Genebra San Miguel</p>
+                                                </div>
+                                            </div>
+
+                                            <!--scores-->
+                                            <div class="standing-scores">
+                                                <div class="first-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">89</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">35</p>
+                                                    <p class="s2">55</p>
+                                                </div>
+
+                                                <div class="second-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">89</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">35</p>
+                                                    <p class="s2">55</p>
+                                                </div>
+                                            </div>
+
+                                            <!--livestream | lineup-->
+                                            <div class="standing-list-btn">
+                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                </div>
 
                             </div>
                         </div>
