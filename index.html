@@ -30,9 +30,14 @@
             </div>
 
             <div class="nav-links">
-                <button class="nav-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button class="nav-btn"><i class="fa-regular fa-user"></i><p>Login</p></button>
-                <button class="nav-btn"><i class="fa-solid fa-bars"></i></button>
+                <div class="search-div hidden">
+                    <input type="search" class="search-input" placeholder="search">
+                </div>
+                <div class="navBtn-wrapper">
+                    <button class="nav-btn searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="nav-btn"><i class="fa-regular fa-user"></i><p>Login</p></button>
+                    <button class="nav-btn"><i class="fa-solid fa-bars"></i></button>
+                </div>
             </div>
         </nav>
 
@@ -63,7 +68,7 @@
                             <div class="team-pinned-img">
                                 <img src="/img/team/beermen.png" alt="team-logo" class="img-fluid">
                             </div>
-                            Beermen
+                            <p class="team-pinned-name">Rain or Shine</p>
                         </div>
                     </div>
 
@@ -108,7 +113,9 @@
                         <!-- C O N T E N T  C O N T A I N E R-->
                         <div class="content-container">
                             <div class="standing-wrapper">
-                                <div class="dropdown-container">
+
+                                <!--DROPDOWN CONTAINER-->
+                                <div class="dropdown-container dropdown">
 
                                     <!--- D R O P D O W N  B U T T O N-->
                                     <div class="dropdown-btn">
@@ -125,10 +132,12 @@
                                         </div>
 
                                         <!--standing button-->
-                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                        <button class="standing-btn dropbtn">Standings<i class="fa-solid fa-chevron-down"></i></p>
                                     </div>
 
-                                    <div class="standing-list-box">
+
+                                    <!--NESTED STANDING LIST-->
+                                    <div class="standing-list-box dropdown-content">
                                         <div class="standing-list">
                                             <!--favorite button-->
                                             <div class="standing-favorite">
@@ -184,7 +193,13 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
                                 </div>
+
+                                <!--ADD ANOTHER DROPDOWN BELOW-->
+
                             </div>
                         </div>
 

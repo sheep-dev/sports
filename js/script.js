@@ -69,3 +69,11 @@ modals.forEach(modal => {
     }
   });
 });
+
+
+const searchBtn = document.querySelector('.searchBtn')
+const searchWrapper = document.querySelector('.search-hidden')
+
+searchBtn.addEventListener('click', ()=> {
+  searchWrapper.classList.toggle('search-hidden')
+})
