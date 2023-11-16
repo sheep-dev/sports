@@ -933,6 +933,19 @@ html, body {
 
 /*** large devices ***/
 @media only screen and (min-width: 992px) {
+    .navigation .navigation-links {
+        flex-direction: row;
+        gap: 0.6rem;
+    }
+
+    .navigation-links i {
+        font-size: 1.05rem;
+    }
+
+    .navigation-links p {
+        font-size: 1rem
+    }
+
     .logo-img .logo-mobile {
         display: none;
     }
@@ -946,7 +959,7 @@ html, body {
     }
 
     .header .navigation {
-        gap: 3rem;
+        gap: 2rem;
     }
 
     .standing-team .team-name {
