@@ -35,7 +35,7 @@
                 </div>
                 <div class="navBtn-wrapper">
                     <button class="nav-btn toggle-btn" onclick="toggleDropdown('item1')"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <button class="nav-btn"><i class="fa-regular fa-user"></i><p>Login</p></button>
+                    <button data-modal="login" class="nav-btn"><i class="fa-regular fa-user"></i><p>Login</p></button>
                     <button class="nav-btn toggle-btn" onclick="toggleDropdown('item2')"><i class="fa-solid fa-bars"></i></button>
                 </div>
                 <div class="dropdown-item menu-content " id="item2">
@@ -242,10 +242,10 @@
     </main>
 
     <!-- M O D A L-->
-    <div class="modal">
+    <div class="modal" id="login">
         <div class="modal-content">
             <div class="login-container">
-                <span><button class="login-close"><i class="fa-solid fa-xmark"></i></button></span>
+                <span><button class="login-close" data-close="login"><i class="fa-solid fa-xmark"></i></button></span>
                 <p>Login</p>
                 <small>continue with:</small>
 
