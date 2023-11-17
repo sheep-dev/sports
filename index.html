@@ -38,8 +38,17 @@
                     <button class="nav-btn"><i class="fa-regular fa-user"></i><p>Login</p></button>
                     <button class="nav-btn toggle-btn" onclick="toggleDropdown('item2')"><i class="fa-solid fa-bars"></i></button>
                 </div>
-                <div class="dropdown-item " id="item2">
-                    menu content
+                <div class="dropdown-item menu-content " id="item2">
+                   <div class="menu-content-wrapper">
+                        <a href="#" class="menu-link">
+                            <i class="fa-solid fa-gear"></i>
+                            <p class="menu-link-name">Setting</p>
+                        </a>
+                        <div class="menu-link">
+                            <i class="fa-solid fa-moon"></i>
+                            <p class="menu-link-name">Dark Mode</p>
+                        </div>
+                   </div>
                 </div>
             </div>
         </nav>
@@ -108,10 +117,13 @@
                                 <button class="tab-btn">Schedule</button>
                             </div>
 
+                            <!--- D A T E -->
                             <div class="date-container">
-                                <div id="dateDisplay"></div>
-                                <button onclick="previousDate()">Previous</button>
-                                <button onclick="nextDate()">Next</button>
+                                <div class="date-wrapper">
+                                    <button onclick="previousDate()"><i class="fa-solid fa-chevron-left"></i></button>
+                                    <div id="dateDisplay"></div>
+                                    <button onclick="nextDate()"><i class="fa-solid fa-chevron-right"></i></button>
+                                </div>
                             </div>
                         </div>
 
@@ -204,88 +216,6 @@
 
                                 <!--ADD ANOTHER DROPDOWN BELOW-->
 
-                                <!--DROPDOWN CONTAINER-->
-                                <div class="dropdown-container">
-
-                                    <!--- D R O P D O W N  B U T T O N-->
-                                    <div class="dropdown-btn">
-                                        <!--favorite button-->
-                                        <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
-
-                                        <!--team name-->
-                                        <div class="team-div">
-                                            <div class="team-logo">
-                                                <img src="/img/team/black_water.png" alt="team_logo" class="img-fluid">
-                                            </div>
-                                            <p class="team-name">Black Water</p>
-                                            <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
-                                        </div>
-
-                                        <!--standing button-->
-                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
-                                    </div>
-
-                                    <!--NESTED STANDING LIST-->
-                                    <div class="standing-list-box dropdown-standing-content">
-                                        <div class="standing-list">
-                                            <!--favorite button-->
-                                            <div class="standing-favorite">
-                                                <button><i class="fa-regular fa-star"></i></button>
-                                            </div>
-
-                                            <!--quarter-->
-                                            <div class="standing-quarter">
-                                                <p>4th Quarter</p>
-                                            </div>
-
-                                            <!--team-->
-                                            <div class="standing-team">
-
-                                                <div class="first-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/team/rain_or_shine.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">Rain or Shine</p>
-                                                </div>
-
-                                                <div class="second-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/team/genebra.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">Genebra San Miguel</p>
-                                                </div>
-                                            </div>
-
-                                            <!--scores-->
-                                            <div class="standing-scores">
-                                                <div class="first-team-scores">
-                                                    <p>78</p>
-                                                    <p class="s2">89</p>
-                                                    <p class="s2">25</p>
-                                                    <p class="s2">35</p>
-                                                    <p class="s2">55</p>
-                                                </div>
-
-                                                <div class="second-team-scores">
-                                                    <p>78</p>
-                                                    <p class="s2">89</p>
-                                                    <p class="s2">25</p>
-                                                    <p class="s2">35</p>
-                                                    <p class="s2">55</p>
-                                                </div>
-                                            </div>
-
-                                            <!--livestream | lineup-->
-                                            <div class="standing-list-btn">
-                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
-                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--ADD ANOTHER STANDING LIST BELOW-->
-                                    
-                                </div>
 
                             </div>
                         </div>
@@ -310,6 +240,28 @@
             </article>
         </section>
     </main>
+
+    <!-- M O D A L-->
+    <div class="modal">
+        <div class="modal-content">
+            <div class="login-container">
+                <span><button class="login-close"><i class="fa-solid fa-xmark"></i></button></span>
+                <p>Login</p>
+                <small>continue with:</small>
+
+                <div class="login-wrapper">
+                    <div class="login-btn-wrapper">
+                        <i class="fa-brands fa-google"></i>
+                        <p>Google</p>
+                    </div>
+                    <div class="login-btn-wrapper">
+                        <i class="fa-brands fa-facebook"></i>
+                        <p>Facebook</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="/js/script.js"></script>
 </body>

@@ -111,6 +111,8 @@ html, body {
     align-items: end;
     gap: 0.8rem;
     width: 100%;
+
+    position: relative;
 }
 
 .nav-links .search-div {
@@ -168,6 +170,53 @@ html, body {
 
 .active {
     display: block;
+}
+
+.nav-links .menu-content {
+    position: absolute;
+    top: 2.5rem;
+    z-index: 999;
+
+    background-color: #191919;
+    border-radius: 8px;
+    padding: 0.8rem;
+    width: 11rem;
+}
+
+.menu-content .menu-content-wrapper {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.menu-content-wrapper .menu-link {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0.5rem;
+    gap: 0.8rem;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-link:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.menu-link i {
+    color: var(--secondary-txtColor);
+    font-size: 0.9rem;
+}
+
+.menu-link p {
+    color: var(--secondary-txtColor);
+    font-size: 0.9rem;
 }
 
 /** NAV LOWER **/
@@ -400,14 +449,12 @@ html, body {
 
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 }
 
 /** TAB **/
 .content-wrapper .tab-container {
     width: 100%;
     padding: 0;
-    overflow: auto;
 
     display: flex;
     flex-direction: column;
@@ -416,18 +463,19 @@ html, body {
     gap: 0.8rem;
 }
 
-.tab-container::-webkit-scrollbar {
-    scrollbar-width: none;
-    display: none;
-}
-
 .tab-container .tab-div {
     width: 100%;
+    overflow: auto;
 
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    padding: 1rem 0 0 1rem;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.tab-div::-webkit-scrollbar {
+    scrollbar-width: none;
+    display: none;
 }
 
 .tab-div .tab-btn {
@@ -461,6 +509,36 @@ html, body {
     color: var(--bgBlack);
 }
 
+.tab-container .date-container {
+    background-color: var(--primary-bgColor);
+    width: 100%;
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-container .date-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.date-wrapper #dateDisplay {
+    color: var(--tertiary-txtColor);
+    font-size: 0.75rem;
+    width: 100%;
+}
+
+.date-container button {
+    background-color: transparent;
+    color: var(--secondary-txtColor);
+    border: none;
+    outline: none;
+}
+
 /** c o n t e n t  c o n t a i n e r **/
 .content-container {
     width: 100%;
@@ -480,8 +558,6 @@ html, body {
     width: 100%;
     margin-bottom: 1rem;
 }
-
-
 
 .dropdown-container .dropdown-btn {
     background-color: var(--bgGlass);
@@ -748,6 +824,103 @@ html, body {
     width: 100%;
 }
 
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+
+    display: none;
+}
+
+.modal .modal-content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: auto 0;
+}
+
+.modal-content .login-container {
+    height: auto;
+    width: 100%;
+    padding: 1rem;
+
+    background-color: var(--primary-bgColor);
+    color: var(--tertiary-txtColor);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.login-container span {
+    width: 100%;
+    text-align: end;
+}
+
+.login-container p {
+    font-size: 1.1rem;
+}
+
+.login-container .login-close {
+    color: var(--tertiary-txtColor);
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0.1rem 0.3rem;
+}
+
+.login-close:hover {
+    color: crimson;
+    background-color: var(--bgGlass);
+    border-radius: 50%;
+}
+
+.login-container .login-wrapper {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-wrapper .login-btn-wrapper {
+    width: 100%;
+    padding: 0.5rem 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    background-color: var(--secondary-bgColor);
+    color: var(--bgBlack);
+    border-radius: 10px;
+}
+
+.login-btn-wrapper:hover {
+    background-color: var(--bgGlass);
+}
+
+.login-btn-wrapper i {
+    color: var(--primary-txtColor);
+}
+
+.login-btn-wrapper p {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
 /************ B R E A K P O I N T S ****************/
 @media only screen and (min-width: 320px) {
     .navigation-links i {
@@ -755,6 +928,10 @@ html, body {
     }
 
     .navigation-links p {
+        font-size: 0.8rem;
+    }
+
+    .date-wrapper #dateDisplay {
         font-size: 0.8rem;
     }
     
@@ -826,6 +1003,10 @@ html, body {
         font-weight: 600;
     }
 
+    .date-wrapper #dateDisplay {
+        font-size: 0.9rem;
+    }
+
     .dropdown-btn .fav-btn {
         font-size: 1rem;
         margin-right: 0.3rem;
@@ -887,6 +1068,30 @@ html, body {
     .notification {
         display: block; /* show on mobile */
     }
+
+    .modal-content .login-container {
+        width: 24rem;
+    }
+
+    .login-container p {
+        font-size: 1.3rem;
+    }
+
+    .login-container small {
+        font-size: 1rem;
+    }
+
+    .login-wrapper .login-btn-wrapper {
+        padding: 0.7rem;
+    }
+
+    .login-btn-wrapper i {
+        font-size: 1rem;
+    }
+    
+    .login-btn-wrapper p {
+        font-size: 1rem;
+    }
     
 }
 
@@ -921,8 +1126,25 @@ html, body {
         padding: 1.5rem 1rem 1rem 1rem;
     }
 
+    .content-wrapper .tab-container {
+        flex-direction: row;
+    }
+
     .team-div .pin-btn {
         font-size: 1rem;
+    }
+
+    .tab-container .date-container {
+        background-color: transparent;
+        width: 15rem;
+    }
+
+    .tab-container .tab-div {
+        padding: 1rem;
+    }
+
+    .date-wrapper #dateDisplay {
+        width: auto;
     }
 
     .dropdown-container .dropdown-btn {
@@ -1028,12 +1250,44 @@ html, body {
         border-radius: 10px;
     }
 
+    .content-wrapper .tab-container {
+        padding-bottom: 1rem;
+    }
+
     .tab-container .tab-div {
         padding: 0;
     }
 
+    .tab-container .date-container {
+        background-color: var(--bgGlass);
+        width: 15rem;
+        padding: 0.4rem;
+        border-radius: 5px;
+    }
+
+    .date-wrapper #dateDisplay {
+        color: var(--bgBlack);
+        font-weight: 600;
+    }
+
+    .date-wrapper button {
+        color: var(--bgBlack);
+    }
+
     .dropdown-container .dropdown-btn {
         border-radius: 10px;
+    }
+
+    .nav-links .menu-content {
+        top: 3rem;
+    }
+
+    .menu-link i {
+        font-size: 1rem;
+    }
+
+    .menu-link p {
+        font-size: 1rem;
     }
 
     .article .sideRight {
