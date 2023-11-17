@@ -1147,6 +1147,10 @@ html, body {
         padding: 1.5rem 1rem 0 1rem;
     }
 
+    .navigation-links i {
+        font-size: 1.3rem;
+    }
+
     .content-wrapper .tab-container {
         flex-direction: row;
     }

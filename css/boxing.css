@@ -1,0 +1,40 @@
+:root {
+    --primary-bgColor: #001e28;
+    --secondary-bgColor: #B5E5CF;
+    --tertiary-bgColor: #00141e;
+    --bgBlack: #010a0f;
+    --bgGlass: rgba(181,229,207, 0.6);
+    --bgRed: #c80037;
+
+    --notification-bgColor: #01203e;
+    --tab-bgColor: #0f2d37;
+    --pinColor: #0787fa;
+    --tab-bgHover: #555e61;
+
+    --primary-txtColor: #3D5B59;
+    --secondary-txtColor: #f5f5f5;
+    --tertiary-txtColor: #eeeeee;
+    --txtRed: #e90243;
+
+}
+
+.dropdown-btn .boxing-team-div {
+    padding: 0.2rem 0;
+}
+
+.dropdown-btn .boxing-team-div .fa-user {
+    color: var(--pinColor);
+    font-size: 0.8rem;
+}
+
+.boxing-team-div .team-name {
+    width: 12rem;
+    font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 576px) {
+    .boxing-team-div .team-name {
+        font-size: 0.9rem;
+        width: auto;
+    }
+}
