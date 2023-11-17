@@ -1,0 +1,225 @@
+:root {
+    --primary-bgColor: #001e28;
+    --secondary-bgColor: #B5E5CF;
+    --tertiary-bgColor: #00141e;
+    --bgBlack: #010a0f;
+    --bgGlass: rgba(181,229,207, 0.6);
+    --bgRed: #c80037;
+
+    --notification-bgColor: #01203e;
+    --tab-bgColor: #0f2d37;
+    --pinColor: #0787fa;
+    --tab-bgHover: #555e61;
+
+    --primary-txtColor: #3D5B59;
+    --secondary-txtColor: #f5f5f5;
+    --tertiary-txtColor: #eeeeee;
+    --txtRed: #e90243;
+
+}
+
+
+.favorites-content-wrapper .tab-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1rem;
+
+    background-color: var(--tertiary-bgColor);
+}
+
+.tab-container .tab-upper-div {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab-upper-div .tab-upper-div-wrapper {
+    border-bottom: 3px solid var(--bgRed);
+    padding: 1rem 0;
+}
+
+.tab-upper-div-wrapper p {
+    color: var(--txtRed);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.tab-upper-div .volume-btn {
+    color: var(--tertiary-txtColor);
+}
+
+.tab-container .favorites-tab-wrapper {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 0 1rem 0;
+}
+
+.tab-container .favorites-tab-div {
+    padding: 0;
+}
+
+.favorites-tab-div .tab-btn {
+    padding: 0.5rem;
+}
+
+.favorites-tab-wrapper .favorites-setting-btn {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.4rem 0.5rem;
+    border-radius: 5px;
+    color: var(--secondary-txtColor);
+}
+
+.favorites-content-wrapper .added-favorites-team {
+    width: 100%;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--tertiary-bgColor);
+}
+
+.added-favorites-team .null-container {
+    width: 100%;
+    padding: 1rem 0 0.3rem 0;
+
+    color: var(--secondary-txtColor);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.null-container .title {
+    font-size: 1.1rem;
+}
+
+.null-container .subtitle {
+    font-size: 0.8rem;
+}
+
+.null-container .favorites-search-btn-wrapper {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.favorites-search-btn-wrapper .favorites-search-btn {
+    width: 100%;
+    padding: 0.8rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    background-color: var(--tab-bgColor);
+    color: var(--secondary-txtColor);
+
+    font-size: 0.9rem;
+
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.favorites-tab-wrapper .slider-menu-wrapper {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.slider-menu-wrapper .slider-menu-content {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    z-index: 9999;
+
+    padding: 1rem 1rem 0.5rem 1rem;
+    background-color: var(--bgBlack);
+    color: var(--secondary-txtColor);
+    border-radius: 10px;
+
+    width: 10rem;
+}
+
+.slider-menu-content .slider-menu-div {
+    width: 100%;
+    margin-bottom: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+}
+
+.slider-menu-div p{
+    font-size: 0.75rem;
+}
+
+@media only screen and (min-width: 576px) {
+    .favorites-search-btn-wrapper .favorites-search-btn {
+        width: auto;
+        padding: 0.8rem 1rem;
+    }
+
+    .null-container .title {
+        font-size: 1.2rem;
+    }
+    
+    .null-container .subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .null-container .title {
+        font-size: 1.3rem;
+    }
+    
+    .null-container .subtitle {
+        font-size: 1rem;
+    }
+
+    .slider-menu-wrapper .slider-menu-content {
+        width: 12rem;
+    }
+
+    .tab-upper-div-wrapper p {
+        font-size: 0.9rem;
+    }
+
+    .slider-menu-div p{
+        font-size: 0.85rem;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .favorites-content-wrapper .tab-container {
+        background-color: transparent;
+    }
+
+    .favorites-content-wrapper .added-favorites-team {
+        background-color: transparent;
+    }
+}

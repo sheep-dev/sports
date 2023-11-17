@@ -15,10 +15,12 @@ html, body {
     --tertiary-bgColor: #00141e;
     --bgBlack: #010a0f;
     --bgGlass: rgba(181,229,207, 0.6);
+    --bgRed: #c80037;
 
     --notification-bgColor: #01203e;
     --tab-bgColor: #0f2d37;
     --pinColor: #0787fa;
+    --tab-bgHover: #555e61;
 
     --primary-txtColor: #3D5B59;
     --secondary-txtColor: #f5f5f5;
@@ -227,7 +229,7 @@ html, body {
 /** NAV LOWER **/
 .header .navigation {
     width: 100%;
-    padding: 0.3rem 1rem;
+    padding: 0.5rem 1rem 0rem 1rem;
 
     display: flex;
     align-items: center;
@@ -252,6 +254,8 @@ html, body {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+
+    padding-bottom: 0.8rem;
 }
 
 .navigation-links i {
@@ -260,6 +264,7 @@ html, body {
 
 .navigation .navigation-links:hover {
     color: var(--secondary-txtColor);
+    border-bottom: 3px solid var(--bgRed);
 }
 
 .navigation-links p {
@@ -267,8 +272,8 @@ html, body {
     font-size: 0.8rem;
 }
 
-.navigation-links p:hover {
-    text-decoration: underline;
+.active-link {
+    border-bottom: 3px solid var(--bgRed);
 }
 
 /*** M A I N ***/
@@ -310,7 +315,7 @@ html, body {
     display: none;
     flex-direction: column;
     align-items: start;
-    justify-content: space-between;
+    justify-content: start;
 }
 
 /** sidebar-top **/
@@ -342,6 +347,7 @@ html, body {
     flex-direction: column;
     align-items: start;
     gap: 0.9rem;
+    margin: 1rem 0;
 }
 
 .sideleft-center::-webkit-scrollbar {
@@ -496,7 +502,7 @@ html, body {
 }
 
 .tab-div .tab-btn:hover {
-    background-color: var(--bgGlass);
+    background-color: var(--tab-bgHover);
     color: var(--tertiary-txtColor);
 }
 
@@ -992,7 +998,7 @@ html, body {
     }
 
     .header .navigation {
-        padding: 1rem 1rem 0.5rem 1rem;
+        padding: 1rem 1rem 0 1rem;
         gap: 2rem;
     }
 
@@ -1133,7 +1139,7 @@ html, body {
     .header .navigation {
         gap: 2.5rem;
         justify-content: start;
-        padding: 1.5rem 1rem 1rem 1rem;
+        padding: 1.5rem 1rem 0 1rem;
     }
 
     .content-wrapper .tab-container {
@@ -1197,6 +1203,14 @@ html, body {
         width: 30%;
     }
 
+    .navigation .navigation-links:hover {
+        border-bottom: 4px solid var(--bgRed);
+    }
+
+    .active-link {
+        border-bottom: 4px solid var(--bgRed);
+    }
+
     .header .navigation {
         gap: 2rem;
     }
@@ -1228,6 +1242,14 @@ html, body {
 
     .nav-links .search-div {
         width: 20%;
+    }
+
+    .navigation .navigation-links:hover {
+        border-bottom: 5px solid var(--bgRed);
+    }
+
+    .active-link {
+        border-bottom: 5px solid var(--bgRed);
     }
 
     .main .section {
@@ -1275,7 +1297,7 @@ html, body {
     }
 
     .tab-div .tab-btn.tab-active {
-        background-color: #c80037;
+        background-color: var(--bgRed);
     }
 
     .tab-container .date-container {
