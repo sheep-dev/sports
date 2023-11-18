@@ -305,7 +305,7 @@ html, body {
 
 /*** S I D E B A R  L E F T ***/
 .article .sideLeft {
-    width: 17rem;
+    width: 14rem;
     height: 43rem;
     color: var(--secondary-txtColor);
 
@@ -592,7 +592,7 @@ html, body {
 /** c o n t e n t  h e a d e r **/
 .content-wrapper .content-wrapper-heading {
     background-color: var(--tertiary-bgColor);
-    padding: 1rem;
+    padding: 1rem 0.5rem;
 }
 
 .content-wrapper-heading p {
@@ -1208,10 +1208,6 @@ html, body {
         width: 15rem;
     }
 
-    .tab-container .tab-div {
-        padding: 1rem;
-    }
-
     .date-wrapper #dateDisplay {
         width: auto;
     }
@@ -1226,6 +1222,10 @@ html, body {
 
     .standing-list-box .standing-list {
         grid-template-columns: 2rem 1fr 3fr 2fr 1fr;
+    }
+
+    .content-wrapper .content-wrapper-heading {
+        padding: 1rem 0;
     }
 }
 
@@ -1266,6 +1266,10 @@ html, body {
 
     .header .navigation {
         gap: 2rem;
+    }
+
+    .article .sideLeft {
+        width: 17rem;
     }
 
     .standing-team .team-name {

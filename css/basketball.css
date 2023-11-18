@@ -5,6 +5,7 @@
     --bgBlack: #010a0f;
     --bgGlass: rgba(181,229,207, 0.6);
     --bgRed: #c80037;
+    --bgYellow: #efcd00;
 
     --notification-bgColor: #01203e;
     --tab-bgColor: #0f2d37;
@@ -110,17 +111,21 @@
 }
 
 .header-center-img-wrapper .header-center-title p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.2rem;
 }
 
 .header-center-img-wrapper .header-center-title small {
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .header-center .material-icons {
     color: var(--tab-bgHover);
+}
+
+.header-center .cc {
+    color: var(--pinColor);
 }
 
 .content-header .header-bottom {
@@ -173,19 +178,22 @@
 
 .dropdown-container .basketball-dropdown-btn {
     background-color: var(--primary-bgColor);
-    padding: 0.5rem 1.8rem;
+    padding: 0.5rem;
 }
 
 .basketball-dropdown-btn .team-div {
-    width: 100%;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .basketball-dropdown-title p{
     font-size: 0.8rem;
     color: var(--tertiary-txtColor);
+}
+
+.basketball-dropdown-title .cc{
+    color: var(--bgYellow);
 }
 
 .basketball-dropdown-title small {
@@ -195,7 +203,22 @@
 }
 
 .basketball-dropdown-btn .team-div .pin-btn {
+    color: var(--pinColor);
+}
+
+.standing-btn-wrapper .standing-btn-desktop {
+    font-size: 0.85rem;
+    text-decoration: underline;
+    display: none;
+}
+
+.standing-btn-wrapper .standing-btn-mobile {
+    background-color: transparent;
+    border: none;
+    outline: none;
+
     color: var(--tertiary-txtColor);
+    font-size: 1rem;
 }
 
 .standing-list-box .basketball-standing-list {
@@ -254,7 +277,7 @@
     font-weight: 400;
     color: var(--secondary-txtColor);
     text-decoration: underline;
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
 }
 
 /** standing form **/
@@ -386,6 +409,10 @@
     .basketball-standing-list .basketball-standing-list-btn {
         display: none;
     }
+
+    .tab-container-wrapper .tab-container-btn {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -431,6 +458,33 @@
     .basketball-team-pinned-list .active-pinned-list {
         background-color: var(--tab-bgColor);
         border-radius: 5px;
+    }
+
+    .standing-btn-wrapper .standing-btn-mobile {
+        display: none;
+    }
+
+    .content-wrapper .basketball-content-container {
+        border-radius: 8px;
+    }
+    
+    .main-content .content-wrapper {
+        background-color: var(--tertiary-bgColor);
+        padding: 1rem 1rem 0 1rem;
+        border-radius: 10px;
+    }
+
+    .main-content .standing-form-content-wrapper {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .standing-form-content-wrapper .standing-form-content-container {
+        border-radius: 8px;
+    }
+
+    .standing-form-content-wrapper .tab-container .tab-div {
+        padding: 0;
     }
 }
 
@@ -479,9 +533,9 @@
         order: 4;
     }
     
-    .basketball-standing-list-btn button {
+    /* .basketball-standing-list-btn button {
         display: none;
-    }
+    } */
 
     .show-more-wrapper p {
         font-size: 0.8rem;
@@ -489,13 +543,14 @@
 }
 
 @media only screen and (min-width: 1280px) {
-    .main-content .standing-form-content-wrapper {
-        padding: 1rem;
-        border-radius: 10px;
-    }
-
     .header-center-img-wrapper .header-center-title p {
         font-weight: 500;
+        font-size: 1.3rem;
+    }
+
+    .header-center-img-wrapper .header-center-title small {
+        font-weight: 500;
+        font-size: 1rem;
     }
 
     .standing-form-content-wrapper .standing-form-content-container {
