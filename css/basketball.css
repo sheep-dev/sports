@@ -181,6 +181,10 @@
     padding: 0.5rem;
 }
 
+.dropdown-container .pc {
+    padding: 0.5rem 1rem;
+}
+
 .basketball-dropdown-btn .team-div {
     display: flex;
     align-items: center;
@@ -533,9 +537,9 @@
         order: 4;
     }
     
-    /* .basketball-standing-list-btn button {
-        display: none;
-    } */
+    .dropdown-container .fc {
+        padding: 0.5rem 2.2rem;
+    }
 
     .show-more-wrapper p {
         font-size: 0.8rem;
@@ -555,5 +559,10 @@
 
     .standing-form-content-wrapper .standing-form-content-container {
         border-radius: 8px;
+    }
+
+    .standing-list-box .basketball-standing-list {
+        grid-template-columns: 1.5rem 5fr 1fr 10fr 5fr;
+        padding: 1rem 0;
     }
 }
