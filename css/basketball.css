@@ -23,7 +23,6 @@
     display: none;
 }
 
-
 /** M A I N  C O N T E N T **/
 /** content header **/
 .main-content .content-header {
@@ -324,6 +323,11 @@
     background-color: var(--primary-bgColor);
 }
 
+.standing-form-content-wrapper .fc-standing-form-content-container {
+    background-color: var(--primary-bgColor);
+    width: 100%;
+}
+
 .standing-form-content-container .standing-form-content-container-tab-wrapper {
     width: 100%;
 }
@@ -516,12 +520,20 @@
         border-radius: 8px;
     }
 
+    .main-content .standing-form-content-wrapper {
+        padding: 1rem;
+    }
+
     .standing-form-content-wrapper .pc {
         padding: 1rem;
     }
 
     .standing-form-content-wrapper .standing-form-content-wrapper-nested-tab {
-        padding: 0 1rem 1rem 1rem;
+        padding: 0;
+    }
+
+    .standing-form-content-wrapper-nested-tab .standing-form-content-container {
+        padding: 0;
     }
 
     .standing-form-content-wrapper .tab-container .tab-div {
@@ -531,6 +543,7 @@
     .standing-form-content-wrapper .tab-container .tab-div .tab-btn {
         font-size: 0.75rem;
     }
+    
 }
 
 @media only screen and (min-width: 992px) {
@@ -586,10 +599,6 @@
         font-size: 0.8rem;
     }
 
-    .main-content .standing-form-content-wrapper {
-        padding: 1rem;
-    }
-
     .standing-form-content-wrapper .pc-tab-container {
         padding: 0 0 1rem 0;
     }
@@ -599,7 +608,7 @@
     }
 
     .standing-form-content-wrapper .standing-form-content-container {
-        background-color: var(--tab-bgColor);
+        background-color: var(--primary-bgColor);
         width: 100%;
     }
 

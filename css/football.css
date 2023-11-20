@@ -1,0 +1,252 @@
+:root {
+    --primary-bgColor: #001e28;
+    --secondary-bgColor: #B5E5CF;
+    --tertiary-bgColor: #00141e;
+    --bgBlack: #010a0f;
+    --bgGlass: rgba(181,229,207, 0.6);
+    --bgRed: #c80037;
+    --bgYellow: #efcd00;
+
+    --notification-bgColor: #01203e;
+    --tab-bgColor: #0f2d37;
+    --pinColor: #0787fa;
+    --tab-bgHover: #555e61;
+
+    --primary-txtColor: #3D5B59;
+    --secondary-txtColor: #f5f5f5;
+    --tertiary-txtColor: #c8cdcd;
+
+}
+
+/** S I D E B A R  L E F T **/
+.article .football-sideLeft {
+    display: none;
+}
+
+/** M A I N  C O N T E N T **/
+.dropdown-btn .team-div .football-dropdown-title {
+    color: var(--bgYellow);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.main-content .pfl-standing-form-content-wrapper {
+    padding: 0.5rem 0;
+}
+
+.standing-form-content-wrapper .pfl-tab-container {
+    width: 100%;
+    overflow: auto;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.standing-form-content-wrapper .pfl-tab-container .tab-div {
+    padding: 0;
+}
+
+.standing-form-content-wrapper .standing-form-content-container {
+    background-color: var(--primary-bgColor);
+    width: 100%;
+}
+
+.standing-form-content-wrapper .pfl-form-footer {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.pfl-form-footer .standing-form-footer-top {
+    width: 100%;
+    padding: 0 1rem 0.5rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.standing-form-footer-top .pfl-form-footer-top {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pfl-form-footer-top .square-red {
+    background-color: var(--bgRed);
+}
+
+.pfl-form-footer-top .fa-circle-info {
+    color: var(--tab-bgHover);
+}
+
+.header-center-img-wrapper .header-center-img {
+    padding: 0 1rem;
+}
+
+.header-center-img .img-fluid {
+    height: 100%;
+    width: 100%;
+}
+
+/****** B R E A K P O I N T S ********/
+@media only screen and (min-width: 576px) {
+    .cpa-standing-form-content-wrapper .cpa-tab-container {
+        padding: 0;
+    }
+    
+    .cpa-tab-container .tab-div {
+        padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+    }
+    
+    .cpa-standing-form-content-wrapper .cpa-tab-container .tab-div .tab-btn {
+        font-size: 0.7rem;
+    }
+    
+    .cpa-nested-tab .tab-container .tab-div {
+        padding: 0 0.5rem;
+    }
+    
+    .cpa-nested-tab .tab-container .tab-div .tab-btn {
+        font-size: 0.7rem;
+    }
+    
+    .cpa-nested-tab .cpa-standing-form-content-container {
+        background-color: transparent;
+        padding: 0;
+    }
+    
+    .cpa-standing-form-content-container .cpa-match-grid-wrapper {
+    
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
+        width: 100%;
+    }
+
+    .cpa-match-grid-wrapper .cpa-match-top {
+        width: 100%;
+    }
+
+    .cpa-match-grid-wrapper .cpa-match-prev-next {
+        background-color: var(--primary-bgColor);
+        border-bottom: 1px solid var(--bgBlack);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        padding: 0.5rem 1rem;
+    }
+
+    .cpa-match-prev-next button {
+        background-color: var(--bgBlack);
+        color: var(--tertiary-txtColor);
+
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        padding: 0.5rem;
+
+        display: flex;
+        gap: 0.5rem;
+    }
+    
+    .cpa-match-grid-wrapper .match-grid {
+        width: 100%;
+        padding: 0.5rem 0;
+    
+        background-color: var(--primary-bgColor);
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .match-grid .match-grid-title {
+        font-size: 0.7rem;
+        font-weight: 600;
+    
+        text-transform: uppercase;
+        color: var(--tertiary-txtColor);
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .article .football-sideLeft {
+        width: 16rem;
+        display: flex;
+    }
+
+    .main-content .pfl-standing-form-content-wrapper {
+        padding: 0.8rem 0.8rem;
+    }
+
+    .standing-form-content-wrapper .pfl-tab-container {
+        padding: 0;
+    }
+    
+
+    .standing-form-content-wrapper .pfl-tab-container .tab-div {
+        padding: 0;
+    }
+
+    .cpa-standing-form-content-wrapper .cpa-tab-container {
+        padding: 0 0 0.8rem 0;
+    }
+    
+    .cpa-tab-container .tab-div {
+        padding: 0.5rem 0.5rem 0 0.5rem;
+    }
+    
+    .cpa-nested-tab .tab-container .tab-div {
+        padding: 0;
+    }
+
+    .cpa-nested-tab .cpa-standing-form-content-container {
+        background-color: transparent;
+    }
+    
+    .cpa-standing-form-content-container .cpa-match-grid-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
+        width: 100%;
+    }
+    
+    .cpa-match-grid-wrapper .match-grid {
+        width: 100%;
+    
+        background-color: var(--primary-bgColor);
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+
+@media only screen and (min-width: 992px) {
+    .standing-btn-wrapper .standing-btn-desktop {
+        display: flex;
+    }
+
+    .standing-btn-desktop {
+        border: none;
+        outline: none;
+
+        background-color: transparent;
+        color: var(--tertiary-txtColor);
+        padding: 0 1rem;
+    }
+
+    .pfl-form-footer .standing-form-footer-top  {
+        flex-direction: row;
+        align-items: center;
+    }
+}
