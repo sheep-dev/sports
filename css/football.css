@@ -249,4 +249,12 @@
         flex-direction: row;
         align-items: center;
     }
+
+    .cpa-standing-form-content-wrapper .cpa-tab-container .tab-div .tab-btn {
+        font-size: 0.8rem;
+    }
+
+    .cpa-nested-tab .tab-container .tab-div .tab-btn {
+        font-size: 0.8rem;
+    }
 }
