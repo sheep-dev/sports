@@ -138,367 +138,590 @@
                         </div>
                         <!--bottom-->
                         <div class="header-bottom">
-                            <button class="tab-btn header-tab-active">Summary</button>
-                            <button class="tab-btn">Results</button>
-                            <button class="tab-btn">Fixtures</button>
-                            <button class="tab-btn">Standings</button>
-                            <button class="tab-btn">Archive</button>
+                            <button data-set="summary" class="tab-btn tab-button header-tab-active">Summary</button>
+                            <button data-set="results" class="tab-btn tab-button">Results</button>
+                            <button data-set="fixtures" class="tab-btn tab-button">Fixtures</button>
+                            <button data-set="standings" class="tab-btn tab-button">Standings</button>
+                            <button data-set="archive" class="tab-btn tab-button">Archive</button>
                         </div>
                     </div>
 
 
-                    <!--T O D A Y'S  M A T C H E S  C O N T E N T  W R A P P E R-->
-                    <div class="content-wrapper">
-                        <div class="content-wrapper-heading">
-                            <p>Today's Matches</p>
-                        </div>
-
-                        <!-- C O N T E N T  C O N T A I N E R-->
-                        <div class="content-container basketball-content-container">
-                            <div class="standing-wrapper">
-
-                                <!--DROPDOWN CONTAINER-->
-                                <div class="dropdown-container">
-
-                                    <!--- D R O P D O W N  B U T T O N-->
-                                    <div class="dropdown-btn basketball-dropdown-btn">
-                                        <!--favorite button-->
-                                        <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
-
-                                        <!--team name-->
-                                        <div class="team-div">
-                                            <div class="team-logo">
-                                                <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
-                                            </div>
-                                            <div class="basketball-dropdown-title">
-                                                <p class="cc">Fiesta Conference - Play Offs</p>
-                                                <small class="cc">Philippines</small>
-                                            </div>
-                                            <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
-                                        </div>
-
-                                        <!--standing button-->
-                                        <div class="standing-btn-wrapper">
-                                            <button class="standing-btn-desktop">Standings</button>
-                                            <button class="standing-btn-mobile"><i class="fa-solid fa-list"></i></button>
-                                        </div>
-                                    </div>
-
-                                    <!--NESTED STANDING LIST-->
-                                    <div class="standing-list-box dropdown-standing-content">
-                                        <div class="standing-list basketball-standing-list">
-                                            <!--favorite button-->
-                                            <div class="standing-favorite">
-                                                <button><i class="fa-regular fa-star"></i></button>
-                                            </div>
-
-                                            <!--quarter-->
-                                            <div class="standing-quarter basketball-standing-quarter">
-                                                <p class="s1">18.08</p>
-                                                <p class="s2">19.08</p>
-                                            </div>
-
-                                            <!--team-->
-                                            <div class="standing-team basketball-standing-team">
-
-                                                <div class="first-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/team/rain_or_shine.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">Rain or Shine</p>
-                                                </div>
-
-                                                <div class="second-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/team/genebra.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">Genebra San Miguel</p>
-                                                </div>
-                                            </div>
-
-                                            <!--scores-->
-                                            <div class="standing-scores basketball-standing-scores">
-                                                <div class="first-team-scores">
-                                                    <p class="s1">78</p>
-                                                    <p class="s2">89</p>
-                                                    <p class="s2">25</p>
-                                                    <p class="s2">35</p>
-                                                    <p class="s2">55</p>
-                                                </div>
-
-                                                <div class="second-team-scores">
-                                                    <p class="s1">78</p>
-                                                    <p class="s2">89</p>
-                                                    <p class="s2">25</p>
-                                                    <p class="s2">35</p>
-                                                    <p class="s2">55</p>
-                                                </div>
-                                            </div>
-
-                                            <!--livestream | lineup-->
-                                            <div class="standing-list-btn basketball-standing-list-btn">
-                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
-                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--ADD ANOTHER STANDING LIST BELOW-->
-                                    
-                                </div>
-
-                                <!--ADD ANOTHER DROPDOWN BELOW-->
-
-
+                    <!--s u m m a r y-->
+                    <div id="summary" class="tab content-tab-wrapper">
+                        <!--T O D A Y'S  M A T C H E S  C O N T E N T  W R A P P E R-->
+                        <div class="content-wrapper">
+                            <div class="content-wrapper-heading">
+                                <p>Today's Matches</p>
                             </div>
-                        </div>
 
-                        <!--show more btn-->
-                        <div class="show-more-wrapper">
-                            <p style="color: white;">Show more matches</p>
-                        </div>
+                            <!-- C O N T E N T  C O N T A I N E R-->
+                            <div class="content-container basketball-content-container">
+                                <div class="standing-wrapper">
 
-                    </div>
+                                    <!--DROPDOWN CONTAINER-->
+                                    <div class="dropdown-container">
 
-
-                    <!-----  *****  ----->
-
-
-                    <!--L A T E S T  S C O R E S   C O N T E N T  W R A P P E R-->
-                    <div class="content-wrapper">
-                        <div class="content-wrapper-heading">
-                            <p>Latest Scores</p>
-                        </div>
-
-                        <!-- C O N T E N T  C O N T A I N E R-->
-                        <div class="content-container basketball-content-container">
-                            <div class="standing-wrapper">
-
-                                <!--DROPDOWN CONTAINER-->
-                                <div class="dropdown-container">
-
-                                    <!--- D R O P D O W N  B U T T O N-->
-                                    <div class="dropdown-btn basketball-dropdown-btn">
-                                        <!--favorite button-->
-                                        <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
-
-                                        <!--team name-->
-                                        <div class="team-div">
-                                            <div class="team-logo">
-                                                <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
-                                            </div>
-                                            <div class="basketball-dropdown-title">
-                                                <p class="cc">Fiesta Conference - Play Offs</p>
-                                                <small class="cc">Philippines</small>
-                                            </div>
-                                            <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
-                                        </div>
-
-                                        <!--standing button-->
-                                        <div class="standing-btn-wrapper">
-                                            <button class="standing-btn-desktop">Standings</button>
-                                            <button class="standing-btn-mobile"><i class="fa-solid fa-list"></i></button>
-                                        </div>
-                                    </div>
-
-                                    <!--NESTED STANDING LIST-->
-                                    <div class="standing-list-box dropdown-standing-content">
-                                        <div class="standing-list basketball-standing-list">
+                                        <!--- D R O P D O W N  B U T T O N-->
+                                        <div class="dropdown-btn basketball-dropdown-btn">
                                             <!--favorite button-->
-                                            <div class="standing-favorite">
-                                                <button><i class="fa-regular fa-star"></i></button>
+                                            <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                            <!--team name-->
+                                            <div class="team-div">
+                                                <div class="team-logo">
+                                                    <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
+                                                </div>
+                                                <div class="basketball-dropdown-title">
+                                                    <p class="cc">Fiesta Conference - Play Offs</p>
+                                                    <small class="cc">Philippines</small>
+                                                </div>
+                                                <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
                                             </div>
 
-                                            <!--quarter-->
-                                            <div class="standing-quarter basketball-standing-quarter">
-                                                <p class="s1">18.08</p>
-                                                <p class="s2">19.08</p>
-                                            </div>
-
-                                            <!--team-->
-                                            <div class="standing-team basketball-standing-team">
-
-                                                <div class="first-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/team/rain_or_shine.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">Rain or Shine</p>
-                                                </div>
-
-                                                <div class="second-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/team/genebra.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">Genebra San Miguel</p>
-                                                </div>
-                                            </div>
-
-                                            <!--scores-->
-                                            <div class="standing-scores basketball-standing-scores">
-                                                <div class="first-team-scores">
-                                                    <p class="s1">78</p>
-                                                    <p class="s2">89</p>
-                                                    <p class="s2">25</p>
-                                                    <p class="s2">35</p>
-                                                    <p class="s2">55</p>
-                                                </div>
-
-                                                <div class="second-team-scores">
-                                                    <p class="s1">78</p>
-                                                    <p class="s2">89</p>
-                                                    <p class="s2">25</p>
-                                                    <p class="s2">35</p>
-                                                    <p class="s2">55</p>
-                                                </div>
-                                            </div>
-
-                                            <!--livestream | lineup-->
-                                            <div class="standing-list-btn basketball-standing-list-btn">
-                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
-                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                            <!--standing button-->
+                                            <div class="standing-btn-wrapper">
+                                                <button class="standing-btn standing-btn-desktop">Standings</button>
+                                                <button class="standing-btn-mobile"><i class="fa-solid fa-list"></i></button>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <!--ADD ANOTHER STANDING LIST BELOW-->
+                                        <!--NESTED STANDING LIST-->
+                                        <div class="standing-list-box dropdown-standing-content">
+                                            <div class="standing-list basketball-standing-list">
+                                                <!--favorite button-->
+                                                <div class="standing-favorite">
+                                                    <button><i class="fa-regular fa-star"></i></button>
+                                                </div>
+
+                                                <!--quarter-->
+                                                <div class="standing-quarter basketball-standing-quarter">
+                                                    <p class="s1">18.08</p>
+                                                    <p class="s2">19.08</p>
+                                                </div>
+
+                                                <!--team-->
+                                                <div class="standing-team basketball-standing-team">
+                                                    <div class="first-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/team/rain_or_shine.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Rain or Shine</p>
+                                                    </div>
+
+                                                    <div class="second-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/team/genebra.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Genebra San Miguel</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--scores-->
+                                                <div class="standing-scores basketball-standing-scores">
+                                                    <div class="first-team-scores">
+                                                        <p class="s1">78</p>
+                                                        <p class="s2">89</p>
+                                                        <p class="s2">25</p>
+                                                        <p class="s2">35</p>
+                                                        <p class="s2">55</p>
+                                                    </div>
+
+                                                    <div class="second-team-scores">
+                                                        <p class="s1">78</p>
+                                                        <p class="s2">89</p>
+                                                        <p class="s2">25</p>
+                                                        <p class="s2">35</p>
+                                                        <p class="s2">55</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--livestream | lineup-->
+                                                <div class="standing-list-btn basketball-standing-list-btn">
+                                                    <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                    <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--ADD ANOTHER STANDING LIST BELOW-->
                                     
-                                </div>
-
-                                <!--ADD ANOTHER DROPDOWN BELOW-->
-
-
-                            </div>
-                        </div>
-
-                        <!--show more btn-->
-                        <div class="show-more-wrapper">
-                            <p style="color: white;">Show more matches</p>
-                        </div>
-
-                    </div>
-
-
-                    <!-----  *****  ----->
-
-
-                    <!--S C H E D U L E D   C O N T E N T  W R A P P E R-->
-                    <div class="content-wrapper">
-                        <div class="content-wrapper-heading">
-                            <p>Scheduled</p>
-                        </div>
-
-                        <!-- C O N T E N T  C O N T A I N E R-->
-                        <div class="content-container basketball-content-container">
-                            <div class="standing-wrapper">
-
-                                <!--DROPDOWN CONTAINER-->
-                                <div class="dropdown-container">
-
-                                    <!--- D R O P D O W N  B U T T O N-->
-                                    <div class="dropdown-btn basketball-dropdown-btn">
-                                        <!--favorite button-->
-                                        <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
-
-                                        <!--team name-->
-                                        <div class="team-div">
-                                            <div class="team-logo">
-                                                <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
-                                            </div>
-                                            <div class="basketball-dropdown-title">
-                                                <p class="cc">Fiesta Conference - Play Offs</p>
-                                                <small class="cc">Philippines</small>
-                                            </div>
-                                            <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
-                                        </div>
-
-                                        <!--standing button-->
-                                        <div class="standing-btn-wrapper">
-                                            <button class="standing-btn-desktop">Standings</button>
-                                            <button class="standing-btn-mobile"><i class="fa-solid fa-list"></i></button>
-                                        </div>
                                     </div>
 
-                                    <!--NESTED STANDING LIST-->
-                                    <div class="standing-list-box dropdown-standing-content">
-                                        <div class="standing-list basketball-standing-list">
+                                    <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
+                                </div>
+                            </div>
+
+                            <!--show more btn-->
+                            <div class="show-more-wrapper">
+                                <p style="color: white;">Show more matches</p>
+                            </div>
+
+                        </div>
+
+
+                        <!-----  *****  ----->
+
+
+                        <!--L A T E S T  S C O R E S   C O N T E N T  W R A P P E R-->
+                        <div class="content-wrapper">
+                            <div class="content-wrapper-heading">
+                                <p>Latest Scores</p>
+                            </div>
+
+                            <!-- C O N T E N T  C O N T A I N E R-->
+                            <div class="content-container basketball-content-container">
+                                <div class="standing-wrapper">
+
+                                    <!--DROPDOWN CONTAINER-->
+                                    <div class="dropdown-container">
+
+                                        <!--- D R O P D O W N  B U T T O N-->
+                                        <div class="dropdown-btn basketball-dropdown-btn">
                                             <!--favorite button-->
-                                            <div class="standing-favorite">
-                                                <button><i class="fa-regular fa-star"></i></button>
+                                            <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                            <!--team name-->
+                                            <div class="team-div">
+                                                <div class="team-logo">
+                                                    <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
+                                                </div>
+                                                <div class="basketball-dropdown-title">
+                                                    <p class="cc">Fiesta Conference - Play Offs</p>
+                                                    <small class="cc">Philippines</small>
+                                                </div>
+                                                <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
                                             </div>
 
-                                            <!--quarter-->
-                                            <div class="standing-quarter basketball-standing-quarter">
-                                                <p class="s1">18.08</p>
-                                                <p class="s2">19.08</p>
-                                            </div>
-
-                                            <!--team-->
-                                            <div class="standing-team basketball-standing-team">
-
-                                                <div class="first-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/team/rain_or_shine.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">Rain or Shine</p>
-                                                </div>
-
-                                                <div class="second-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/team/genebra.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">Genebra San Miguel</p>
-                                                </div>
-                                            </div>
-
-                                            <!--scores-->
-                                            <div class="standing-scores basketball-standing-scores">
-                                                <div class="first-team-scores">
-                                                    <p class="s1">78</p>
-                                                    <p class="s2">89</p>
-                                                    <p class="s2">25</p>
-                                                    <p class="s2">35</p>
-                                                    <p class="s2">55</p>
-                                                </div>
-
-                                                <div class="second-team-scores">
-                                                    <p class="s1">78</p>
-                                                    <p class="s2">89</p>
-                                                    <p class="s2">25</p>
-                                                    <p class="s2">35</p>
-                                                    <p class="s2">55</p>
-                                                </div>
-                                            </div>
-
-                                            <!--livestream | lineup-->
-                                            <div class="standing-list-btn basketball-standing-list-btn">
-                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
-                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                            <!--standing button-->
+                                            <div class="standing-btn-wrapper">
+                                                <button class="standing-btn standing-btn-desktop">Standings</button>
+                                                <button class="standing-btn-mobile"><i class="fa-solid fa-list"></i></button>
                                             </div>
                                         </div>
+
+                                        <!--NESTED STANDING LIST-->
+                                        <div class="standing-list-box dropdown-standing-content">
+                                            <div class="standing-list basketball-standing-list">
+                                                <!--favorite button-->
+                                                <div class="standing-favorite">
+                                                    <button><i class="fa-regular fa-star"></i></button>
+                                                </div>
+
+                                                <!--quarter-->
+                                                <div class="standing-quarter basketball-standing-quarter">
+                                                    <p class="s1">18.08</p>
+                                                    <p class="s2">19.08</p>
+                                                </div>
+
+                                                <!--team-->
+                                                <div class="standing-team basketball-standing-team">
+
+                                                    <div class="first-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/team/rain_or_shine.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Rain or Shine</p>
+                                                    </div>
+
+                                                    <div class="second-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/team/genebra.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Genebra San Miguel</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--scores-->
+                                                <div class="standing-scores basketball-standing-scores">
+                                                    <div class="first-team-scores">
+                                                        <p class="s1">78</p>
+                                                        <p class="s2">89</p>
+                                                        <p class="s2">25</p>
+                                                        <p class="s2">35</p>
+                                                        <p class="s2">55</p>
+                                                    </div>
+
+                                                    <div class="second-team-scores">
+                                                        <p class="s1">78</p>
+                                                        <p class="s2">89</p>
+                                                        <p class="s2">25</p>
+                                                        <p class="s2">35</p>
+                                                        <p class="s2">55</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--livestream | lineup-->
+                                                <div class="standing-list-btn basketball-standing-list-btn">
+                                                    <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                    <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
                                     </div>
 
-                                    <!--ADD ANOTHER STANDING LIST BELOW-->
-                                    
+                                    <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
                                 </div>
-
-                                <!--ADD ANOTHER DROPDOWN BELOW-->
-
-
                             </div>
+
+                            <!--show more btn-->
+                            <div class="show-more-wrapper">
+                                <p style="color: white;">Show more matches</p>
+                            </div>
+
                         </div>
 
-                        <!--show more btn-->
-                        <div class="show-more-wrapper">
-                            <p style="color: white;">Show more matches</p>
+
+                        <!-----  *****  ----->
+
+
+                        <!--S C H E D U L E D   C O N T E N T  W R A P P E R-->
+                        <div class="content-wrapper">
+                            <div class="content-wrapper-heading">
+                                <p>Scheduled</p>
+                            </div>
+
+                            <!-- C O N T E N T  C O N T A I N E R-->
+                            <div class="content-container basketball-content-container">
+                                <div class="standing-wrapper">
+
+                                    <!--DROPDOWN CONTAINER-->
+                                    <div class="dropdown-container">
+
+                                        <!--- D R O P D O W N  B U T T O N-->
+                                        <div class="dropdown-btn basketball-dropdown-btn">
+                                            <!--favorite button-->
+                                            <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                            <!--team name-->
+                                            <div class="team-div">
+                                                <div class="team-logo">
+                                                    <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
+                                                </div>
+                                                <div class="basketball-dropdown-title">
+                                                    <p class="cc">Fiesta Conference - Play Offs</p>
+                                                    <small class="cc">Philippines</small>
+                                                </div>
+                                                <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                            </div>
+
+                                            <!--standing button-->
+                                            <div class="standing-btn-wrapper">
+                                                <button class="standing-btn standing-btn-desktop">Standings</button>
+                                                <button class="standing-btn-mobile"><i class="fa-solid fa-list"></i></button>
+                                            </div>
+                                        </div>
+
+                                        <!--NESTED STANDING LIST-->
+                                        <div class="standing-list-box dropdown-standing-content">
+                                            <div class="standing-list basketball-standing-list">
+                                                <!--favorite button-->
+                                                <div class="standing-favorite">
+                                                    <button><i class="fa-regular fa-star"></i></button>
+                                                </div>
+
+                                                <!--quarter-->
+                                                <div class="standing-quarter basketball-standing-quarter">
+                                                    <p class="s1">18.08</p>
+                                                    <p class="s2">19.08</p>
+                                                </div>
+
+                                                <!--team-->
+                                                <div class="standing-team basketball-standing-team">
+
+                                                    <div class="first-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/team/rain_or_shine.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Rain or Shine</p>
+                                                    </div>
+
+                                                    <div class="second-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/team/genebra.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Genebra San Miguel</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--scores-->
+                                                <div class="standing-scores basketball-standing-scores">
+                                                    <div class="first-team-scores">
+                                                        <p class="s1">78</p>
+                                                        <p class="s2">89</p>
+                                                        <p class="s2">25</p>
+                                                        <p class="s2">35</p>
+                                                        <p class="s2">55</p>
+                                                    </div>
+
+                                                    <div class="second-team-scores">
+                                                        <p class="s1">78</p>
+                                                        <p class="s2">89</p>
+                                                        <p class="s2">25</p>
+                                                        <p class="s2">35</p>
+                                                        <p class="s2">55</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--livestream | lineup-->
+                                                <div class="standing-list-btn basketball-standing-list-btn">
+                                                    <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                    <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                    </div>
+
+                                    <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
+                                </div>
+                            </div>
+
+                            <!--show more btn-->
+                            <div class="show-more-wrapper">
+                                <p style="color: white;">Show more matches</p>
+                            </div>
+
                         </div>
 
+
+                        <!-----  *****  ----->
                     </div>
 
+                    <!-- results -->
+                    <div id="results" class="tab hidden">
+                        <div class="content-wrapper">
+                            <!-- C O N T E N T  C O N T A I N E R-->
+                            <div class="content-container basketball-content-container">
+                                <div class="standing-wrapper">
 
-                    <!-----  *****  ----->
+                                    <!--DROPDOWN CONTAINER-->
+                                    <div class="dropdown-container">
+
+                                        <!--- D R O P D O W N  B U T T O N-->
+                                        <div class="dropdown-btn basketball-dropdown-btn">
+                                            <!--favorite button-->
+                                            <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                            <!--team name-->
+                                            <div class="team-div">
+                                                <div class="team-logo">
+                                                    <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
+                                                </div>
+                                                <div class="basketball-dropdown-title">
+                                                    <p class="cc">Fiesta Conference - Play Offs</p>
+                                                    <small class="cc">Philippines</small>
+                                                </div>
+                                                <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                            </div>
+
+                                            <!--standing button-->
+                                            <div class="standing-btn-wrapper">
+                                                <button class="standing-btn standing-btn-desktop">Standings</button>
+                                                <button class="standing-btn-mobile"><i class="fa-solid fa-list"></i></button>
+                                            </div>
+                                        </div>
+
+                                        <!--NESTED STANDING LIST-->
+                                        <div class="standing-list-box dropdown-standing-content">
+                                            <div class="standing-list basketball-standing-list">
+                                                <!--favorite button-->
+                                                <div class="standing-favorite">
+                                                    <button><i class="fa-regular fa-star"></i></button>
+                                                </div>
+
+                                                <!--quarter-->
+                                                <div class="standing-quarter basketball-standing-quarter">
+                                                    <p class="s1">18.08</p>
+                                                    <p class="s2">19.08</p>
+                                                </div>
+
+                                                <!--team-->
+                                                <div class="standing-team basketball-standing-team">
+                                                    <div class="first-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/team/genebra.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Barangay Genebra San Miguel</p>
+                                                    </div>
+
+                                                    <div class="second-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/team/converge.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Converge</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--scores-->
+                                                <div class="standing-scores basketball-standing-scores">
+                                                    <div class="first-team-scores">
+                                                        <p class="s1">115</p>
+                                                        <p class="s2">89</p>
+                                                        <p class="s2">99</p>
+                                                        <p class="s2">35</p>
+                                                        <p class="s2">55</p>
+                                                    </div>
+
+                                                    <div class="second-team-scores">
+                                                        <p class="s1">115</p>
+                                                        <p class="s2">89</p>
+                                                        <p class="s2">99</p>
+                                                        <p class="s2">35</p>
+                                                        <p class="s2">55</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--livestream | lineup-->
+                                                <div class="standing-list-btn basketball-standing-list-btn">
+                                                    <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                    <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                    </div>
+
+                                    <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
+                                </div>
+                            </div>
+
+                            <!--show more btn-->
+                            <div class="show-more-wrapper">
+                                <p style="color: white;">Show more matches</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--fixtures-->
+                    <div id="fixtures" class="tab hidden">
+                        <div class="content-wrapper">
+                            <!-- C O N T E N T  C O N T A I N E R-->
+                            <div class="content-container basketball-content-container">
+                                <div class="standing-wrapper">
+
+                                    <!--DROPDOWN CONTAINER-->
+                                    <div class="dropdown-container">
+
+                                        <!--- D R O P D O W N  B U T T O N-->
+                                        <div class="dropdown-btn basketball-dropdown-btn">
+                                            <!--favorite button-->
+                                            <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                            <!--team name-->
+                                            <div class="team-div">
+                                                <div class="team-logo">
+                                                    <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
+                                                </div>
+                                                <div class="basketball-dropdown-title">
+                                                    <p class="cc">Fiesta Conference - Play Offs</p>
+                                                    <small class="cc">Philippines</small>
+                                                </div>
+                                                <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                            </div>
+
+                                            <!--standing button-->
+                                            <div class="standing-btn-wrapper">
+                                                <button class="standing-btn standing-btn-desktop">Standings</button>
+                                                <button class="standing-btn-mobile"><i class="fa-solid fa-list"></i></button>
+                                            </div>
+                                        </div>
+
+                                        <!--NESTED STANDING LIST-->
+                                        <div class="standing-list-box dropdown-standing-content">
+                                            <div class="standing-list basketball-standing-list">
+                                                <!--favorite button-->
+                                                <div class="standing-favorite">
+                                                    <button><i class="fa-regular fa-star"></i></button>
+                                                </div>
+
+                                                <!--quarter-->
+                                                <div class="standing-quarter basketball-standing-quarter">
+                                                    <p class="s1">11.08</p>
+                                                    <p class="s2">16.08</p>
+                                                </div>
+
+                                                <!--team-->
+                                                <div class="standing-team basketball-standing-team">
+                                                    <div class="first-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/team/terrafirma.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Terrafirma</p>
+                                                    </div>
+
+                                                    <div class="second-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/team/magnolia.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Magnolia</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--scores-->
+                                                <div class="standing-scores basketball-standing-scores">
+                                                    <div class="first-team-scores">
+                                                        <p class="s1">68</p>
+                                                        <p class="s2">89</p>
+                                                        <p class="s2">99</p>
+                                                        <p class="s2">120</p>
+                                                        <p class="s2">55</p>
+                                                    </div>
+
+                                                    <div class="second-team-scores">
+                                                        <p class="s1">68</p>
+                                                        <p class="s2">89</p>
+                                                        <p class="s2">99</p>
+                                                        <p class="s2">120</p>
+                                                        <p class="s2">55</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--livestream | lineup-->
+                                                <div class="standing-list-btn basketball-standing-list-btn">
+                                                    <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                    <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                    </div>
+
+                                    <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
+                                </div>
+                            </div>
+
+                            <!--show more btn-->
+                            <div class="show-more-wrapper">
+                                <p style="color: white;">Show more matches</p>
+                            </div>
+
+                        </div>
+                    </div>
+
 
                     <!--S T A N D I N G  F O R M  C O N T E N T  W R A P P E R-->
-                    <div class="standing-form-content-wrapper">
+                    <div id="standings" class="tab standing-form-content-wrapper">
                         <!-- T A B  B A R-->
                         <div class="tab-container">
                             <div class="tab-div">
@@ -516,7 +739,7 @@
                                         <button class="tab-btn">Home</button>
                                         <button class="tab-btn">Away</button>
                                     </div>
-    
+
                                     <div class="tab-container-btn">
                                         <i class="fa-solid fa-bars "></i>
                                         <i class="fa-solid fa-list"></i>
@@ -526,57 +749,57 @@
                                 <!-----T A B L E-->
                                 <div class="standing-form-tab-content">
                                     <table>
-                                         <thead>
-                                             <tr>
-                                                 <th>#</th>
-                                                 <th>TEAM</th>
-                                                 <th>MP</th>
-                                                 <th>W</th>
-                                                 <th>L</th>
-                                                 <th>TP</th>
-                                                 <th>PTS</th>
-                                                 <th>FORM</th>
-                                             </tr>
-                                         </thead>
-                                         <tbody>
-                                             <tr>
-                                                 <td>12.</td>
-                                                 <td>
-                                                     <div class="td-wrapper">
-                                                         <div class="td-team-img">
-                                                             <img src="/img/team/magnolia.png" alt="pba_logo" class="img-fluid">
-                                                         </div>
-                                                         <p class="team-name">Magnolia Hotshots</p>
-                                                     </div>
-                                                 </td>
-                                                 <td>180</td>
-                                                 <td>150</td>
-                                                 <td>300</td>
-                                                 <td>1818:1652</td>
-                                                 <td>350</td>
-                                                 <td>
-                                                     <div class="table-form-grid">
-                                                         <div class="box box-green">
-                                                             W
-                                                         </div>
-                                                         <div class="box box-red">
-                                                             L
-                                                         </div>
-                                                         <div class="box box-red">
-                                                             L
-                                                         </div>
-                                                         <div class="box box-green">
-                                                             W
-                                                         </div>
-                                                         <div class="box box-green">
-                                                             W
-                                                         </div>
-                                                     </div>
-                                                 </td>
-                                             </tr>
-                                         </tbody>
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>TEAM</th>
+                                                <th>MP</th>
+                                                <th>W</th>
+                                                <th>L</th>
+                                                <th>TP</th>
+                                                <th>PTS</th>
+                                                <th>FORM</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>12.</td>
+                                                <td>
+                                                    <div class="td-wrapper">
+                                                        <div class="td-team-img">
+                                                            <img src="/img/team/magnolia.png" alt="pba_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Magnolia Hotshots</p>
+                                                    </div>
+                                                </td>
+                                                <td>180</td>
+                                                <td>150</td>
+                                                <td>300</td>
+                                                <td>1818:1652</td>
+                                                <td>350</td>
+                                                <td>
+                                                    <div class="table-form-grid">
+                                                        <div class="box box-green">
+                                                            W
+                                                        </div>
+                                                        <div class="box box-red">
+                                                            L
+                                                        </div>
+                                                        <div class="box box-red">
+                                                            L
+                                                        </div>
+                                                        <div class="box box-green">
+                                                            W
+                                                        </div>
+                                                        <div class="box box-green">
+                                                            W
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                     </table>
-                                 </div>
+                                </div>
 
                             </div>
                         </div>
@@ -590,6 +813,37 @@
                             <p>If teams finish on equal points at the end of the season, score difference will be the tie-breaker.</p>
                         </div>
 
+                    </div>
+
+                    <!--A R C H I V E  C O N T E N T  W R A P P E R-->
+                    <div id="archive" class="tab hidden">
+                        <div class="archive-content-wrapper">
+                            <div class="archive-content-wrapper-title">
+                                <p>season</p>
+                                <p>winner</p>
+                            </div>
+
+                            <div class="archive-div">
+                                <div class="archive-content-wrapper-list">
+                                    <p>Commisioners Cup 2022</p>
+                                    <div class="archive-content-container">
+                                        <div class="archive-content-container-img">
+                                            <img src="/img/team/genebra.png" alt="pba_logo" class="img-fluid">
+                                        </div>
+                                        <p>Barangay Genebra San Miguel</p>
+                                    </div>
+                                </div>
+                                <div class="archive-content-wrapper-list">
+                                    <p>Commisioners Cup 2019</p>
+                                    <div class="archive-content-container">
+                                        <div class="archive-content-container-img">
+                                            <img src="/img/team/beermen.png" alt="pba_logo" class="img-fluid">
+                                        </div>
+                                        <p>San Miguel Beermen</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

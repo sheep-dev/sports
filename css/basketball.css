@@ -173,6 +173,12 @@
 }
 
 /** content wrapper **/
+.content-tab-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .content-wrapper .basketball-content-container {
     width: 100%;
 
@@ -580,14 +586,27 @@ table tr td {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.archive-content-wrapper .archive-content-wrapper-list {
+.archive-content-wrapper .archive-div {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+}
+
+.archive-div .archive-content-wrapper-list {
     color: var(--tertiary-txtColor);
     font-size: 0.8rem;
     font-weight: 600;
-    padding: 1rem 1rem 0 1rem;
+    padding: 0.5rem 1rem;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.archive-div .archive-content-wrapper-list:nth-child(even) {
+    background-color: var(--primary-bgColor);
+    border-radius: 5px;
 }
 
 .archive-content-wrapper-list .archive-content-container {
