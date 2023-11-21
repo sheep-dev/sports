@@ -32,11 +32,8 @@
             </div>
 
             <div class="nav-links">
-                <div class="search-div dropdown-item" id="item1">
-                    <input type="search" class="search-input" placeholder="search">
-                </div>
                 <div class="navBtn-wrapper">
-                    <button class="nav-btn toggle-btn" onclick="toggleDropdown('item1')"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button data-modal="search" class="nav-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                     <button data-modal="login" class="nav-btn"><i class="fa-regular fa-user"></i><p>Login</p></button>
                     <button class="nav-btn toggle-btn" onclick="toggleDropdown('item2')"><i class="fa-solid fa-bars"></i></button>
                 </div>
@@ -580,7 +577,7 @@
                                          </tbody>
                                     </table>
                                  </div>
-                                 
+
                             </div>
                         </div>
 
@@ -614,28 +611,6 @@
             </article>
         </section>
     </main>
-
-    <!-- M O D A L-->
-    <div class="modal" id="login">
-        <div class="modal-content">
-            <div class="login-container">
-                <span><button class="login-close" data-close="login"><i class="fa-solid fa-xmark"></i></button></span>
-                <p>Login</p>
-                <small>continue with:</small>
-
-                <div class="login-wrapper">
-                    <div class="login-btn-wrapper">
-                        <i class="fa-brands fa-google"></i>
-                        <p>Google</p>
-                    </div>
-                    <div class="login-btn-wrapper">
-                        <i class="fa-brands fa-facebook"></i>
-                        <p>Facebook</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="/js/script.js"></script>
 </body>

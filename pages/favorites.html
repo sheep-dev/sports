@@ -32,11 +32,8 @@
             </div>
 
             <div class="nav-links">
-                <div class="search-div dropdown-item" id="item1">
-                    <input type="search" class="search-input" placeholder="search">
-                </div>
                 <div class="navBtn-wrapper">
-                    <button class="nav-btn toggle-btn" onclick="toggleDropdown('item1')"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button data-modal="search" class="nav-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                     <button data-modal="login" class="nav-btn"><i class="fa-regular fa-user"></i><p>Login</p></button>
                     <button class="nav-btn toggle-btn" onclick="toggleDropdown('item2')"><i class="fa-solid fa-bars"></i></button>
                 </div>
@@ -74,11 +71,15 @@
                 <!-- S I D E B A R  L E F T-->
                 <aside class="sideLeft">
                     <div class="sideleft-top">
-                        <p><i class="fa-solid fa-thumbtack"></i> Pinned Leagues</p>
+                        <p><i class="fa-solid fa-star"></i> My Team</p>
                     </div>
 
                     <div class="sideleft-center">
-                        <div class="team-pinned-list">
+                        <div class="add-team">
+                            <i class="fa-solid fa-add"></i>
+                            <p> Add The Team</p>
+                        </div>
+                        <div class="team-pinned-list" style="display: none;">
                             <div class="team-pinned-img">
                                 <img src="/img/team/beermen.png" alt="team-logo" class="img-fluid">
                             </div>
@@ -189,27 +190,6 @@
         </section>
     </main>
 
-    <!-- M O D A L-->
-    <div class="modal" id="login">
-        <div class="modal-content">
-            <div class="login-container">
-                <span><button class="login-close" data-close="login"><i class="fa-solid fa-xmark"></i></button></span>
-                <p>Login</p>
-                <small>continue with:</small>
-
-                <div class="login-wrapper">
-                    <div class="login-btn-wrapper">
-                        <i class="fa-brands fa-google"></i>
-                        <p>Google</p>
-                    </div>
-                    <div class="login-btn-wrapper">
-                        <i class="fa-brands fa-facebook"></i>
-                        <p>Facebook</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="/js/script.js"></script>
 </body>

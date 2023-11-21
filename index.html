@@ -31,11 +31,8 @@
             </div>
 
             <div class="nav-links">
-                <div class="search-div dropdown-item" id="item1">
-                    <input type="search" class="search-input" placeholder="search">
-                </div>
                 <div class="navBtn-wrapper">
-                    <button class="nav-btn toggle-btn" onclick="toggleDropdown('item1')"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button data-modal="search" class="nav-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                     <button data-modal="login" class="nav-btn"><i class="fa-regular fa-user"></i><p>Login</p></button>
                     <button class="nav-btn toggle-btn" onclick="toggleDropdown('item2')"><i class="fa-solid fa-bars"></i></button>
                 </div>
@@ -245,7 +242,7 @@
         </section>
     </main>
 
-    <!-- M O D A L-->
+    <!-- M O D A L  L O G I N-->
     <div class="modal" id="login">
         <div class="modal-content">
             <div class="login-container">
@@ -261,6 +258,41 @@
                     <div class="login-btn-wrapper">
                         <i class="fa-brands fa-facebook"></i>
                         <p>Facebook</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- M O D A L  S E A R C H-->
+    <div class="modal" id="search">
+        <div class="modal-content">
+            <div class="search-container">
+                <span><p>Search</p><button class="search-close" data-close="search"><i class="fa-solid fa-xmark"></i></button></span>
+               
+                <div class="search-wrapper">
+                    <div class="search-wrapper-div">
+                        <input type="search" class="search-wrapper-input" placeholder="type your search here">
+                    </div>
+
+                    <small>Please type at least 2 characters. The results will start displaying here immediately. </small>
+                    <p>Most Popular Searches</p>
+
+                    <div class="search-wrapper-list">
+                        <!-- -- -->
+                        <div class="search-wrapper-list-div">
+                            <div class="search-wrapper-list-div-title">
+                                <div class="search-wrapper-list-div-img">
+                                    <img src="/img/flags/philippines_flag.png" alt="flag" class="img-fluid">
+                                </div>
+                                <div>
+                                    <p>PBA</p>
+                                    <small>Basketball, Philippines</small>
+                                </div>
+                            </div>
+                            <button><i class="fa-solid fa-thumbtack"></i></button>
+                        </div>
+
                     </div>
                 </div>
             </div>

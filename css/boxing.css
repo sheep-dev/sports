@@ -32,9 +32,70 @@
     font-size: 0.8rem;
 }
 
+.content-wrapper .boxing-breadcrumbs {
+    width: 100%;
+    padding: 0.7rem 0 0 0.7rem;
+}
+
+.boxing-breadcrumbs .boxing-breadcrumbs-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.boxing-breadcrumbs-header .fa-chevron-right {
+    color: var(--tertiary-txtColor);
+    font-size: 0.8rem;
+}
+
+.boxing-breadcrumbs-header .boxing-breadcrumbs-name {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+
+    color: var(--tertiary-txtColor);
+}
+
+.boxing-breadcrumbs-name .material-icons {
+    font-size: 1.1rem;
+}
+
+.boxing-breadcrumbs-name .flags-img {
+    height: 1rem;
+    width: 1rem;
+}
+
+.flags-img .img-fluid {
+    height: 100%;
+    width: 100%;
+}
+
+.boxing-breadcrumbs-name p {
+    font-size: 0.8rem;
+}
+
 @media only screen and (min-width: 576px) {
     .boxing-team-div .team-name {
         font-size: 0.9rem;
         width: auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .boxing-breadcrumbs-name p {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .content-wrapper .boxing-breadcrumbs {
+        width: 100%;
+        padding: 0 0 1rem 0;
+    }
+
+    .boxing-breadcrumbs-name p {
+        font-size: 1rem;
     }
 }

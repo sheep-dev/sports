@@ -32,11 +32,8 @@
             </div>
 
             <div class="nav-links">
-                <div class="search-div dropdown-item" id="item1">
-                    <input type="search" class="search-input" placeholder="search">
-                </div>
                 <div class="navBtn-wrapper">
-                    <button class="nav-btn toggle-btn" onclick="toggleDropdown('item1')"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button data-modal="search" class="nav-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                     <button data-modal="login" class="nav-btn"><i class="fa-regular fa-user"></i><p>Login</p></button>
                     <button class="nav-btn toggle-btn" onclick="toggleDropdown('item2')"><i class="fa-solid fa-bars"></i></button>
                 </div>
@@ -109,6 +106,23 @@
 
                     <!-- C O N T E N T  W R A P P E R-->
                     <div class="content-wrapper">
+                        <!--B R E A D C R U M B S-->
+                        <div class="boxing-breadcrumbs">
+                            <div class="boxing-breadcrumbs-header">
+                                <div class="boxing-breadcrumbs-name">
+                                    <span class="material-icons">sports_mma</span>
+                                    <p>Boxing</p>
+                                </div>
+                                <i class="fa-solid fa-chevron-right"></i>
+                                <div class="boxing-breadcrumbs-name">
+                                    <div class="flags-img">
+                                        <img src="/img/flags/philippines.png" alt="philippines_flag" class="img-fluid">
+                                    </div>
+                                    <p>Philippines</p>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- T A B  B A R-->
                         <div class="tab-container">
                             <div class="tab-div">
@@ -239,28 +253,6 @@
             </article>
         </section>
     </main>
-
-    <!-- M O D A L-->
-    <div class="modal" id="login">
-        <div class="modal-content">
-            <div class="login-container">
-                <span><button class="login-close" data-close="login"><i class="fa-solid fa-xmark"></i></button></span>
-                <p>Login</p>
-                <small>continue with:</small>
-
-                <div class="login-wrapper">
-                    <div class="login-btn-wrapper">
-                        <i class="fa-brands fa-google"></i>
-                        <p>Google</p>
-                    </div>
-                    <div class="login-btn-wrapper">
-                        <i class="fa-brands fa-facebook"></i>
-                        <p>Facebook</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="/js/script.js"></script>
 </body>
