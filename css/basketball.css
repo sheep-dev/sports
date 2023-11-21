@@ -12,6 +12,9 @@
     --pinColor: #0787fa;
     --tab-bgHover: #555e61;
 
+    --bgBoxRed: #dc0000;
+    --bgBoxGreen: #00a83f;
+
     --primary-txtColor: #3D5B59;
     --secondary-txtColor: #f5f5f5;
     --tertiary-txtColor: #c8cdcd;
@@ -446,76 +449,98 @@
 
 .standing-form-tab-content table {
     width: 100%;
+    border: none;
 
     overflow-x: auto;
     white-space: nowrap;
-    background-color: var(--bgBlack);
+    background-color: var(--primary-bgColor);
 }
 
 table thead {
     width: 100%;
+    background-color: var(--primary-bgColor);
+}
+
+table thead tr {
+    padding: 0.3rem;
 }
 
 table thead tr th {
+    font-size: 0.75rem;
     color: var(--tertiary-txtColor);
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 0.3rem 0.5rem;
-
     text-align: start;
 }
 
+table thead tr th:nth-child(7), table thead tr th:nth-child(8) {
+    display: none;
+}
+
+table tbody tr td:nth-child(7), table tbody tr td:nth-child(8) {
+    display: none;
+}
+
 table tbody {
+    width: 100%;
     background-color: var(--bgBlack);
-    width: 100%;
+    border: none;
 }
 
-table tbody tr {
-    border-bottom: 1px solid white;
-    width: 100%;
-}
-
-table tbody tr td {
-    color: var(--tertiary-txtColor);
-
+table tr td {
     font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.3rem 0.5rem;
+    color: var(--tertiary-txtColor);
+    text-align: start;
+    padding: 0.3rem 0 0 0;
 }
 
-table tbody tr .td-team {
+.td-wrapper {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-table tbody tr .td-team .td-team-img {
-    height: 1rem;
-    width: 1rem;
+.td-wrapper .td-team-img {
+    height: 1.1rem;
+    width: 1.1rem;
 }
 
-table tbody tr .td-team .td-team-img .img-fluid {
+.td-team-img .img-fluid {
     height: 100%;
     width: 100%;
 }
 
-table tbody tr .num {
-    background-color: var(--pinColor);
+.td-wrapper .team-name {
+    width: 7rem;
 
-    border-radius: 3px;
-    padding: 0.1rem 0.25rem;
-}
-
-table tbody tr .team-name {
-    width: 4rem;
-
-    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    overflow: hidden;
 }
 
-table .table-hide, table .table-hide-td {
-    display: none;
+.table-form-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+
+    padding: 0 0.2rem;
+}
+
+.table-form-grid .box {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 3px;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-form-grid .box-green {
+    background-color: var(--bgBoxGreen);
+}
+
+.table-form-grid .box-red {
+    background-color: var(--bgBoxRed);
 }
 
 /*********** B R E A K P O I N T S ****************/
@@ -533,43 +558,16 @@ table .table-hide, table .table-hide-td {
     }
 
     /** TABLE **/
-    table tbody tr .team-name {
-        width: 8rem;
+    table thead tr th:nth-child(7), table thead tr th:nth-child(8) {
+        display: inline-table;
+    }
+    
+    table tbody tr td:nth-child(7), table tbody tr td:nth-child(8) {
+        display: inline-table;
     }
 
-    table .table-hide{
-        display: inline-block;
-    }
-
-    table tbody .table-hide-td .pts {
-        width: 1.3rem;
-        
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    table .table-hide-td {
-        display: inline-flex;
-    }
-
-    .table-hide-td .table-form-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 0.5rem;
-    }
-
-    .table-form-grid .box {
-        border-radius: 2px;
-        padding: 0.2rem 0.3rem;
-    }
-
-    .table-form-grid .box-green {
-        background-color: green;
-    }
-
-    .table-form-grid .box-red {
-        background-color: var(--bgRed);
+    .td-wrapper .team-name {
+        width: 11rem;
     }
 }
 
@@ -666,8 +664,8 @@ table .table-hide, table .table-hide-td {
     }
     
     /** TABLE **/
-    .table-hide-td .table-form-grid {
-        padding-right: 0.4rem;
+    .td-wrapper .team-name {
+        width: 8rem;
     }
 }
 
@@ -742,8 +740,8 @@ table .table-hide, table .table-hide-td {
     }
 
      /** TABLE **/
-     table tbody tr .team-name {
-        width: 15rem;
+    .td-wrapper .team-name {
+        width: 18rem;
     }
 }
 
@@ -768,7 +766,15 @@ table .table-hide, table .table-hide-td {
     }
 
     /** TABLE **/
-    table thead tr th {
+    table thead tr th { 
         font-size: 0.85rem;
+    }
+
+    table tbody tr td {
+        font-size: 0.85rem;
+    }
+
+    .td-wrapper .team-name {
+        width: 25rem;
     }
 }

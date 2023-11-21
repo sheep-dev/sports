@@ -159,6 +159,7 @@
     .cpa-match-grid-wrapper .match-grid {
         width: 100%;
         padding: 0.5rem 0;
+        border-radius: 5px;
     
         background-color: var(--primary-bgColor);
         
@@ -256,5 +257,10 @@
 
     .cpa-nested-tab .tab-container .tab-div .tab-btn {
         font-size: 0.8rem;
+    }
+
+     /** match **/
+     .cpa-match-top .cpa-match-prev-next {
+        display: none;
     }
 }
