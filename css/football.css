@@ -91,6 +91,21 @@
     width: 100%;
 }
 
+.content-container {
+    display: flex;
+    overflow: hidden;
+    width: 300px; /* Adjust the width as needed */
+    border: 1px solid #ccc;
+    margin: 20px;
+  }
+
+  .content {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
 /****** B R E A K P O I N T S ********/
 @media only screen and (min-width: 576px) {
     .cpa-standing-form-content-wrapper .cpa-tab-container {

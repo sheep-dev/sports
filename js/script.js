@@ -5,10 +5,9 @@ dropdowns.forEach(dropdown => {
   const btn = dropdown.querySelector('.standing-btn');
   const content = dropdown.querySelector('.dropdown-standing-content');
 
-
   content.style.display = 'block';
 
-  btn.addEventListener('click', ()=> {
+  btn.addEventListener('click', () => {
     if (content.style.display === 'block') {
       content.style.display = 'none';
     } else {
@@ -17,6 +16,7 @@ dropdowns.forEach(dropdown => {
   });
 
 });
+
 
 
 
@@ -44,11 +44,32 @@ const toggleDropdown = (itemId) => {
 
 
 // MULTIPLE TABS
+// const tabButtons = document.querySelectorAll('.tab-button');
+// const tabContents = document.querySelectorAll('.tab');
+
+// tabButtons.forEach(button => {
+//   button.addEventListener('click', function() {
+//     const tabId = this.dataset.set;
+//     tabContents.forEach(content => {
+//       content.style.display = 'none';
+//     });
+//     document.getElementById(tabId).style.display = 'flex';
+//   });
+// });
+
 const tabButtons = document.querySelectorAll('.tab-button');
 const tabContents = document.querySelectorAll('.tab');
 
 tabButtons.forEach(button => {
   button.addEventListener('click', function() {
+    // Remove the 'active' class from all tab buttons
+    tabButtons.forEach(btn => {
+      btn.classList.remove('tab-active');
+    });
+
+    // Add the 'active' class to the clicked tab button
+    this.classList.add('tab-active');
+
     const tabId = this.dataset.set;
     tabContents.forEach(content => {
       content.style.display = 'none';
@@ -56,6 +77,41 @@ tabButtons.forEach(button => {
     document.getElementById(tabId).style.display = 'flex';
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+ 
+  let currentIndex = 0;
+
+ 
+  function showContent(index) {
+   
+    const contentDivs = document.querySelectorAll('.content');
+    contentDivs.forEach(div => div.style.display = 'none');
+
+   
+    contentDivs[index].style.display = 'block';
+  }
+
+ 
+  function next() {
+    currentIndex = (currentIndex + 1) % contentDivs.length;
+    showContent(currentIndex);
+  }
+
+  function prev() {
+    currentIndex = (currentIndex - 1 + contentDivs.length) % contentDivs.length;
+    showContent(currentIndex);
+  }
+
+  
+  document.getElementById('nextBtn').addEventListener('click', next);
+  document.getElementById('prevBtn').addEventListener('click', prev);
+
+
+  showContent(currentIndex);
+});
+
 
 // MULTIPLE MODALS
 const modalButtons = document.querySelectorAll('[data-modal]');
