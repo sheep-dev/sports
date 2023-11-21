@@ -14,6 +14,7 @@
 
     --bgBoxRed: #dc0000;
     --bgBoxGreen: #00a83f;
+    --bgBoxOrange: #f3a000;
 
     --primary-txtColor: #3D5B59;
     --secondary-txtColor: #f5f5f5;
@@ -479,6 +480,12 @@ table tbody tr td:nth-child(7), table tbody tr td:nth-child(8) {
     display: none;
 }
 
+table tbody tr td:nth-child(1) p {
+    background-color: var(--pinColor);
+    border-radius: 3px;
+    padding: 0.1rem 0;
+}
+
 table tbody {
     width: 100%;
     background-color: var(--bgBlack);
@@ -541,6 +548,10 @@ table tr td {
 
 .table-form-grid .box-red {
     background-color: var(--bgBoxRed);
+}
+
+.table-form-grid .box-orange {
+    background-color: var(--bgBoxOrange);
 }
 
 /*********** B R E A K P O I N T S ****************/
