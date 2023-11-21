@@ -558,6 +558,55 @@ table tr td {
     background-color: var(--bgBoxOrange);
 }
 
+
+/** archive **/
+.archive-content-wrapper {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.archive-content-wrapper .archive-content-wrapper-title {
+    width: 100%;
+    padding: 0.5rem 1rem;
+
+    background-color: var(--primary-bgColor);
+    color: var(--tertiary-txtColor);
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.archive-content-wrapper .archive-content-wrapper-list {
+    color: var(--tertiary-txtColor);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 1rem 1rem 0 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.archive-content-wrapper-list .archive-content-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.archive-content-container .archive-content-container-img {
+    height: 1rem;
+    width: 1rem;
+}
+
+.archive-content-container-img .img-fluid {
+    height: 100%;
+    width: 100%;
+}
+
 /*********** B R E A K P O I N T S ****************/
 @media only screen and (min-width: 576px) {
     .standing-list-box .basketball-standing-list {
