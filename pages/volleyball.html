@@ -119,11 +119,11 @@
                         <!-- T A B  B A R-->
                         <div class="tab-container">
                             <div class="tab-div">
-                                <button class="tab-btn tab-active">All</button>
-                                <button class="tab-btn">Mens</button>
-                                <button class="tab-btn">Women</button>
-                                <button class="tab-btn">Finished</button>
-                                <button class="tab-btn">Schedule</button>
+                                <button data-set="all" class="tab-btn tab-button tab-active">All</button>
+                                <button data-set="mens" class="tab-btn tab-button">Mens</button>
+                                <button data-set="women" class="tab-btn tab-button">Women</button>
+                                <button data-set="finished" class="tab-btn tab-button">Finished</button>
+                                <button data-set="schedule" class="tab-btn tab-button">Schedule</button>
                             </div>
 
                             <!--- D A T E -->
@@ -136,8 +136,8 @@
                             </div>
                         </div>
 
-                        <!-- C O N T E N T  C O N T A I N E R-->
-                        <div class="content-container">
+                        <!--A L L  C O N T E N T  C O N T A I N E R-->
+                        <div id="all" class="tab content-container">
                             <div class="standing-wrapper">
 
                                 <!--DROPDOWN CONTAINER-->
@@ -313,6 +313,376 @@
                             </div>
                         </div>
 
+                        <!--M E N S  C O N T E N T  C O N T A I N E R-->
+                        <div id="mens" class="tab hidden">
+                            <div class="standing-wrapper">
+
+                                <!--DROPDOWN CONTAINER-->
+                                <div class="dropdown-container">
+
+                                    <!--- D R O P D O W N  B U T T O N-->
+                                    <div class="dropdown-btn">
+                                        <!--favorite button-->
+                                        <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                        <!--team name-->
+                                        <div class="team-div">
+                                            <div class="team-logo">
+                                                <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
+                                            </div>
+                                            <p class="team-name">Men's Division</p>
+                                            <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                        </div>
+
+                                        <!--standing button-->
+                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                    </div>
+
+                                    <!--NESTED STANDING LIST-->
+                                    <div class="standing-list-box dropdown-standing-content">
+                                        <div class="standing-list">
+                                            <!--favorite button-->
+                                            <div class="standing-favorite">
+                                                <button><i class="fa-regular fa-star"></i></button>
+                                            </div>
+
+                                            <!--quarter-->
+                                            <div class="standing-quarter">
+                                                <p>4th Quarter</p>
+                                            </div>
+
+                                            <!--team-->
+                                            <div class="standing-team">
+
+                                                <div class="first-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/volleyball/1200px-Seal_of_Santa_Rosa,_Laguna.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">Santa Rosa Laguna</p>
+                                                </div>
+
+                                                <div class="second-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/volleyball/arellano-university-logo-D0C35BB9A2-seeklogo.com.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">Arellano University</p>
+                                                </div>
+                                            </div>
+
+                                            <!--scores-->
+                                            <div class="standing-scores">
+                                                <div class="first-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">89</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">35</p>
+                                                    <p class="s2">55</p>
+                                                </div>
+
+                                                <div class="second-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">89</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">35</p>
+                                                    <p class="s2">55</p>
+                                                </div>
+                                            </div>
+
+                                            <!--livestream | lineup-->
+                                            <div class="standing-list-btn">
+                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                </div>
+
+                                <!--ADD ANOTHER DROPDOWN BELOW-->
+
+                            </div>
+                        </div>
+
+
+                        <!--W O M E N  C O N T E N T  C O N T A I N E R-->
+                        <div id="women" class="tab hidden">
+                            <div class="standing-wrapper">
+
+                                <!--DROPDOWN CONTAINER-->
+                                <div class="dropdown-container">
+
+                                    <!--- D R O P D O W N  B U T T O N-->
+                                    <div class="dropdown-btn">
+                                        <!--favorite button-->
+                                        <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                        <!--team name-->
+                                        <div class="team-div">
+                                            <div class="team-logo">
+                                                <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
+                                            </div>
+                                            <p class="team-name">Women's Division</p>
+                                            <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                        </div>
+
+                                        <!--standing button-->
+                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                    </div>
+
+                                    <!--NESTED STANDING LIST-->
+                                    <div class="standing-list-box dropdown-standing-content">
+                                        <div class="standing-list">
+                                            <!--favorite button-->
+                                            <div class="standing-favorite">
+                                                <button><i class="fa-regular fa-star"></i></button>
+                                            </div>
+
+                                            <!--quarter-->
+                                            <div class="standing-quarter">
+                                                <p>17:00</p>
+                                            </div>
+
+                                            <!--team-->
+                                            <div class="standing-team">
+
+                                                <div class="first-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/volleyball/Fighting_Warays_Volleyball.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">Fighting Warays</p>
+                                                </div>
+
+                                                <div class="second-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/volleyball/San_Beda_University_seal.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">San Beda University</p>
+                                                </div>
+                                            </div>
+
+                                            <!--scores-->
+                                            <div class="standing-scores">
+                                                <div class="first-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">89</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">35</p>
+                                                    <p class="s2">55</p>
+                                                </div>
+
+                                                <div class="second-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">89</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">35</p>
+                                                    <p class="s2">55</p>
+                                                </div>
+                                            </div>
+
+                                            <!--livestream | lineup-->
+                                            <div class="standing-list-btn">
+                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                </div>
+
+                                <!--ADD ANOTHER DROPDOWN BELOW-->
+
+                            </div>
+                        </div>
+
+                        
+                        <!--F I N I S H E D  C O N T E N T  C O N T A I N E R-->
+                        <div id="finished" class="tab hidden">
+                            <div class="standing-wrapper">
+
+                                <!--DROPDOWN CONTAINER-->
+                                <div class="dropdown-container">
+
+                                    <!--- D R O P D O W N  B U T T O N-->
+                                    <div class="dropdown-btn">
+                                        <!--favorite button-->
+                                        <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                        <!--team name-->
+                                        <div class="team-div">
+                                            <div class="team-logo">
+                                                <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
+                                            </div>
+                                            <p class="team-name">Women's Division</p>
+                                            <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                        </div>
+
+                                        <!--standing button-->
+                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                    </div>
+
+                                    <!--NESTED STANDING LIST-->
+                                    <div class="standing-list-box dropdown-standing-content">
+                                        <div class="standing-list">
+                                            <!--favorite button-->
+                                            <div class="standing-favorite">
+                                                <button><i class="fa-regular fa-star"></i></button>
+                                            </div>
+
+                                            <!--quarter-->
+                                            <div class="standing-quarter">
+                                                <p>Finished</p>
+                                            </div>
+
+                                            <!--team-->
+                                            <div class="standing-team">
+
+                                                <div class="first-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/volleyball/Jose_Rizal_University_seal.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">Jose Rizal University</p>
+                                                </div>
+
+                                                <div class="second-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/volleyball/arellano-university-logo-D0C35BB9A2-seeklogo.com.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">Arellano University</p>
+                                                </div>
+                                            </div>
+
+                                            <!--scores-->
+                                            <div class="standing-scores">
+                                                <div class="first-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">89</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">35</p>
+                                                    <p class="s2">55</p>
+                                                </div>
+
+                                                <div class="second-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">89</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">35</p>
+                                                    <p class="s2">55</p>
+                                                </div>
+                                            </div>
+
+                                            <!--livestream | lineup-->
+                                            <div class="standing-list-btn">
+                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                </div>
+
+                                <!--ADD ANOTHER DROPDOWN BELOW-->
+
+                            </div>
+                        </div>
+
+                        <!--S C H E D U L E D  C O N T E N T  C O N T A I N E R-->
+                        <div id="schedule" class="tab hidden">
+                            <div class="standing-wrapper">
+
+                                <!--DROPDOWN CONTAINER-->
+                                <div class="dropdown-container">
+
+                                    <!--- D R O P D O W N  B U T T O N-->
+                                    <div class="dropdown-btn">
+                                        <!--favorite button-->
+                                        <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                        <!--team name-->
+                                        <div class="team-div">
+                                            <div class="team-logo">
+                                                <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
+                                            </div>
+                                            <p class="team-name">Men's Division</p>
+                                            <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                        </div>
+
+                                        <!--standing button-->
+                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                    </div>
+
+                                    <!--NESTED STANDING LIST-->
+                                    <div class="standing-list-box dropdown-standing-content">
+                                        <div class="standing-list">
+                                            <!--favorite button-->
+                                            <div class="standing-favorite">
+                                                <button><i class="fa-regular fa-star"></i></button>
+                                            </div>
+
+                                            <!--quarter-->
+                                            <div class="standing-quarter">
+                                                <p>18:00</p>
+                                            </div>
+
+                                            <!--team-->
+                                            <div class="standing-team">
+
+                                                <div class="first-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/volleyball/Cignal_HD_volleyball_logo.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">Cignal</p>
+                                                </div>
+
+                                                <div class="second-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/volleyball/1200px-Seal_of_Santa_Rosa,_Laguna.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">Sta Rosa Laguna</p>
+                                                </div>
+                                            </div>
+
+                                            <!--scores-->
+                                            <div class="standing-scores">
+                                                <div class="first-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">20</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">80</p>
+                                                    <p class="s2">55</p>
+                                                </div>
+
+                                                <div class="second-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">20</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">80</p>
+                                                    <p class="s2">55</p>
+                                                </div>
+                                            </div>
+
+                                            <!--livestream | lineup-->
+                                            <div class="standing-list-btn">
+                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                </div>
+
+                                <!--ADD ANOTHER DROPDOWN BELOW-->
+
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
 

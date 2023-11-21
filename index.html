@@ -54,7 +54,7 @@
         <!-- M E N U-->
         <div class="container navigation">
             <a href="/pages/favorites.html" class="navigation-links"><span class="material-icons">star</span><p>Favorites</p></a>
-            <a href="/pages/football.html" class="navigation-links"><span class="material-icons">star</span><p>Football</p></a>
+            <a href="/pages/football.html" class="navigation-links"><span class="material-icons">sports_soccer</span><p>Football</p></a>
             <a href="/index.html" class="navigation-links active-link"><span class="material-icons">sports_basketball</span><p>Basketball</p></a>
             <a href="/pages/volleyball.html" class="navigation-links"><span class="material-icons">sports_volleyball</span><p>Volleyball</p></a>
             <a href="/pages/boxing.html" class="navigation-links"><span class="material-icons">sports_mma</span><p>Boxing</p></a>
@@ -111,11 +111,11 @@
                         <!-- T A B  B A R-->
                         <div class="tab-container">
                             <div class="tab-div">
-                                <button class="tab-btn tab-active">All</button>
-                                <button class="tab-btn">Live</button>
-                                <button class="tab-btn">Odds</button>
-                                <button class="tab-btn">Finished</button>
-                                <button class="tab-btn">Schedule</button>
+                                <button data-set="all" class="tab-btn tab-button">All</button>
+                                <button data-set="live" class="tab-btn tab-button">Live</button>
+                                <button data-set="odds" class="tab-btn tab-button">Odds</button>
+                                <button data-set="finished" class="tab-btn tab-button">Finished</button>
+                                <button data-set="schedule" class="tab-btn tab-button">Schedule</button>
                             </div>
 
                             <!--- D A T E -->
@@ -128,8 +128,8 @@
                             </div>
                         </div>
 
-                        <!-- C O N T E N T  C O N T A I N E R-->
-                        <div class="content-container">
+                        <!--A L L  C O N T E N T  C O N T A I N E R-->
+                        <div id="all" class="tab content-container">
                             <div class="standing-wrapper">
 
                                 <!--DROPDOWN CONTAINER-->
@@ -143,9 +143,9 @@
                                         <!--team name-->
                                         <div class="team-div">
                                             <div class="team-logo">
-                                                <img src="/img/team/black_water.png" alt="team_logo" class="img-fluid">
+                                                <img src="/img/flags/philippines_flag.png" alt="team_logo" class="img-fluid">
                                             </div>
-                                            <p class="team-name">Black Water</p>
+                                            <p class="team-name">Philippines</p>
                                             <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
                                         </div>
 
@@ -221,6 +221,377 @@
                             </div>
                         </div>
 
+                        <!--L I V E  C O N T E N T  C O N T A I N E R-->
+                        <div id="live" class="tab hidden">
+                            <div class="standing-wrapper">
+
+                                <!--DROPDOWN CONTAINER-->
+                                <div class="dropdown-container">
+
+                                    <!--- D R O P D O W N  B U T T O N-->
+                                    <div class="dropdown-btn">
+                                        <!--favorite button-->
+                                        <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                        <!--team name-->
+                                        <div class="team-div">
+                                            <div class="team-logo">
+                                                <img src="/img/flags/philippines_flag.png" alt="team_logo" class="img-fluid">
+                                            </div>
+                                            <p class="team-name">Philippines</p>
+                                            <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                        </div>
+
+                                        <!--standing button-->
+                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                    </div>
+
+                                    <!--NESTED STANDING LIST-->
+                                    <div class="standing-list-box dropdown-standing-content">
+                                        <div class="standing-list">
+                                            <!--favorite button-->
+                                            <div class="standing-favorite">
+                                                <button><i class="fa-regular fa-star"></i></button>
+                                            </div>
+
+                                            <!--quarter-->
+                                            <div class="standing-quarter">
+                                                <p>18:00</p>
+                                            </div>
+
+                                            <!--team-->
+                                            <div class="standing-team">
+
+                                                <div class="first-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/team/beermen.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">Beermen</p>
+                                                </div>
+
+                                                <div class="second-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/team/black_water.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">Black Water</p>
+                                                </div>
+                                            </div>
+
+                                            <!--scores-->
+                                            <div class="standing-scores">
+                                                <div class="first-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">150</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">35</p>
+                                                    <p class="s2">55</p>
+                                                </div>
+
+                                                <div class="second-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">150</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">35</p>
+                                                    <p class="s2">55</p>
+                                                </div>
+                                            </div>
+
+                                            <!--livestream | lineup-->
+                                            <div class="standing-list-btn">
+                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                </div>
+
+                                <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
+                            </div>
+                        </div>
+
+                        <!--O D D S  C O N T E N T  C O N T A I N E R-->
+                        <div id="odds" class="tab hidden">
+                            <div class="standing-wrapper">
+
+                                <!--DROPDOWN CONTAINER-->
+                                <div class="dropdown-container">
+
+                                    <!--- D R O P D O W N  B U T T O N-->
+                                    <div class="dropdown-btn">
+                                        <!--favorite button-->
+                                        <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                        <!--team name-->
+                                        <div class="team-div">
+                                            <div class="team-logo">
+                                                <img src="/img/flags/philippines_flag.png" alt="team_logo" class="img-fluid">
+                                            </div>
+                                            <p class="team-name">Philippines</p>
+                                            <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                        </div>
+
+                                        <!--standing button-->
+                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                    </div>
+
+                                    <!--NESTED STANDING LIST-->
+                                    <div class="standing-list-box dropdown-standing-content">
+                                        <div class="standing-list">
+                                            <!--favorite button-->
+                                            <div class="standing-favorite">
+                                                <button><i class="fa-regular fa-star"></i></button>
+                                            </div>
+
+                                            <!--quarter-->
+                                            <div class="standing-quarter">
+                                                <p>3rd Quarter</p>
+                                            </div>
+
+                                            <!--team-->
+                                            <div class="standing-team">
+
+                                                <div class="first-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/team/bolts.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">Meralco Bolts</p>
+                                                </div>
+
+                                                <div class="second-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/team/converge.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">Converge</p>
+                                                </div>
+                                            </div>
+
+                                            <!--scores-->
+                                            <div class="standing-scores">
+                                                <div class="first-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">89</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">35</p>
+                                                    <p class="s2">55</p>
+                                                </div>
+
+                                                <div class="second-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">89</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">35</p>
+                                                    <p class="s2">55</p>
+                                                </div>
+                                            </div>
+
+                                            <!--livestream | lineup-->
+                                            <div class="standing-list-btn">
+                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                </div>
+
+                                <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
+                            </div>
+                        </div>
+
+                        <!--F I N I S H E D  C O N T E N T  C O N T A I N E R-->
+                        <div id="finished" class="tab hidden">
+                            <div class="standing-wrapper">
+
+                                <!--DROPDOWN CONTAINER-->
+                                <div class="dropdown-container">
+
+                                    <!--- D R O P D O W N  B U T T O N-->
+                                    <div class="dropdown-btn">
+                                        <!--favorite button-->
+                                        <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                        <!--team name-->
+                                        <div class="team-div">
+                                            <div class="team-logo">
+                                                <img src="/img/flags/philippines_flag.png" alt="team_logo" class="img-fluid">
+                                            </div>
+                                            <p class="team-name">Philippines</p>
+                                            <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                        </div>
+
+                                        <!--standing button-->
+                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                    </div>
+
+                                    <!--NESTED STANDING LIST-->
+                                    <div class="standing-list-box dropdown-standing-content">
+                                        <div class="standing-list">
+                                            <!--favorite button-->
+                                            <div class="standing-favorite">
+                                                <button><i class="fa-regular fa-star"></i></button>
+                                            </div>
+
+                                            <!--quarter-->
+                                            <div class="standing-quarter">
+                                                <p>Finished</p>
+                                            </div>
+
+                                            <!--team-->
+                                            <div class="standing-team">
+
+                                                <div class="first-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/team/genebra.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">Genebra San Miguel</p>
+                                                </div>
+
+                                                <div class="second-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/team/magnolia.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">Magnolia Hotshots</p>
+                                                </div>
+                                            </div>
+
+                                            <!--scores-->
+                                            <div class="standing-scores">
+                                                <div class="first-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">89</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">35</p>
+                                                    <p class="s2">75</p>
+                                                </div>
+
+                                                <div class="second-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">89</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">35</p>
+                                                    <p class="s2">75</p>
+                                                </div>
+                                            </div>
+
+                                            <!--livestream | lineup-->
+                                            <div class="standing-list-btn">
+                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                </div>
+
+                                <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
+                            </div>
+                        </div>
+
+                        <!--S C H E D U L E D  C O N T A I N E R-->
+                        <div id="schedule" class="tab hidden">
+                            <div class="standing-wrapper">
+
+                                <!--DROPDOWN CONTAINER-->
+                                <div class="dropdown-container">
+
+                                    <!--- D R O P D O W N  B U T T O N-->
+                                    <div class="dropdown-btn">
+                                        <!--favorite button-->
+                                        <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                        <!--team name-->
+                                        <div class="team-div">
+                                            <div class="team-logo">
+                                                <img src="/img/flags/philippines_flag.png" alt="team_logo" class="img-fluid">
+                                            </div>
+                                            <p class="team-name">Philippines</p>
+                                            <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                        </div>
+
+                                        <!--standing button-->
+                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                    </div>
+
+                                    <!--NESTED STANDING LIST-->
+                                    <div class="standing-list-box dropdown-standing-content">
+                                        <div class="standing-list">
+                                            <!--favorite button-->
+                                            <div class="standing-favorite">
+                                                <button><i class="fa-regular fa-star"></i></button>
+                                            </div>
+
+                                            <!--quarter-->
+                                            <div class="standing-quarter">
+                                                <p>16:00</p>
+                                            </div>
+
+                                            <!--team-->
+                                            <div class="standing-team">
+
+                                                <div class="first-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/team/north_port.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">North Port Batang Pier</p>
+                                                </div>
+
+                                                <div class="second-team">
+                                                    <div class="team-logo">
+                                                        <img src="/img/team/phoenix.png" alt="team_logo" class="img-fluid">
+                                                    </div>
+                                                    <p class="team-name">Phoenix</p>
+                                                </div>
+                                            </div>
+
+                                            <!--scores-->
+                                            <div class="standing-scores">
+                                                <div class="first-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">89</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">76</p>
+                                                    <p class="s2">55</p>
+                                                </div>
+
+                                                <div class="second-team-scores">
+                                                    <p>78</p>
+                                                    <p class="s2">89</p>
+                                                    <p class="s2">25</p>
+                                                    <p class="s2">76</p>
+                                                    <p class="s2">55</p>
+                                                </div>
+                                            </div>
+
+                                            <!--livestream | lineup-->
+                                            <div class="standing-list-btn">
+                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                </div>
+
+                                <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
+                            </div>
+                        </div>
                     </div>
                 </div>
 

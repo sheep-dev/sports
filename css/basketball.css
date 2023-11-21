@@ -161,6 +161,10 @@
     outline: none;
 }
 
+.header-bottom .tab-btn:hover {
+    color: var(--secondary-txtColor);
+}
+
 .header-bottom .header-tab-active {
     color: var(--bgRed);
     font-weight: 600;
