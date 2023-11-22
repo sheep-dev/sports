@@ -45,7 +45,7 @@
 }
 
 .standing-form-content-wrapper .standing-form-content-container {
-    background-color: var(--primary-bgColor);
+    background-color: var(--tertiary-bgColor);
     width: 100%;
 }
 
@@ -56,6 +56,8 @@
     flex-direction: column;
     align-items: center;
     gap: 0.8rem;
+
+    margin-top: 1rem;
 }
 
 .pfl-form-footer .standing-form-footer-top {

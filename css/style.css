@@ -345,7 +345,7 @@ html, body {
 }
 
 .sideleft-top p{
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -392,12 +392,12 @@ html, body {
 }
 
 .sideleft-center .team-pinned-list {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     font-weight: 500;
     color: var(--tertiary-txtColor);
 
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: start;
     gap: 0.5rem;
 
@@ -594,6 +594,10 @@ html, body {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+
+    text-align: center;
+
+    width: 100%;
 }
 
 .date-wrapper #dateDisplay {
@@ -1367,21 +1371,16 @@ html, body {
         font-size: 1.3rem;
     }
 
-    .content-wrapper .tab-container {
-        flex-direction: row;
-    }
-
     .team-div .pin-btn {
         font-size: 1rem;
     }
 
-    .tab-container .date-container {
-        background-color: transparent;
-        width: 15rem;
+    .tab-container .tab-div {
+        padding: 0 1rem;
     }
 
     .date-wrapper #dateDisplay {
-        width: auto;
+        width: 100%;
     }
 
     .dropdown-container .dropdown-btn {
@@ -1403,6 +1402,15 @@ html, body {
 
     .search-wrapper small {
         font-size: 0.8rem;
+    }
+
+    .section .article {
+        padding: 1rem;
+    }
+
+    .article .sideLeft {
+        display: flex;
+        width: 17rem;
     }
 }
 
@@ -1445,10 +1453,6 @@ html, body {
         gap: 2rem;
     }
 
-    .article .sideLeft {
-        width: 17rem;
-    }
-
     .standing-team .team-name {
         width: 30rem;
     }
@@ -1481,6 +1485,16 @@ html, body {
     .standing-list-box .standing-list {
         padding: 0.8rem 0.5rem;
         grid-template-columns: 2rem 1fr 1fr 2fr 1fr;
+    }
+
+     .content-wrapper .tab-container {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .tab-container .date-container {
+        background-color: transparent;
+        width: 40%;
     }
 }
 
@@ -1561,7 +1575,7 @@ html, body {
 
     .tab-container .date-container {
         background-color: var(--tab-bgColor);
-        width: 15rem;
+        width: 18rem;
         padding: 0.8rem;
         border-radius: 5px;
     }

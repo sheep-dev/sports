@@ -528,16 +528,16 @@
                         <!-- T A B  B A R-->
                         <div class="tab-container pfl-tab-container">
                             <div class="tab-div">
-                                <button class="tab-btn tab-active">Standings</button>
-                                <button class="tab-btn">Form</button>
-                                <button class="tab-btn">Over/Under</button>
-                                <button class="tab-btn">HT/FT</button>
-                                <button class="tab-btn">Top Scorers</button>
+                                <button data-set="standing-form" class="tab-btn nested-tab-button tab-active">Standings</button>
+                                <button data-set="form" class="tab-btn nested-tab-button">Form</button>
+                                <button data-set="overUnder" class="tab-btn nested-tab-button">Over/Under</button>
+                                <button data-set="ht-ft" class="tab-btn nested-tab-button">HT/FT</button>
+                                <button data-set="top-scorers" class="tab-btn nested-tab-button">Top Scorers</button>
                             </div>
                         </div>
 
                         <!-- C O N T E N T  C O N T A I N E R-->
-                        <div class="standing-form-content-container">
+                        <div id="standing-form" class="nested-tab standing-form-content-container">
                             <div class="standing-form-content-container-tab-wrapper">
                                 <div class="tab-container-wrapper">
                                     <div class="tab-container">
@@ -608,36 +608,410 @@
                                 </div>
 
                             </div>
-                        </div>
 
-                        <!-- F O O T E R-->
-                        <div class="standing-form-footer pfl-form-footer">
-                            <div class="standing-form-footer-top">
-                                <div class="pfl-form-footer-top">
-                                    <div class="square"></div>
-                                    <p>Promotion - AFC Champions League</p>
+                            <!-- F O O T E R-->
+                            <div class="standing-form-footer pfl-form-footer">
+                                <div class="standing-form-footer-top">
+                                    <div class="pfl-form-footer-top">
+                                        <div class="square"></div>
+                                        <p>Promotion - AFC Champions League</p>
+                                    </div>
+
+                                    <div class="pfl-form-footer-top">
+                                        <i class="fa-solid fa-circle-info"></i>
+                                        <p>United City: (Withdraw from the tournament)</p>
+                                    </div>
                                 </div>
 
-                                <div class="pfl-form-footer-top">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <p>United City: (Withdraw from the tournament)</p>
+                                <div class="standing-form-footer-top">
+                                    <div class="pfl-form-footer-top">
+                                        <div class="square square-red"></div>
+                                        <p>Promotion - AFC Cup</p>
+                                    </div>
+                                    <div class="pfl-form-footer-top">
+                                        <i class="fa-solid fa-circle-info"></i>
+                                        <p>United City: (Withdraw from the tournament)</p>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="standing-form-footer-top">
-                                <div class="pfl-form-footer-top">
-                                    <div class="square square-red"></div>
-                                    <p>Promotion - AFC Cup</p>
+                        <!-- F O R M  C O N T E N T  C O N T A I N E R-->
+                        <div id="form" class="nested-tab hidden">
+                            <div class="standing-form-content-container fc-standing-form-content-container">
+                                <div class="standing-form-content-container-tab-wrapper">
+                                    <div class="tab-container-wrapper">
+                                        <div class="tab-container">
+                                            <button class="tab-btn standing-form-tab-active">Overall</button>
+                                            <button class="tab-btn">Home</button>
+                                            <button class="tab-btn">Away</button>
+                                        </div>
+        
+                                        <div class="tab-container-btn">
+                                            <i class="fa-solid fa-bars "></i>
+                                            <i class="fa-solid fa-list"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-container-wrapper">
+                                        <div class="tab-container">
+                                            <button class="tab-btn standing-form-tab-active">5</button>
+                                            <button class="tab-btn">10</button>
+                                            <button class="tab-btn">15</button>
+                                            <button class="tab-btn">20</button>
+                                            <button class="tab-btn">25</button>
+                                        </div>
+                                    </div>
+    
+                                    <!-----T A B L E-->
+                                    <div class="standing-form-tab-content">
+                                       <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>TEAM</th>
+                                                    <th>MP</th>
+                                                    <th>W</th>
+                                                    <th>L</th>
+                                                    <th>TP</th>
+                                                    <th>PTS</th>
+                                                    <th>FORM</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1.</td>
+                                                    <td>
+                                                        <div class="td-wrapper">
+                                                            <div class="td-team-img">
+                                                                <img src="/img/football/Azkals_Development_Team_crest.png" alt="pba_logo" class="img-fluid">
+                                                            </div>
+                                                            <p class="team-name">Azkal</p>
+                                                        </div>
+                                                    </td>
+                                                    <td>180</td>
+                                                    <td>150</td>
+                                                    <td>300</td>
+                                                    <td>1818:1652</td>
+                                                    <td>350</td>
+                                                    <td>
+                                                        <div class="table-form-grid">
+                                                            <div class="box box-green">
+                                                                W
+                                                            </div>
+                                                            <div class="box box-red">
+                                                                L
+                                                            </div>
+                                                            <div class="box box-red">
+                                                                L
+                                                            </div>
+                                                            <div class="box box-green">
+                                                                W
+                                                            </div>
+                                                            <div class="box box-green">
+                                                                W
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                       </table>
+                                    </div>
                                 </div>
-                                <div class="pfl-form-footer-top">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <p>United City: (Withdraw from the tournament)</p>
+                                
+                            </div>
+                        </div>
+
+
+                        <!-- O V E R  U N D E R  C O N T E N T  C O N T A I N E R-->
+                        <div id="overUnder" class="nested-tab hidden">
+                            <div class="standing-form-content-container fc-standing-form-content-container">
+                                <div class="standing-form-content-container-tab-wrapper">
+                                    <div class="tab-container-wrapper">
+                                        <div class="tab-container">
+                                            <button class="tab-btn standing-form-tab-active">Overall</button>
+                                            <button class="tab-btn">Home</button>
+                                            <button class="tab-btn">Away</button>
+                                        </div>
+        
+                                        <div class="tab-container-btn">
+                                            <i class="fa-solid fa-bars "></i>
+                                            <i class="fa-solid fa-list"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-container-wrapper">
+                                        <div class="tab-container">
+                                            <button class="tab-btn standing-form-tab-active">5</button>
+                                            <button class="tab-btn">0.5</button>
+                                            <button class="tab-btn">1.5</button>
+                                            <button class="tab-btn">2.5</button>
+                                            <button class="tab-btn">3.5</button>
+                                            <button class="tab-btn">4.5</button>
+                                            <button class="tab-btn">5.5</button>
+                                            <button class="tab-btn">6.5</button>
+                                        </div>
+                                    </div>
+    
+                                    <!-----T A B L E-->
+                                    <div class="standing-form-tab-content">
+                                       <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>TEAM</th>
+                                                    <th>MP</th>
+                                                    <th>W</th>
+                                                    <th>L</th>
+                                                    <th>TP</th>
+                                                    <th>PTS</th>
+                                                    <th>FORM</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1.</td>
+                                                    <td>
+                                                        <div class="td-wrapper">
+                                                            <div class="td-team-img">
+                                                                <img src="/img/football/United_City_FC_logo.svg.png" alt="pba_logo" class="img-fluid">
+                                                            </div>
+                                                            <p class="team-name">United City</p>
+                                                        </div>
+                                                    </td>
+                                                    <td>180</td>
+                                                    <td>150</td>
+                                                    <td>300</td>
+                                                    <td>1818:1652</td>
+                                                    <td>350</td>
+                                                    <td>
+                                                        <div class="table-form-grid">
+                                                            <div class="box box-green">
+                                                                W
+                                                            </div>
+                                                            <div class="box box-red">
+                                                                L
+                                                            </div>
+                                                            <div class="box box-red">
+                                                                L
+                                                            </div>
+                                                            <div class="box box-green">
+                                                                W
+                                                            </div>
+                                                            <div class="box box-green">
+                                                                W
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                       </table>
+                                    </div>
                                 </div>
+                            </div>
+                        </div>
+
+
+                        <!--HT - FT  C O N T E N T  C O N T A I N E R-->
+                        <div id="ht-ft" class="nested-tab hidden">
+                            <div class="standing-form-content-container-tab-wrapper">
+                                <div class="tab-container-wrapper">
+                                    <div class="tab-container">
+                                        <button class="tab-btn standing-form-tab-active">Overall</button>
+                                        <button class="tab-btn">Home</button>
+                                        <button class="tab-btn">Away</button>
+                                    </div>
+    
+                                    <div class="tab-container-btn">
+                                        <i class="fa-solid fa-bars "></i>
+                                        <i class="fa-solid fa-list"></i>
+                                    </div>
+                                </div>
+
+                                <!-----T A B L E-->
+                                <div class="pfl-standing-form-tab-content">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>TEAM</th>
+                                                <th>MP</th>
+                                                <th>W</th>
+                                                <th>D</th>
+                                                <th>L</th>
+                                                <th>G</th>
+                                                <th>GD</th>
+                                                <th>PTS</th>
+                                                <th>FORM</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><p>12.</p></td>
+                                                <td>
+                                                    <div class="td-wrapper">
+                                                        <div class="td-team-img">
+                                                            <img src="/img/football/Kaya_Iloilo_crest.png" alt="pba_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Kaya</p>
+                                                    </div>
+                                                </td>
+                                                <td>180</td>
+                                                <td>10</td>
+                                                <td>150</td>
+                                                <td>300</td>
+                                                <td>18:22</td>
+                                                <td>350</td>
+                                                <td>350</td>
+                                                <td>
+                                                    <div class="table-form-grid">
+                                                        <div class="box box-green">
+                                                            W
+                                                        </div>
+                                                        <div class="box box-red">
+                                                            L
+                                                        </div>
+                                                        <div class="box box-orange">
+                                                            D
+                                                        </div>
+                                                        <div class="box box-green">
+                                                            W
+                                                        </div>
+                                                        <div class="box box-green">
+                                                            W
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- F O O T E R-->
+                                <div class="standing-form-footer pfl-form-footer">
+                                    <div class="standing-form-footer-top">
+                                        <div class="pfl-form-footer-top">
+                                            <div class="square"></div>
+                                            <p>Promotion - AFC Champions League</p>
+                                        </div>
+
+                                        <div class="pfl-form-footer-top">
+                                            <i class="fa-solid fa-circle-info"></i>
+                                            <p>United City: (Withdraw from the tournament)</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="standing-form-footer-top">
+                                        <div class="pfl-form-footer-top">
+                                            <div class="square square-red"></div>
+                                            <p>Promotion - AFC Cup</p>
+                                        </div>
+                                        <div class="pfl-form-footer-top">
+                                            <i class="fa-solid fa-circle-info"></i>
+                                            <p>United City: (Withdraw from the tournament)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--T O P  S C O R E R S  C O N T E N T  C O N T A I N E R-->
+                        <div id="top-scorers" class="nested-tab hidden standing-form-content-container">
+                            <div class="standing-form-content-container-tab-wrapper">
+                                <div class="tab-container-wrapper tnp-tab-container-wrapper">
+                                    <div class="tab-container tnp-container">
+                                        <select name="" id="" class="tnp-btn">
+                                            <option value="">Team<i class="fa-solid fa-chevron-down"></i></option>
+                                            <option value="">Azkals<i class="fa-solid fa-chevron-down"></i></option>
+                                            <option value="">Cebu FC<i class="fa-solid fa-chevron-down"></i></option>
+                                            <option value="">Kaya<i class="fa-solid fa-chevron-down"></i></option>
+                                            <option value="">Maharlika <i class="fa-solid fa-chevron-down"></i></option>
+                                            <option value="">Mendiola FC 1991<i class="fa-solid fa-chevron-down"></i></option>
+                                            <option value="">Stallion<i class="fa-solid fa-chevron-down"></i></option>
+                                            <option value="">United City<i class="fa-solid fa-chevron-down"></i></option>
+                                        </select>
+                                        <select name="" id="" class="tnp-btn">
+                                            <option value="">Nationality<i class="fa-solid fa-chevron-down"></i></option>
+                                            <option value="">Philippines<i class="fa-solid fa-chevron-down"></i></option>
+                                        </select>
+                                        <select name="" id="" class="tnp-btn">
+                                            <option value="">Position<i class="fa-solid fa-chevron-down"></i></option>
+                                            <option value="">Defender<i class="fa-solid fa-chevron-down"></i></option>
+                                            <option value="">Midfielder<i class="fa-solid fa-chevron-down"></i></option>
+                                            <option value="">Forward<i class="fa-solid fa-chevron-down"></i></option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-----T A B L E-->
+                                <div class="pfl-standing-form-tab-content">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>TEAM</th>
+                                                <th>MP</th>
+                                                <th>W</th>
+                                                <th>D</th>
+                                                <th>L</th>
+                                                <th>G</th>
+                                                <th>GD</th>
+                                                <th>PTS</th>
+                                                <th>FORM</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><p>12.</p></td>
+                                                <td>
+                                                    <div class="td-wrapper">
+                                                        <div class="td-team-img">
+                                                            <img src="/img/football/Philippine_Air_Force_F.C._2023.png" alt="pba_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Philippine Air Force</p>
+                                                    </div>
+                                                </td>
+                                                <td>180</td>
+                                                <td>10</td>
+                                                <td>150</td>
+                                                <td>300</td>
+                                                <td>18:22</td>
+                                                <td>350</td>
+                                                <td>350</td>
+                                                <td>
+                                                    <div class="table-form-grid">
+                                                        <div class="box box-green">
+                                                            W
+                                                        </div>
+                                                        <div class="box box-red">
+                                                            L
+                                                        </div>
+                                                        <div class="box box-orange">
+                                                            D
+                                                        </div>
+                                                        <div class="box box-green">
+                                                            W
+                                                        </div>
+                                                        <div class="box box-green">
+                                                            W
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <!--show more btn-->
+                            <div class="show-more-wrapper">
+                                <p style="color: white; text-align: center;">Show more</p>
                             </div>
                         </div>
 
                     </div>
-
                 </div>
 
 
