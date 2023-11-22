@@ -81,6 +81,18 @@
     padding: 0.4rem 0.5rem;
     border-radius: 5px;
     color: var(--secondary-txtColor);
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.favorites-setting-btn p {
+    display: none;
+    align-items: center;
+    gap: 0.3rem;
+
+    font-size: 1rem;
 }
 
 .favorites-content-wrapper .added-favorites-team {
@@ -211,6 +223,12 @@
 
     .slider-menu-div p{
         font-size: 0.85rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .favorites-setting-btn p { 
+        display: flex;
     }
 }
 

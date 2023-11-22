@@ -123,14 +123,15 @@
 
                             <div class="favorites-tab-wrapper">
                                 <div class="tab-div favorites-tab-div">
-                                    <button class="tab-btn tab-active">Timeline</button>
-                                    <button class="tab-btn">Yesterday</button>
-                                    <button class="tab-btn">Live</button>
+                                    <button data-set="timeline" class="tab-btn tab-button tab-active">Timeline</button>
+                                    <button data-set="yesterday" class="tab-btn tab-button">Yesterday</button>
+                                    <button data-set="live" class="tab-btn tab-button">Live</button>
                                 </div>
 
                                 <div class="slider-menu-wrapper">
                                     <button class="favorites-setting-btn toggle-btn" onclick="toggleDropdown('slider-menu')">
                                         <i class="fa-solid fa-sliders"></i>
+                                        <p>Settings <i class="fa-solid fa-chevron-down"></i></p>
                                     </button>
                                     <div class="dropdown-item slider-menu-content" id="slider-menu">
                                         <div class="slider-menu-div">
@@ -151,7 +152,7 @@
                         </div>
 
                         <!-- A D D E D  F A V O R I T E  T E A M S-->
-                        <div class="added-favorites-team">
+                        <div id="timeline" class="tab added-favorites-team">
                             <div class="null-container">
                                 <p class="title">Add your favorite teams</p>
                                 <p class="subtitle">Have all matches and important news about your favorite teams in one place.</p>
@@ -166,6 +167,26 @@
 
                             <div>
 
+                            </div>
+                        </div>
+
+
+                        <!-- Y E S T E R D A Y-->
+                        <div id="yesterday" class="tab hidden">
+                            <div class="added-favorites-team">
+                                <div class="null-container">
+                                    <p class="title" style="font-weight: 600;">No game was played yesterday</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- L I V E-->
+                        <div id="live" class="tab hidden">
+                            <div class="added-favorites-team">
+                                <div class="null-container">
+                                    <p class="title" style="font-weight: 600;">No match is being played right now</p>
+                                </div>
                             </div>
                         </div>
 
