@@ -102,7 +102,7 @@
                             <div class="notif-img">
                                 <img src="/img/flags/philippines.png" alt="flags_img" class="img-fluid">
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!</p>
+                            <p>Sundan ng live and score sa Filbet.com</p>
                         </div>
                         <button class="notif-btn" id="closeButton" onclick="closeParagraph()"><i class="fa-solid fa-xmark"></i></button>
                     </div>
@@ -535,12 +535,13 @@
                         <!-- T A B  B A R-->
                         <div class="tab-container pc-tab-container">
                             <div class="tab-div">
-                                <button class="tab-btn tab-active">Main</button>
-                                <button class="tab-btn">Play Offs</button>
+                                <button data-set="main" class="tab-btn nested-tab-button tab-active">Main</button>
+                                <button data-set="playOff" class="tab-btn nested-tab-button">Play Offs</button>
                             </div>
                         </div>
 
-                        <div class="standing-form-content-wrapper-nested-tab pc-nested-tab">
+                        <!-- M A I N-->
+                        <div id="main" class="nested-tab standing-form-content-wrapper-nested-tab pc-nested-tab">
                             <div class="tab-container">
                                 <div class="tab-div">
                                     <button class="tab-btn tab-active">Standings</button>
@@ -628,6 +629,54 @@
                                     <p>Promotion - Fiesta Conference (Play offs)</p>
                                 </div>
                                 <p>If teams finish on equal points at the end of the season, score difference will be the tie-breaker.</p>
+                            </div>
+                        </div>
+
+
+                        <!-- ******* -->
+
+
+                        <!-- P L A Y  O F F S-->
+                        <div id="playOff" class="nested-tab hidden">
+                            <div class="standing-form-content-wrapper-nested-tab pc-nested-tab">
+                                <div class="tab-container">
+                                    <div class="tab-div">
+                                        <button class="tab-btn tab-active">Draw</button>
+                                    </div>
+                                </div>
+        
+                                <!-- C O N T E N T  C O N T A I N E R-->
+                                <div class="standing-form-content-container basketballs-standing-form-content-container">
+                                    <div class="standing-form-content-container-tab-wrapper basketballs-match-grid-wrapper">
+
+                                        <div class="basketballs-match-top">
+                                            <div class="match-grid">
+                                                <div class="match-grid-title">
+                                                    Quarter Finals
+                                                </div>
+                                                <div class="match-grid-title">
+                                                    Semi Finals
+                                                </div>
+                                                <div class="match-grid-title">
+                                                    Final
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="match-grid">
+                                            <div>
+                                                1
+                                            </div>
+                                            <div>
+                                                2
+                                            </div>
+                                            <div>
+                                                3
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 

@@ -49,12 +49,11 @@ const tabContents = document.querySelectorAll('.tab');
 
 tabButtons.forEach(button => {
   button.addEventListener('click', function() {
-    // Remove the 'active' class from all tab buttons
+
     tabButtons.forEach(btn => {
       btn.classList.remove('tab-active', 'header-tab-active');
     });
 
-    // Add the 'active' class to the clicked tab button
     this.classList.add('tab-active', 'header-tab-active');
 
     const tabId = this.dataset.set;
@@ -65,7 +64,30 @@ tabButtons.forEach(button => {
   });
 });
 
+// MULTIPLE NESTED TABS
+const nestedTabBtn = document.querySelectorAll('.nested-tab-button');
+const nestedTabContent = document.querySelectorAll('.nested-tab');
 
+nestedTabBtn.forEach(buttons => {
+  buttons.addEventListener('click', function() {
+    
+    nestedTabBtn.forEach(btns => {
+      btns.classList.remove('tab-active', 'header-tab-active');
+    })
+
+    this.classList.add('tab-active', 'header-tab-active');
+
+    const tabIds = this.dataset.set;
+    nestedTabContent.forEach(contents => {
+      contents.style.display = 'none';
+    });
+
+    document.getElementById(tabIds).style.display = 'flex';
+  })
+})
+
+
+// MOBILE SLIDER PAGES
 document.addEventListener('DOMContentLoaded', function () {
  
   let currentIndex = 0;
