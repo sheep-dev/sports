@@ -137,249 +137,484 @@
                         </div>
                         <!--bottom-->
                         <div class="header-bottom">
-                            <button class="tab-btn header-tab-active">Summary</button>
-                            <button class="tab-btn">Results</button>
-                            <button class="tab-btn">Fixtures</button>
-                            <button class="tab-btn">Standings</button>
-                            <button class="tab-btn">Archive</button>
+                            <button data-set="summary" class="tab-btn tab-button header-tab-active">Summary</button>
+                            <button data-set="results" class="tab-btn tab-button">Results</button>
+                            <button data-set="fixtures" class="tab-btn tab-button">Fixtures</button>
+                            <button data-set="standings" class="tab-btn tab-button">Standings</button>
+                            <button data-set="archive" class="tab-btn tab-button">Archive</button>
                         </div>
                     </div>
 
 
-                    <!--L A T E S T  S C O R E S   C O N T E N T  W R A P P E R-->
-                    <div class="content-wrapper">
-                        <div class="content-wrapper-heading">
-                            <p>Latest Scores</p>
-                        </div>
-
-                        <!-- C O N T E N T  C O N T A I N E R-->
-                        <div class="content-container basketball-content-container">
-                            <div class="standing-wrapper">
-
-                                <!--DROPDOWN CONTAINER-->
-                                <div class="dropdown-container">
-
-                                    <!--- D R O P D O W N  B U T T O N-->
-                                    <div class="dropdown-btn basketball-dropdown-btn">
-                                        <!--favorite button-->
-                                        <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
-
-                                        <!--team name-->
-                                        <div class="team-div">
-                                            <div class="team-logo">
-                                                <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
-                                            </div>
-                                            <div class="basketball-dropdown-title">
-                                                <p class="cc">Copa Paulino Alacantara - Play Offs</p>
-                                                <small class="cc">Philippines</small>
-                                            </div>
-                                            <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
-                                        </div>
-
-                                        <!--standing button-->
-                                        <div class="standing-btn-wrapper">
-                                            <button class="standing-btn standing-btn-desktop">Standings</button>
-                                            <button class="standing-btn-mobile"><i class="fa-solid fa-list"></i></button>
-                                        </div>
-                                    </div>
-
-                                    <!--NESTED STANDING LIST-->
-                                    <div class="standing-list-box dropdown-standing-content">
-                                        <div class="standing-list basketball-standing-list">
-                                            <!--favorite button-->
-                                            <div class="standing-favorite">
-                                                <button><i class="fa-regular fa-star"></i></button>
-                                            </div>
-
-                                            <!--quarter-->
-                                            <div class="standing-quarter basketball-standing-quarter">
-                                                <p class="s1">18.08</p>
-                                                <p class="s2">19.08</p>
-                                            </div>
-
-                                            <!--team-->
-                                            <div class="standing-team basketball-standing-team">
-
-                                                <div class="first-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/football/Maharlika_FC_PFL_crest.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">Maharlika</p>
-                                                </div>
-
-                                                <div class="second-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/football/Stallion_Laguna_FC_Logo.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">Stallion</p>
-                                                </div>
-                                            </div>
-
-                                            <!--scores-->
-                                            <div class="standing-scores basketball-standing-scores">
-                                                <div class="first-team-scores">
-                                                    <p class="s1">78</p>
-                                                    <p class="s2">89</p>
-                                                    <p class="s2">25</p>
-                                                    <p class="s2">35</p>
-                                                    <p class="s2">55</p>
-                                                </div>
-
-                                                <div class="second-team-scores">
-                                                    <p class="s1">78</p>
-                                                    <p class="s2">89</p>
-                                                    <p class="s2">25</p>
-                                                    <p class="s2">35</p>
-                                                    <p class="s2">55</p>
-                                                </div>
-                                            </div>
-
-                                            <!--livestream | lineup-->
-                                            <div class="standing-list-btn basketball-standing-list-btn">
-                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
-                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--ADD ANOTHER STANDING LIST BELOW-->
-                                    
-                                </div>
-
-                                <!--ADD ANOTHER DROPDOWN BELOW-->
-
-
+                    <div id="summary" class="tab content-tab-wrapper">
+                        <!--L A T E S T  S C O R E S   C O N T E N T  W R A P P E R-->
+                        <div class="content-wrapper">
+                            <div class="content-wrapper-heading">
+                                <p>Latest Scores</p>
                             </div>
+
+                            <!-- C O N T E N T  C O N T A I N E R-->
+                            <div class="content-container basketball-content-container">
+                                <div class="standing-wrapper">
+
+                                    <!--DROPDOWN CONTAINER-->
+                                    <div class="dropdown-container">
+
+                                        <!--- D R O P D O W N  B U T T O N-->
+                                        <div class="dropdown-btn basketball-dropdown-btn">
+                                            <!--favorite button-->
+                                            <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                            <!--team name-->
+                                            <div class="team-div">
+                                                <div class="team-logo">
+                                                    <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
+                                                </div>
+                                                <div class="basketball-dropdown-title">
+                                                    <p class="cc">Copa Paulino Alacantara - Play Offs</p>
+                                                    <small class="cc">Philippines</small>
+                                                </div>
+                                                <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                            </div>
+
+                                            <!--standing button-->
+                                            <div class="standing-btn-wrapper">
+                                                <button class="standing-btn standing-btn-desktop">Standings</button>
+                                                <button class="standing-btn-mobile"><i class="fa-solid fa-list"></i></button>
+                                            </div>
+                                        </div>
+
+                                        <!--NESTED STANDING LIST-->
+                                        <div class="standing-list-box dropdown-standing-content">
+                                            <div class="standing-list basketball-standing-list">
+                                                <!--favorite button-->
+                                                <div class="standing-favorite">
+                                                    <button><i class="fa-regular fa-star"></i></button>
+                                                </div>
+
+                                                <!--quarter-->
+                                                <div class="standing-quarter basketball-standing-quarter">
+                                                    <p class="s1">18.08</p>
+                                                    <p class="s2">19.08</p>
+                                                </div>
+
+                                                <!--team-->
+                                                <div class="standing-team basketball-standing-team">
+
+                                                    <div class="first-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/football/Maharlika_FC_PFL_crest.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Maharlika</p>
+                                                    </div>
+
+                                                    <div class="second-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/football/Stallion_Laguna_FC_Logo.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Stallion</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--scores-->
+                                                <div class="standing-scores basketball-standing-scores">
+                                                    <div class="first-team-scores">
+                                                        <p class="s1">6</p>
+                                                        <p class="s2">3</p>
+                                                        <p class="s2">1</p>
+                                                        <p class="s2">4</p>
+                                                        <p class="s2">2</p>
+                                                    </div>
+
+                                                    <div class="second-team-scores">
+                                                        <p class="s1">6</p>
+                                                        <p class="s2">3</p>
+                                                        <p class="s2">1</p>
+                                                        <p class="s2">4</p>
+                                                        <p class="s2">2</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--livestream | lineup-->
+                                                <div class="standing-list-btn basketball-standing-list-btn">
+                                                    <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                    <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                    </div>
+
+                                    <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
+                                </div>
+                            </div>
+
+                            <!--show more btn-->
+                            <div class="show-more-wrapper">
+                                <p style="color: white;">Show more matches</p>
+                            </div>
+
                         </div>
 
-                        <!--show more btn-->
-                        <div class="show-more-wrapper">
-                            <p style="color: white;">Show more matches</p>
+
+                        <!-----  *****  ----->
+
+                        <!--S C H E D U L E D   C O N T E N T  W R A P P E R-->
+                        <div class="content-wrapper">
+                            <div class="content-wrapper-heading">
+                                <p>Scheduled</p>
+                            </div>
+
+                            <!-- C O N T E N T  C O N T A I N E R-->
+                            <div class="content-container basketball-content-container">
+                                <div class="standing-wrapper">
+
+                                    <!--DROPDOWN CONTAINER-->
+                                    <div class="dropdown-container">
+
+                                        <!--- D R O P D O W N  B U T T O N-->
+                                        <div class="dropdown-btn basketball-dropdown-btn">
+                                            <!--favorite button-->
+                                            <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                            <!--team name-->
+                                            <div class="team-div">
+                                                <div class="team-logo">
+                                                    <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
+                                                </div>
+                                                <div class="basketball-dropdown-title">
+                                                    <p class="cc">Copa Paulino Alacantara - Play Offs</p>
+                                                    <small class="cc">Philippines</small>
+                                                </div>
+                                                <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                            </div>
+
+                                            <!--standing button-->
+                                            <div class="standing-btn-wrapper">
+                                                <button class="standing-btn standing-btn-desktop">Standings</button>
+                                                <button class="standing-btn-mobile"><i class="fa-solid fa-list"></i></button>
+                                            </div>
+                                        </div>
+
+                                        <!--NESTED STANDING LIST-->
+                                        <div class="standing-list-box dropdown-standing-content">
+                                            <div class="standing-list basketball-standing-list">
+                                                <!--favorite button-->
+                                                <div class="standing-favorite">
+                                                    <button><i class="fa-regular fa-star"></i></button>
+                                                </div>
+
+                                                <!--quarter-->
+                                                <div class="standing-quarter basketball-standing-quarter">
+                                                    <p class="s1">18.08</p>
+                                                    <p class="s2">19.08</p>
+                                                </div>
+
+                                                <!--team-->
+                                                <div class="standing-team basketball-standing-team">
+
+                                                    <div class="first-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/football/Maharlika_FC_PFL_crest.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Maharlika</p>
+                                                    </div>
+
+                                                    <div class="second-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/football/Stallion_Laguna_FC_Logo.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Stallion</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--scores-->
+                                                <div class="standing-scores basketball-standing-scores">
+                                                    <div class="first-team-scores">
+                                                        <p class="s1">4</p>
+                                                        <p class="s2">2</p>
+                                                        <p class="s2">1</p>
+                                                        <p class="s2">6</p>
+                                                        <p class="s2">5</p>
+                                                    </div>
+
+                                                    <div class="second-team-scores">
+                                                        <p class="s1">4</p>
+                                                        <p class="s2">2</p>
+                                                        <p class="s2">1</p>
+                                                        <p class="s2">6</p>
+                                                        <p class="s2">5</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--livestream | lineup-->
+                                                <div class="standing-list-btn basketball-standing-list-btn">
+                                                    <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                    <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                    </div>
+
+                                    <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
+                                </div>
+                            </div>
+
+                            <!--show more btn-->
+                            <div class="show-more-wrapper">
+                                <p style="color: white;">Show more matches</p>
+                            </div>
+
                         </div>
 
                     </div>
+
 
                     <!-----  *****  ----->
 
 
-                    <!--S C H E D U L E D   C O N T E N T  W R A P P E R-->
-                    <div class="content-wrapper">
-                        <div class="content-wrapper-heading">
-                            <p>Scheduled</p>
-                        </div>
+                    <!--R E S U L T S  S C O R E S   C O N T E N T  W R A P P E R-->
+                    <div id="results" class="tab hidden">
+                        
+                        <div class="content-wrapper">
 
-                        <!-- C O N T E N T  C O N T A I N E R-->
-                        <div class="content-container basketball-content-container">
-                            <div class="standing-wrapper">
+                            <!-- C O N T E N T  C O N T A I N E R-->
+                            <div class="content-container basketball-content-container">
+                                <div class="standing-wrapper">
 
-                                <!--DROPDOWN CONTAINER-->
-                                <div class="dropdown-container">
+                                    <!--DROPDOWN CONTAINER-->
+                                    <div class="dropdown-container">
 
-                                    <!--- D R O P D O W N  B U T T O N-->
-                                    <div class="dropdown-btn basketball-dropdown-btn">
-                                        <!--favorite button-->
-                                        <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
-
-                                        <!--team name-->
-                                        <div class="team-div">
-                                            <div class="team-logo">
-                                                <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
-                                            </div>
-                                            <div class="basketball-dropdown-title">
-                                                <p class="cc">Copa Paulino Alacantara - Play Offs</p>
-                                                <small class="cc">Philippines</small>
-                                            </div>
-                                            <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
-                                        </div>
-
-                                        <!--standing button-->
-                                        <div class="standing-btn-wrapper">
-                                            <button class="standing-btn standing-btn-desktop">Standings</button>
-                                            <button class="standing-btn-mobile"><i class="fa-solid fa-list"></i></button>
-                                        </div>
-                                    </div>
-
-                                    <!--NESTED STANDING LIST-->
-                                    <div class="standing-list-box dropdown-standing-content">
-                                        <div class="standing-list basketball-standing-list">
+                                        <!--- D R O P D O W N  B U T T O N-->
+                                        <div class="dropdown-btn basketball-dropdown-btn">
                                             <!--favorite button-->
-                                            <div class="standing-favorite">
-                                                <button><i class="fa-regular fa-star"></i></button>
+                                            <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                            <!--team name-->
+                                            <div class="team-div">
+                                                <div class="team-logo">
+                                                    <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
+                                                </div>
+                                                <div class="basketball-dropdown-title">
+                                                    <p class="cc">Copa Paulino Alacantara - Play Offs</p>
+                                                    <small class="cc">Philippines:</small>
+                                                </div>
+                                                <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
                                             </div>
 
-                                            <!--quarter-->
-                                            <div class="standing-quarter basketball-standing-quarter">
-                                                <p class="s1">18.08</p>
-                                                <p class="s2">19.08</p>
-                                            </div>
-
-                                            <!--team-->
-                                            <div class="standing-team basketball-standing-team">
-
-                                                <div class="first-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/football/Maharlika_FC_PFL_crest.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">Maharlika</p>
-                                                </div>
-
-                                                <div class="second-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/football/Stallion_Laguna_FC_Logo.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">Stallion</p>
-                                                </div>
-                                            </div>
-
-                                            <!--scores-->
-                                            <div class="standing-scores basketball-standing-scores">
-                                                <div class="first-team-scores">
-                                                    <p class="s1">78</p>
-                                                    <p class="s2">89</p>
-                                                    <p class="s2">25</p>
-                                                    <p class="s2">35</p>
-                                                    <p class="s2">55</p>
-                                                </div>
-
-                                                <div class="second-team-scores">
-                                                    <p class="s1">78</p>
-                                                    <p class="s2">89</p>
-                                                    <p class="s2">25</p>
-                                                    <p class="s2">35</p>
-                                                    <p class="s2">55</p>
-                                                </div>
-                                            </div>
-
-                                            <!--livestream | lineup-->
-                                            <div class="standing-list-btn basketball-standing-list-btn">
-                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
-                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                            <!--standing button-->
+                                            <div class="standing-btn-wrapper">
+                                                <button class="standing-btn standing-btn-desktop">Standings</button>
+                                                <button class="standing-btn-mobile"><i class="fa-solid fa-list"></i></button>
                                             </div>
                                         </div>
+
+                                        <!--NESTED STANDING LIST-->
+                                        <div class="standing-list-box dropdown-standing-content">
+                                            <div class="standing-list basketball-standing-list">
+                                                <!--favorite button-->
+                                                <div class="standing-favorite">
+                                                    <button><i class="fa-regular fa-star"></i></button>
+                                                </div>
+
+                                                <!--quarter-->
+                                                <div class="standing-quarter basketball-standing-quarter">
+                                                    <p class="s1">23.08</p>
+                                                    <p class="s2">10.08</p>
+                                                </div>
+
+                                                <!--team-->
+                                                <div class="standing-team basketball-standing-team">
+
+                                                    <div class="first-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/football/The_official_emblem_of_green_archers_united.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Green Archers United</p>
+                                                    </div>
+
+                                                    <div class="second-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/football/Dynamic_Herb_Cebu_F.C.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Cebu F.C</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--scores-->
+                                                <div class="standing-scores basketball-standing-scores">
+                                                    <div class="first-team-scores">
+                                                        <p class="s1">1</p>
+                                                        <p class="s2">5</p>
+                                                        <p class="s2">4</p>
+                                                        <p class="s2">2</p>
+                                                        <p class="s2">6</p>
+                                                    </div>
+
+                                                    <div class="second-team-scores">
+                                                        <p class="s1">1</p>
+                                                        <p class="s2">5</p>
+                                                        <p class="s2">4</p>
+                                                        <p class="s2">2</p>
+                                                        <p class="s2">6</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--livestream | lineup-->
+                                                <div class="standing-list-btn basketball-standing-list-btn">
+                                                    <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                    <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
                                     </div>
 
-                                    <!--ADD ANOTHER STANDING LIST BELOW-->
-                                    
+                                    <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
                                 </div>
-
-                                <!--ADD ANOTHER DROPDOWN BELOW-->
-
-
                             </div>
-                        </div>
 
-                        <!--show more btn-->
-                        <div class="show-more-wrapper">
-                            <p style="color: white;">Show more matches</p>
-                        </div>
+                            <!--show more btn-->
+                            <div class="show-more-wrapper">
+                                <p style="color: white;">Show more matches</p>
+                            </div>
 
+                        </div>
+                    </div>
+
+                    <!-----  *****  ----->
+
+                    <!--F I X T U R E S  S C O R E S   C O N T E N T  W R A P P E R-->
+                    <div id="fixtures" class="tab hidden">
+                        
+                        <div class="content-wrapper">
+
+                            <!-- C O N T E N T  C O N T A I N E R-->
+                            <div class="content-container basketball-content-container">
+                                <div class="standing-wrapper">
+
+                                    <!--DROPDOWN CONTAINER-->
+                                    <div class="dropdown-container">
+
+                                        <!--- D R O P D O W N  B U T T O N-->
+                                        <div class="dropdown-btn basketball-dropdown-btn">
+                                            <!--favorite button-->
+                                            <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
+
+                                            <!--team name-->
+                                            <div class="team-div">
+                                                <div class="team-logo">
+                                                    <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
+                                                </div>
+                                                <div class="basketball-dropdown-title">
+                                                    <p class="cc">Copa Paulino Alacantara - Play Offs</p>
+                                                    <small class="cc">Philippines:</small>
+                                                </div>
+                                                <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                            </div>
+
+                                            <!--standing button-->
+                                            <div class="standing-btn-wrapper">
+                                                <button class="standing-btn standing-btn-desktop">Standings</button>
+                                                <button class="standing-btn-mobile"><i class="fa-solid fa-list"></i></button>
+                                            </div>
+                                        </div>
+
+                                        <!--NESTED STANDING LIST-->
+                                        <div class="standing-list-box dropdown-standing-content">
+                                            <div class="standing-list basketball-standing-list">
+                                                <!--favorite button-->
+                                                <div class="standing-favorite">
+                                                    <button><i class="fa-regular fa-star"></i></button>
+                                                </div>
+
+                                                <!--quarter-->
+                                                <div class="standing-quarter basketball-standing-quarter">
+                                                    <p class="s1">03.08</p>
+                                                    <p class="s2">17.08</p>
+                                                </div>
+
+                                                <!--team-->
+                                                <div class="standing-team basketball-standing-team">
+
+                                                    <div class="first-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/football/Ilocos_United_FC_Logo.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Ilocos United</p>
+                                                    </div>
+
+                                                    <div class="second-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/football/Kaya_Iloilo_crest.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Kaya Iloilo Crest</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--scores-->
+                                                <div class="standing-scores basketball-standing-scores">
+                                                    <div class="first-team-scores">
+                                                        <p class="s1">1</p>
+                                                        <p class="s2">5</p>
+                                                        <p class="s2">4</p>
+                                                        <p class="s2">2</p>
+                                                        <p class="s2">3</p>
+                                                    </div>
+
+                                                    <div class="second-team-scores">
+                                                        <p class="s1">1</p>
+                                                        <p class="s2">5</p>
+                                                        <p class="s2">4</p>
+                                                        <p class="s2">2</p>
+                                                        <p class="s2">3</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--livestream | lineup-->
+                                                <div class="standing-list-btn basketball-standing-list-btn">
+                                                    <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                    <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                    </div>
+
+                                    <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
+                                </div>
+                            </div>
+
+                            <!--show more btn-->
+                            <div class="show-more-wrapper">
+                                <p style="color: white;">Show more matches</p>
+                            </div>
+
+                        </div>
                     </div>
 
 
                     <!-----  *****  ----->
 
                     <!--S T A N D I N G  F O R M  C O N T E N T  W R A P P E R-->
-                    <div class="standing-form-content-wrapper cpa-standing-form-content-wrapper">
+                    <div id="standings" class="tab standing-form-content-wrapper cpa-standing-form-content-wrapper">
                         <!-- T A B  B A R-->
                         <div class="tab-container pc-tab-container cpa-tab-container">
                             <div class="tab-div">
@@ -442,6 +677,31 @@
 
                         </div>
 
+                    </div>
+
+                    <!-----  *****  ----->
+
+                    <!--A R C H I V E  C O N T E N T  W R A P P E R-->
+                    <div id="archive" class="tab hidden">
+                        <div class="archive-content-wrapper">
+                            <div class="archive-content-wrapper-title">
+                                <p>season</p>
+                                <p>winner</p>
+                            </div>
+
+                            <div class="archive-div">
+                                <div class="archive-content-wrapper-list">
+                                    <p>Copa Paulino Alacantara 2022</p>
+                                    <div class="archive-content-container">
+                                        <div class="archive-content-container-img">
+                                            <img src="/img/football/United_City_FC_logo.svg.png" alt="pba_logo" class="img-fluid">
+                                        </div>
+                                        <p>United City</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
 
                 </div>
