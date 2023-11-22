@@ -138,17 +138,17 @@
                         </div>
                         <!--bottom-->
                         <div class="header-bottom">
-                            <button class="tab-btn header-tab-active">Summary</button>
-                            <button class="tab-btn">Results</button>
-                            <button class="tab-btn">Fixtures</button>
-                            <button class="tab-btn">Standings</button>
-                            <button class="tab-btn">Archive</button>
+                            <button data-set="summary" class="tab-btn tab-button header-tab-active">Summary</button>
+                            <button data-set="results" class="tab-btn tab-button">Results</button>
+                            <button data-set="fixtures" class="tab-btn tab-button">Fixtures</button>
+                            <button data-set="standings" class="tab-btn tab-button">Standings</button>
+                            <button data-set="archive" class="tab-btn tab-button">Archive</button>
                         </div>
                     </div>
 
 
                     <!--L A T E S T  S C O R E S   C O N T E N T  W R A P P E R-->
-                    <div class="content-wrapper">
+                    <div id="summary" class="tab content-wrapper">
                         <div class="content-wrapper-heading">
                             <p>Latest Scores</p>
                         </div>
@@ -181,7 +181,7 @@
 
                                         <!--standing button-->
                                         <div class="standing-btn-wrapper">
-                                            <button class="standing-btn-desktop">Standings</button>
+                                            <button class="standing-btn standing-btn-desktop">Standings</button>
                                             <button class="standing-btn-mobile"><i class="fa-solid fa-network-wired"></i></button>
                                         </div>
                                     </div>
@@ -267,8 +267,270 @@
 
                     <!-----  *****  ----->
 
+
+                    <!--R E S U L T S  S C O R E S   C O N T E N T  W R A P P E R-->
+                    <div id="results" class="tab hidden">
+                        <div class="content-wrapper">
+                            <!-- C O N T E N T  C O N T A I N E R-->
+                            <div class="content-container basketball-content-container">
+                                <div class="standing-wrapper">
+
+                                    <!--DROPDOWN CONTAINER-->
+                                    <div class="dropdown-container">
+
+                                        <!--- D R O P D O W N  B U T T O N-->
+                                        <div class="dropdown-btn basketball-dropdown-btn pc">
+                                            <!--favorite button-->
+                                            <button class="fav-btn">
+                                                <!-- <i class="fa-regular fa-star"></i> -->
+                                            </button>
+
+                                            <!--team name-->
+                                            <div class="team-div">
+                                                <div class="team-logo">
+                                                    <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
+                                                </div>
+                                                <div class="basketball-dropdown-title">
+                                                    <p class="cc">Philippine Cup - Play Offs</p>
+                                                    <small class="cc">Philippines</small>
+                                                </div>
+                                                <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                            </div>
+
+                                            <!--standing button-->
+                                            <div class="standing-btn-wrapper">
+                                                <button class="standing-btn standing-btn-desktop">Draw</button>
+                                                <button class="standing-btn-mobile"><i class="fa-solid fa-network-wired"></i></button>
+                                            </div>
+                                        </div>
+
+                                        <!--NESTED STANDING LIST-->
+                                        <div class="standing-list-box dropdown-standing-content">
+                                            <div class="standing-list basketball-standing-list">
+                                                <!--favorite button-->
+                                                <div class="standing-favorite">
+                                                    <button>
+                                                        <!-- <i class="fa-regular fa-star"></i> -->
+                                                    </button>
+                                                </div>
+
+                                                <!--quarter-->
+                                                <div class="standing-quarter basketball-standing-quarter">
+                                                    <p class="s1">06.08</p>
+                                                    <p class="s2">17.08</p>
+                                                </div>
+
+                                                <!--team-->
+                                                <div class="standing-team basketball-standing-team">
+
+                                                    <div class="first-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/team/black_water.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Black Water</p>
+                                                    </div>
+
+                                                    <div class="second-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/team/phoenix.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Phoenix</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--scores-->
+                                                <div class="standing-scores basketball-standing-scores">
+                                                    <div class="first-team-scores">
+                                                        <p class="s1">78</p>
+                                                        <p class="s2">89</p>
+                                                        <p class="s2">115</p>
+                                                        <p class="s2">35</p>
+                                                        <p class="s2">25</p>
+                                                    </div>
+
+                                                    <div class="second-team-scores">
+                                                        <p class="s1">78</p>
+                                                        <p class="s2">89</p>
+                                                        <p class="s2">115</p>
+                                                        <p class="s2">35</p>
+                                                        <p class="s2">25</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--livestream | lineup-->
+                                                <div class="standing-list-btn basketball-standing-list-btn">
+                                                    <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                    <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                    </div>
+
+                                    <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
+                                </div>
+                            </div>
+
+                            <!--show more btn-->
+                            <div class="show-more-wrapper">
+                                <p style="color: white;">Show more matches</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-----  *****  ----->
+
+
+                    <!--R E S U L T S  S C O R E S   C O N T E N T  W R A P P E R-->
+                    <div id="fixtures" class="tab hidden">
+                        <div class="content-wrapper">
+                            <!-- C O N T E N T  C O N T A I N E R-->
+                            <div class="content-container basketball-content-container">
+                                <div class="standing-wrapper">
+
+                                    <!--DROPDOWN CONTAINER-->
+                                    <div class="dropdown-container">
+
+                                        <!--- D R O P D O W N  B U T T O N-->
+                                        <div class="dropdown-btn basketball-dropdown-btn pc">
+                                            <!--favorite button-->
+                                            <button class="fav-btn">
+                                                <!-- <i class="fa-regular fa-star"></i> -->
+                                            </button>
+
+                                            <!--team name-->
+                                            <div class="team-div">
+                                                <div class="team-logo">
+                                                    <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
+                                                </div>
+                                                <div class="basketball-dropdown-title">
+                                                    <p class="cc">Philippine Cup - Play Offs</p>
+                                                    <small class="cc">Philippines</small>
+                                                </div>
+                                                <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                            </div>
+
+                                            <!--standing button-->
+                                            <div class="standing-btn-wrapper">
+                                                <button class="standing-btn standing-btn-desktop">Draw</button>
+                                                <button class="standing-btn-mobile"><i class="fa-solid fa-network-wired"></i></button>
+                                            </div>
+                                        </div>
+
+                                        <!--NESTED STANDING LIST-->
+                                        <div class="standing-list-box dropdown-standing-content">
+                                            <div class="standing-list basketball-standing-list">
+                                                <!--favorite button-->
+                                                <div class="standing-favorite">
+                                                    <button>
+                                                        <!-- <i class="fa-regular fa-star"></i> -->
+                                                    </button>
+                                                </div>
+
+                                                <!--quarter-->
+                                                <div class="standing-quarter basketball-standing-quarter">
+                                                    <p class="s1">09.08</p>
+                                                    <p class="s2">20.08</p>
+                                                </div>
+
+                                                <!--team-->
+                                                <div class="standing-team basketball-standing-team">
+
+                                                    <div class="first-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/team/nlex.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">NLEX</p>
+                                                    </div>
+
+                                                    <div class="second-team">
+                                                        <div class="team-logo">
+                                                            <img src="/img/team/terrafirma.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Terrafirma</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--scores-->
+                                                <div class="standing-scores basketball-standing-scores">
+                                                    <div class="first-team-scores">
+                                                        <p class="s1">99</p>
+                                                        <p class="s2">89</p>
+                                                        <p class="s2">60</p>
+                                                        <p class="s2">35</p>
+                                                        <p class="s2">25</p>
+                                                    </div>
+
+                                                    <div class="second-team-scores">
+                                                        <p class="s1">99</p>
+                                                        <p class="s2">89</p>
+                                                        <p class="s2">60</p>
+                                                        <p class="s2">35</p>
+                                                        <p class="s2">25</p>
+                                                    </div>
+                                                </div>
+
+                                                <!--livestream | lineup-->
+                                                <div class="standing-list-btn basketball-standing-list-btn">
+                                                    <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
+                                                    <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                    </div>
+
+                                    <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
+                                </div>
+                            </div>
+
+                            <!--show more btn-->
+                            <div class="show-more-wrapper">
+                                <p style="color: white;">Show more matches</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!--A R C H I V E  C O N T E N T  W R A P P E R-->
+                    <div id="archive" class="tab hidden">
+                        <div class="archive-content-wrapper">
+                            <div class="archive-content-wrapper-title">
+                                <p>season</p>
+                                <p>winner</p>
+                            </div>
+
+                            <div class="archive-div">
+                                <div class="archive-content-wrapper-list">
+                                    <p>Philippine Cup 2022/2023</p>
+                                    <div class="archive-content-container">
+                                        <div class="archive-content-container-img">
+                                            <img src="/img/team/beermen.png" alt="pba_logo" class="img-fluid">
+                                        </div>
+                                        <p>San Miguel Beermen</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!-----  *****  ----->
+
                     <!--S T A N D I N G  F O R M  C O N T E N T  W R A P P E R-->
-                    <div class="standing-form-content-wrapper">
+                    <div id="standings" class="tab standing-form-content-wrapper">
                         <!-- T A B  B A R-->
                         <div class="tab-container pc-tab-container">
                             <div class="tab-div">
