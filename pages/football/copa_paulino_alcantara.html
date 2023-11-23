@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="/css/basketball.css">
     <link rel="stylesheet" href="/css/football.css">
     <link rel="icon" href="/img/logo/filbet_logo.png">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" 
+        crossorigin="anonymous"></script>
+<script src="jquery.gracket.min.js"></script>
     <title>Football - Cora Paulino Alacantara</title>
 </head>
 <body>
@@ -946,6 +950,16 @@
     <!-- Add subtabs for Main Tab 3 here -->
   </div>
 
+  <div class="my_gracket"></div>
+  
+
     <script src="/js/script.js"></script>
+    <script src="/js/tournament.js"></script>
+
+    <script>
+        $(".my_gracket").gracket({ 
+  src: myData
+});
+    </script>
 </body>
 </html>

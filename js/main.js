@@ -56,3 +56,16 @@
       openSubTab(subTabButton.getAttribute('data-subtab'));
     });
   });
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var imageContainer = document.getElementById('image-container');
+    var scrollImage = document.getElementById('scroll-image');
+
+    window.addEventListener('scroll', function () {
+        var scrollPosition = window.scrollY;
+        var opacity = 1 - scrollPosition / 500; // Adjust the divisor to control the scroll distance
+
+        scrollImage.style.opacity = opacity.toFixed(2); // Limit the opacity to two decimal places
+    });
+});
