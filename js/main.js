@@ -69,3 +69,28 @@
         scrollImage.style.opacity = opacity.toFixed(2); // Limit the opacity to two decimal places
     });
 });
+
+
+function addColoredDivs() {
+    var boxes = document.querySelectorAll('.box');
+
+    boxes.forEach(function(box) {
+      var text = box.textContent.trim();
+
+      // Check if the text contains 'L', 'D', or 'W'
+      if (text.includes('L')) {
+        addColorClass(box, 'box-red');
+      } else if (text.includes('D')) {
+        addColorClass(box, 'box-orange');
+      } else if (text.includes('W')) {
+        addColorClass(box, 'box-green');
+      }
+    });
+  }
+
+  function addColorClass(element, colorClass) {
+    element.classList.add(colorClass);
+  }
+
+  // Example usage:
+  addColoredDivs();
