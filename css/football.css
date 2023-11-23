@@ -49,6 +49,10 @@
     width: 100%;
 }
 
+.standing-form-content-container-tab-wrapper .standing-form-tab-content {
+    margin-bottom: 1rem;
+}
+
 .standing-form-content-wrapper .pfl-form-footer {
     width: 100%;
 

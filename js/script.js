@@ -86,6 +86,27 @@ nestedTabBtn.forEach(buttons => {
   })
 })
 
+//MULTIPLE CHILDREN TABS
+const childTabBtn = document.querySelectorAll('.child-tab-button')
+const childTabContent = document.querySelectorAll('.child-tab')
+
+childTabBtn.forEach(childBtn => {
+  childBtn.addEventListener('click', function() {
+
+    childTabBtn.forEach(childButtons => {
+      childButtons.classList.remove('tab-active', 'header-tab-active')
+    });
+
+    this.classList.add('tab-active', 'header-tab-active');
+
+    const tabChild = this.dataset.set;
+    childTabContent.forEach(childCotent => {
+      childCotent.style.display = 'none';
+    })
+    document.getElementById(tabChild).style.display = 'flex'
+  })
+})
+
 
 // MOBILE SLIDER PAGES
 document.addEventListener('DOMContentLoaded', function () {

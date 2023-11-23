@@ -1021,6 +1021,10 @@ table tbody tr td {
     }
 
     /** TABLE **/
+    table thead tr {
+        padding: 0.5rem auto;
+    }
+
     table thead tr th { 
         font-size: 0.85rem;
     }
