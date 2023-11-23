@@ -348,6 +348,7 @@ html, body {
     font-size: 0.9rem;
     font-weight: 700;
     text-transform: uppercase;
+    
 }
 
 /** sidebar-center **/
@@ -427,8 +428,8 @@ html, body {
 }
 
 .team-pinned-list .team-pinned-img {
-    height: 1.8rem;
-    width: 1rem;
+    height: 1rem;
+    width: 1.3rem;
 }
 
 .team-pinned-img .img-fluid {
@@ -1530,10 +1531,6 @@ html, body {
         display: flex;
     }
 
-    .team-pinned-list .team-pinned-img {
-        width: 22%;
-    }
-
     .team-pinned-list .team-pinned-name {
         width: 100%;
 
@@ -1574,7 +1571,8 @@ html, body {
     }
 
     .tab-container .date-container {
-        background-color: var(--tab-bgColor);
+        background-color: var(--bgBlack);
+        border: 1px solid rgba(245,245,245, 0.1);
         width: 18rem;
         padding: 0.8rem;
         border-radius: 5px;

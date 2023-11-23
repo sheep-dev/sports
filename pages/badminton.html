@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/football.css">
+    <link rel="stylesheet" href="/css/boxing.css">
     <link rel="icon" href="/img/logo/filbet_logo.png">
-    <title>Football</title>
+    <title>Badminton</title>
 </head>
 <body>
     <!---T O P  N A V-->
@@ -55,10 +55,10 @@
         <!-- M E N U-->
         <div class="container navigation">
             <a href="/pages/favorites.html" class="navigation-links"><span class="material-icons">star</span><p>Favorites</p></a>
-            <a href="/pages/football.html" class="navigation-links active-link"><span class="material-icons">sports_soccer</span><p>Football</p></a>
+            <a href="/pages/football.html" class="navigation-links"><span class="material-icons">sports_soccer</span><p>Football</p></a>
             <a href="/index.html" class="navigation-links"><span class="material-icons">sports_basketball</span><p>Basketball</p></a>
             <a href="/pages/volleyball.html" class="navigation-links"><span class="material-icons">sports_volleyball</span><p>Volleyball</p></a>
-            <a href="/pages/badminton.html" class="navigation-links"><span class="material-icons">sports_tennis</span><p>Badminton</p></a>
+            <a href="/pages/badminton.html" class="navigation-links active-link"><span class="material-icons">sports_tennis</span><p>Badminton</p></a>
             <a href="/pages/boxing.html" class="navigation-links"><span class="material-icons">sports_mma</span><p>Boxing</p></a>
             <a href="/pages/esports.html" class="navigation-links"><span class="material-icons">sports_esports</span><p>Esports</p></a>
         </div>
@@ -73,16 +73,13 @@
                 <!-- S I D E B A R  L E F T-->
                 <aside class="sideLeft">
                     <div class="sideleft-top">
-                        <div class="flag-img">
-                            <img src="/img/flags/philippines.png" alt="philippines_flag" class="img-fluid">
-                        </div>
-                        <p>Philippines</p>
+                        <p><i class="fa-solid fa-thumbtack" style="margin-right: 0.5rem;"></i>Categories</p>
                     </div>
 
                     <div class="sideleft-center">
-                        <div class="team-pinned-list bb-team-pinned-list">
-                            <a href="/pages/football/pfl.html" class="team-pinned-name">PFL</a>
-                            <a href="/pages/football/copa_paulino_alcantara.html" class="team-pinned-name">Copa Paulino Alcantara</a>
+                        <div class="team-pinned-list">
+                            <i class="fa-solid fa-user"></i>
+                            <p class="team-pinned-name">BWF Men</p>
                         </div>
                     </div>
 
@@ -109,13 +106,23 @@
 
                     <!-- C O N T E N T  W R A P P E R-->
                     <div class="content-wrapper">
+                        <!--B R E A D C R U M B S-->
+                        <div class="boxing-breadcrumbs">
+                            <div class="boxing-breadcrumbs-header">
+                                <div class="boxing-breadcrumbs-name">
+                                    <span class="material-icons">sports_tennis</span>
+                                    <p>Badminton</p>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- T A B  B A R-->
                         <div class="tab-container">
                             <div class="tab-div">
                                 <button data-set="all" class="tab-btn tab-button tab-active">All</button>
                                 <button data-set="live" class="tab-btn tab-button">Live</button>
                                 <button data-set="odds" class="tab-btn tab-button">Odds</button>
-                                <button data-set="finished" class="tab-btn tab-button">Finished</button>
+                                <button data-set="finish" class="tab-btn tab-button">Finished</button>
                                 <button data-set="schedule" class="tab-btn tab-button">Schedule</button>
                             </div>
 
@@ -142,19 +149,14 @@
                                         <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
 
                                         <!--team name-->
-                                        <div class="team-div">
-                                            <div class="team-logo">
-                                                <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
-                                            </div>
-                                            <div class="basketball-dropdown-title football-dropdown-title">
-                                                <p class="cc pfl">World Championship - Qualification - First Stage</p>
-                                                <small class="cc">AFRICA</small>
-                                            </div>
+                                        <div class="team-div boxing-team-div">
+                                            <i class="fa-solid fa-user"></i>
+                                            <p class="team-name">BWF WORLD TOUR - MEN: China Masters 2 (China)</p>
                                             <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
                                         </div>
 
                                         <!--standing button-->
-                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                        <button class="standing-btn"><i class="fa-solid fa-chevron-down"></i></p>
                                     </div>
 
                                     <!--NESTED STANDING LIST-->
@@ -167,50 +169,53 @@
 
                                             <!--quarter-->
                                             <div class="standing-quarter">
-                                                <p>4th Quarter</p>
+                                                <p>11:00</p>
                                             </div>
 
                                             <!--team-->
-                                            <div class="standing-team">
+                                            <div class="standing-team boxing-standing-team badminton-standing-team">
 
                                                 <div class="first-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/football/icons8-sierra-leone-48.png" alt="team_logo" class="img-fluid">
+                                                    <div class="first-row">
+                                                        <div class="team-logo">
+                                                            <img src="/img/flags/taiwan.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Li Chun-Yi</p>
                                                     </div>
-                                                    <p class="team-name">Sierra Leone</p>
                                                 </div>
 
                                                 <div class="second-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/football/icons8-egypt-48.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">Egypt</p>
+                                                   <div class="first-row">
+                                                        <div class="team-logo">
+                                                            <img src="/img/flags/indonesia.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Ginting A. S</p>
+                                                   </div>
                                                 </div>
                                             </div>
 
                                             <!--scores-->
                                             <div class="standing-scores">
                                                 <div class="first-team-scores">
-                                                    <p>2</p>
+                                                    <p>11</p>
                                                     <p class="s2">5</p>
+                                                    <p class="s2">10</p>
                                                     <p class="s2">3</p>
-                                                    <p class="s2">2</p>
-                                                    <p class="s2">7</p>
+                                                    <p class="s2">8</p>
                                                 </div>
 
                                                 <div class="second-team-scores">
-                                                    <p>2</p>
+                                                    <p>11</p>
                                                     <p class="s2">5</p>
+                                                    <p class="s2">10</p>
                                                     <p class="s2">3</p>
-                                                    <p class="s2">2</p>
-                                                    <p class="s2">7</p>
+                                                    <p class="s2">8</p>
                                                 </div>
                                             </div>
 
                                             <!--livestream | lineup-->
                                             <div class="standing-list-btn">
-                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
-                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                                <button class="btn-info"><i class="fa-solid fa-circle-info"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -225,7 +230,7 @@
                             </div>
                         </div>
 
-                        <!--A L L  C O N T E N T  C O N T A I N E R-->
+                        <!--L I V E  C O N T E N T  C O N T A I N E R-->
                         <div id="live" class="tab hidden">
                             <div class="standing-wrapper">
 
@@ -238,19 +243,14 @@
                                         <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
 
                                         <!--team name-->
-                                        <div class="team-div">
-                                            <div class="team-logo">
-                                                <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
-                                            </div>
-                                            <div class="basketball-dropdown-title football-dropdown-title">
-                                                <p class="cc pfl">World Championship - Qualification - Second Stage</p>
-                                                <small class="cc">ASIA</small>
-                                            </div>
+                                        <div class="team-div boxing-team-div">
+                                            <i class="fa-solid fa-user"></i>
+                                            <p class="team-name">BWF WORLD TOUR - MIXED DOUBLES: China Masters 2 (China)</p>
                                             <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
                                         </div>
 
                                         <!--standing button-->
-                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                        <button class="standing-btn"><i class="fa-solid fa-chevron-down"></i></p>
                                     </div>
 
                                     <!--NESTED STANDING LIST-->
@@ -263,50 +263,53 @@
 
                                             <!--quarter-->
                                             <div class="standing-quarter">
-                                                <p>4th Quarter</p>
+                                                <p>25:00</p>
                                             </div>
 
                                             <!--team-->
-                                            <div class="standing-team">
+                                            <div class="standing-team boxing-standing-team badminton-standing-team">
 
                                                 <div class="first-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/flags/myanmar.png" alt="team_logo" class="img-fluid">
+                                                    <div class="first-row">
+                                                        <div class="team-logo">
+                                                            <img src="/img/flags/japan.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Okuhara N</p>
                                                     </div>
-                                                    <p class="team-name">Myanmar</p>
                                                 </div>
 
                                                 <div class="second-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/flags/north-korea.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">North Korea</p>
+                                                   <div class="first-row">
+                                                        <div class="team-logo">
+                                                            <img src="/img/flags/south-korea.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">An S. Y.</p>
+                                                   </div>
                                                 </div>
                                             </div>
 
                                             <!--scores-->
                                             <div class="standing-scores">
                                                 <div class="first-team-scores">
-                                                    <p>2</p>
+                                                    <p>11</p>
                                                     <p class="s2">5</p>
+                                                    <p class="s2">10</p>
                                                     <p class="s2">3</p>
-                                                    <p class="s2">2</p>
-                                                    <p class="s2">7</p>
+                                                    <p class="s2">8</p>
                                                 </div>
 
                                                 <div class="second-team-scores">
-                                                    <p>2</p>
+                                                    <p>11</p>
                                                     <p class="s2">5</p>
+                                                    <p class="s2">10</p>
                                                     <p class="s2">3</p>
-                                                    <p class="s2">2</p>
-                                                    <p class="s2">7</p>
+                                                    <p class="s2">8</p>
                                                 </div>
                                             </div>
 
                                             <!--livestream | lineup-->
                                             <div class="standing-list-btn">
-                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
-                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                                <button class="btn-info"><i class="fa-solid fa-circle-info"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -334,19 +337,14 @@
                                         <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
 
                                         <!--team name-->
-                                        <div class="team-div">
-                                            <div class="team-logo">
-                                                <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
-                                            </div>
-                                            <div class="basketball-dropdown-title football-dropdown-title">
-                                                <p class="cc pfl">Pacific Games</p>
-                                                <small class="cc">AUSTRALIA & OCEANIA</small>
-                                            </div>
+                                        <div class="team-div boxing-team-div">
+                                            <i class="fa-solid fa-user"></i>
+                                            <p class="team-name">BWF WORLD TOUR - DOUBLES MEN: China Masters 2 (China)</p>
                                             <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
                                         </div>
 
                                         <!--standing button-->
-                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                        <button class="standing-btn"><i class="fa-solid fa-chevron-down"></i></p>
                                     </div>
 
                                     <!--NESTED STANDING LIST-->
@@ -359,50 +357,53 @@
 
                                             <!--quarter-->
                                             <div class="standing-quarter">
-                                                <p>Finished</p>
+                                                <p>19:00</p>
                                             </div>
 
                                             <!--team-->
-                                            <div class="standing-team">
+                                            <div class="standing-team boxing-standing-team badminton-standing-team">
 
                                                 <div class="first-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/flags/samoa.png" alt="team_logo" class="img-fluid">
+                                                    <div class="first-row">
+                                                        <div class="team-logo">
+                                                            <img src="/img/flags/thailand.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Taerattanachai S.</p>
                                                     </div>
-                                                    <p class="team-name">Samoa</p>
                                                 </div>
 
                                                 <div class="second-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/flags/fiji.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">Fiji</p>
+                                                   <div class="first-row">
+                                                        <div class="team-logo">
+                                                            <img src="/img/flags/hong-kong.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Lee C. H. R</p>
+                                                   </div>
                                                 </div>
                                             </div>
 
                                             <!--scores-->
                                             <div class="standing-scores">
                                                 <div class="first-team-scores">
-                                                    <p>1</p>
+                                                    <p>11</p>
                                                     <p class="s2">5</p>
-                                                    <p class="s2">6</p>
-                                                    <p class="s2">7</p>
-                                                    <p class="s2">2</p>
+                                                    <p class="s2">10</p>
+                                                    <p class="s2">3</p>
+                                                    <p class="s2">8</p>
                                                 </div>
 
                                                 <div class="second-team-scores">
-                                                    <p>1</p>
+                                                    <p>11</p>
                                                     <p class="s2">5</p>
-                                                    <p class="s2">6</p>
-                                                    <p class="s2">7</p>
-                                                    <p class="s2">2</p>
+                                                    <p class="s2">10</p>
+                                                    <p class="s2">3</p>
+                                                    <p class="s2">8</p>
                                                 </div>
                                             </div>
 
                                             <!--livestream | lineup-->
                                             <div class="standing-list-btn">
-                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
-                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                                <button class="btn-info"><i class="fa-solid fa-circle-info"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -418,7 +419,7 @@
                         </div>
 
                         <!--F I N I S H E D  C O N T E N T  C O N T A I N E R-->
-                        <div id="finished" class="tab hidden">
+                        <div id="finish" class="tab hidden">
                             <div class="standing-wrapper">
 
                                 <!--DROPDOWN CONTAINER-->
@@ -430,19 +431,14 @@
                                         <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
 
                                         <!--team name-->
-                                        <div class="team-div">
-                                            <div class="team-logo">
-                                                <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
-                                            </div>
-                                            <div class="basketball-dropdown-title football-dropdown-title">
-                                                <p class="cc pfl">World Championship - Qualification - First Stage</p>
-                                                <small class="cc">AFRICA</small>
-                                            </div>
+                                        <div class="team-div boxing-team-div">
+                                            <i class="fa-solid fa-user"></i>
+                                            <p class="team-name">BWF WORLD TOUR - DOUBLES WOMEN: China Masters 2 (China) </p>
                                             <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
                                         </div>
 
                                         <!--standing button-->
-                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                        <button class="standing-btn"><i class="fa-solid fa-chevron-down"></i></p>
                                     </div>
 
                                     <!--NESTED STANDING LIST-->
@@ -459,46 +455,49 @@
                                             </div>
 
                                             <!--team-->
-                                            <div class="standing-team">
+                                            <div class="standing-team boxing-standing-team badminton-standing-team">
 
                                                 <div class="first-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/flags/gambia.png" alt="team_logo" class="img-fluid">
+                                                    <div class="first-row">
+                                                        <div class="team-logo">
+                                                            <img src="/img/flags/denmark.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Kjaer R.</p>
                                                     </div>
-                                                    <p class="team-name">Gambia</p>
                                                 </div>
 
                                                 <div class="second-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/flags/ivory-coast.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">Ivory Coast</p>
+                                                   <div class="first-row">
+                                                        <div class="team-logo">
+                                                            <img src="/img/flags/malaysia.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Tee K. W</p>
+                                                   </div>
                                                 </div>
                                             </div>
 
                                             <!--scores-->
                                             <div class="standing-scores">
                                                 <div class="first-team-scores">
-                                                    <p>1</p>
+                                                    <p>11</p>
+                                                    <p class="s2">5</p>
+                                                    <p class="s2">10</p>
                                                     <p class="s2">3</p>
-                                                    <p class="s2">6</p>
-                                                    <p class="s2">4</p>
-                                                    <p class="s2">2</p>
+                                                    <p class="s2">8</p>
                                                 </div>
 
                                                 <div class="second-team-scores">
-                                                    <p>1</p>
+                                                    <p>11</p>
+                                                    <p class="s2">5</p>
+                                                    <p class="s2">10</p>
                                                     <p class="s2">3</p>
-                                                    <p class="s2">6</p>
-                                                    <p class="s2">4</p>
-                                                    <p class="s2">2</p>
+                                                    <p class="s2">8</p>
                                                 </div>
                                             </div>
 
                                             <!--livestream | lineup-->
                                             <div class="standing-list-btn">
-                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
-                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                                <button class="btn-info"><i class="fa-solid fa-circle-info"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -513,7 +512,8 @@
                             </div>
                         </div>
 
-                        <!--S C H E D U L E  C O N T E N T  C O N T A I N E R-->
+
+                        <!--S C H E D U L E D  C O N T E N T  C O N T A I N E R-->
                         <div id="schedule" class="tab hidden">
                             <div class="standing-wrapper">
 
@@ -526,19 +526,14 @@
                                         <button class="fav-btn"><i class="fa-regular fa-star"></i></button>
 
                                         <!--team name-->
-                                        <div class="team-div">
-                                            <div class="team-logo">
-                                                <img src="/img/flags/philippines.png" alt="team_logo" class="img-fluid">
-                                            </div>
-                                            <div class="basketball-dropdown-title football-dropdown-title">
-                                                <p class="cc pfl">World Championship - Qualification - First Stage</p>
-                                                <small class="cc">AFRICA</small>
-                                            </div>
+                                        <div class="team-div boxing-team-div">
+                                            <i class="fa-solid fa-user"></i>
+                                            <p class="team-name">BWF WORLD TOUR - WOMEN: China Masters 2 (China)</p>
                                             <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
                                         </div>
 
                                         <!--standing button-->
-                                        <button class="standing-btn">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                        <button class="standing-btn"><i class="fa-solid fa-chevron-down"></i></p>
                                     </div>
 
                                     <!--NESTED STANDING LIST-->
@@ -551,24 +546,28 @@
 
                                             <!--quarter-->
                                             <div class="standing-quarter">
-                                                <p>Finished</p>
+                                                <p>15:00</p>
                                             </div>
 
                                             <!--team-->
-                                            <div class="standing-team">
+                                            <div class="standing-team boxing-standing-team badminton-standing-team">
 
                                                 <div class="first-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/flags/chad.png" alt="team_logo" class="img-fluid">
+                                                    <div class="first-row">
+                                                        <div class="team-logo">
+                                                            <img src="/img/flags/taiwan.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Hu Ling F.</p>
                                                     </div>
-                                                    <p class="team-name">Chad</p>
                                                 </div>
 
                                                 <div class="second-team">
-                                                    <div class="team-logo">
-                                                        <img src="/img/flags/madagascar.png" alt="team_logo" class="img-fluid">
-                                                    </div>
-                                                    <p class="team-name">Madagascar</p>
+                                                   <div class="first-row">
+                                                        <div class="team-logo">
+                                                            <img src="/img/flags/hong-kong.png" alt="team_logo" class="img-fluid">
+                                                        </div>
+                                                        <p class="team-name">Tse Y. S</p>
+                                                   </div>
                                                 </div>
                                             </div>
 
@@ -593,8 +592,7 @@
 
                                             <!--livestream | lineup-->
                                             <div class="standing-list-btn">
-                                                <button class="btn-livestream"><i class="fa-solid fa-tv"></i></button>
-                                                <button class="btn-lineup"><i class="fa-solid fa-shirt"></i></button>
+                                                <button class="btn-info"><i class="fa-solid fa-circle-info"></i></button>
                                             </div>
                                         </div>
                                     </div>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/basketball.css">
+    <link rel="stylesheet" href="/css/esports.css">
+    <link rel="icon" href="/img/logo/filbet_logo.png">
+    <title>Esports - 2k Players Tournament</title>
+</head>
+<body>
+    <!---T O P  N A V-->
+    <div class="top-nav">
+        <div class="container advertisement-wrapper">
+            <p>Basketball Livescore, Basketball results, PBA</p>
+            <div class="advertisement-img" style="display: none;">
+                <img src="/img/advertisement.png" alt="advertisement_img" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!---H E A D E R-->
+    <header class="header">
+        <!-- N A V-->
+        <nav class="container nav">
+            <div class="logo-img">
+                <img src="/img/logo/filbet_logo.png" alt="filbet_logo" class="img-fluid logo-mobile">
+                <img src="/img/logo/filbet_pro.png" alt="filbetpro_logo" class="img-fluid logo-desktop">
+            </div>
+
+            <div class="nav-links">
+                <div class="navBtn-wrapper">
+                    <button data-modal="search" class="nav-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button data-modal="login" class="nav-btn"><i class="fa-regular fa-user"></i><p>Login</p></button>
+                    <button class="nav-btn toggle-btn" onclick="toggleDropdown('item2')"><i class="fa-solid fa-bars"></i></button>
+                </div>
+                <div class="dropdown-item menu-content " id="item2">
+                   <div class="menu-content-wrapper">
+                        <a href="#" class="menu-link">
+                            <i class="fa-solid fa-gear"></i>
+                            <p class="menu-link-name">Setting</p>
+                        </a>
+                        <div class="menu-link">
+                            <i class="fa-solid fa-moon"></i>
+                            <p class="menu-link-name">Dark Mode</p>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- M E N U-->
+        <div class="container navigation">
+            <a href="/pages/favorites.html" class="navigation-links"><span class="material-icons">star</span><p>Favorites</p></a>
+            <a href="/pages/football.html" class="navigation-links"><span class="material-icons">sports_soccer</span><p>Football</p></a>
+            <a href="/index.html" class="navigation-links"><span class="material-icons">sports_basketball</span><p>Basketball</p></a>
+            <a href="/pages/volleyball.html" class="navigation-links"><span class="material-icons">sports_volleyball</span><p>Volleyball</p></a>
+            <a href="/pages/badminton.html" class="navigation-links"><span class="material-icons">sports_tennis</span><p>Badminton</p></a>
+            <a href="/pages/boxing.html" class="navigation-links"><span class="material-icons">sports_mma</span><p>Boxing</p></a>
+            <a href="/pages/esports.html" class="navigation-links active-link"><span class="material-icons">sports_esports</span><p>Esports</p></a>
+        </div>
+    </header>
+
+
+    <!--M A I N-->
+    <main class="main">
+        <section class="container section basketball-section">
+            <article class="article">
+
+                <!-- S I D E B A R  L E F T-->
+                <aside class="sideLeft esports-sideLeft">
+                    <div class="sideleft-top">
+                        <p><i class="fa-solid fa-thumbtack" style="margin-right: 0.5rem;"></i>Categories</p>
+                    </div>
+
+                    <div class="sideleft-center esports-sideleft-center">
+                        <div class="esports-categories-dropdown">
+                            <button class="esports-btn toggle-btn" onclick="toggleDropdown('category1')">Counter-Strike</button>
+                            <div id="category1" class="esports-categories-dropdown-content dropdown-item">
+                                <a href="#" class="esports-nested-btn">Arctic Invitational <i class="fa-solid fa-thumbtack"></i></a>
+                            </div>
+                        </div>
+                        <div class="esports-categories-dropdown">
+                            <button class="esports-btn toggle-btn" onclick="toggleDropdown('category2')">Dota 2</button>
+                            <div id="category2" class="esports-categories-dropdown-content dropdown-item">
+                                <button class="esports-nested-btn">Bali Major <i class="fa-solid fa-thumbtack"></i></button>
+                            </div>
+                        </div>
+                        <div class="esports-categories-dropdown">
+                            <button class="esports-btn toggle-btn" onclick="toggleDropdown('category3')">Starcraft 2</button>
+                            <div id="category3" class="esports-categories-dropdown-content dropdown-item">
+                                <button class="esports-nested-btn">Asian Games <i class="fa-solid fa-thumbtack"></i></button>
+                            </div>
+                        </div>
+                        <div class="esports-categories-dropdown">
+                            <button class="esports-btn toggle-btn" onclick="toggleDropdown('category4')">League of Legends</button>
+                            <div id="category4" class="esports-categories-dropdown-content dropdown-item">
+                                <button class="esports-nested-btn">All-Star <i class="fa-solid fa-thumbtack"></i></button>
+                            </div>
+                        </div>
+                        <div class="esports-categories-dropdown">
+                            <button class="esports-btn toggle-btn" onclick="toggleDropdown('category5')">Hearthstone</button>
+                            <div id="category5" class="esports-categories-dropdown-content dropdown-item">
+                                <button class="esports-nested-btn">Asian Games <i class="fa-solid fa-thumbtack"></i></button>
+                            </div>
+                        </div>
+                        <div class="esports-categories-dropdown">
+                            <button class="esports-btn toggle-btn" onclick="toggleDropdown('category6')">OverWatch</button>
+                            <div id="category6" class="esports-categories-dropdown-content dropdown-item">
+                                <button class="esports-nested-btn">APAC Premier <i class="fa-solid fa-thumbtack"></i></button>
+                            </div>
+                        </div>
+                        <div class="esports-categories-dropdown">
+                            <button class="esports-btn toggle-btn" onclick="toggleDropdown('category7')">FIFA</button>
+                            <div id="category7" class="esports-categories-dropdown-content dropdown-item">
+                                <button class="esports-nested-btn">Combat Corona <i class="fa-solid fa-thumbtack"></i></button>
+                            </div>
+                        </div>
+                        <div class="esports-categories-dropdown">
+                            <button class="esports-btn toggle-btn" onclick="toggleDropdown('category8')">Rocket League</button>
+                            <div id="category8" class="esports-categories-dropdown-content dropdown-item">
+                                <button class="esports-nested-btn">Championship Series-Fall <i class="fa-solid fa-thumbtack"></i></button>
+                            </div>
+                        </div>
+                        <div class="esports-categories-dropdown">
+                            <button class="esports-btn toggle-btn" onclick="toggleDropdown('category9')">NBA</button>
+                            <div id="category9" class="esports-categories-dropdown-content dropdown-item">
+                                <a href="/pages/esports/2k_players.html" class="esports-nested-btn">2k Players Tournament<i class="fa-solid fa-thumbtack"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sideleft-bottom" style="display: none;">
+                        <div class="sideleft-advertisement">
+                            <img src="/img/advertisement1.png" alt="advertisement-img" class="img-fluid">
+                        </div>
+                    </div>
+                </aside>
+
+
+                <!-- C O N T E N T -->
+                <div class="main-content">
+                    <!-- N O T I F I C A T I O N  B A R-->
+                    <div class="notification-wrapper" id="notification">
+                        <div class="notif-div">
+                            <div class="notif-img">
+                                <img src="/img/flags/philippines.png" alt="flags_img" class="img-fluid">
+                            </div>
+                            <p>Sundan ng live and score sa Filbet.com</p>
+                        </div>
+                        <button class="notif-btn" id="closeButton" onclick="closeParagraph()"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+
+                    <!-- C O N T E N T  H E A D E R-->
+                    <div class="content-header">
+                        <!--top-->
+                        <div class="header-top">
+                            <div class="header-breadcrumbs">
+                                <span class="material-icons">sports_esports</span>
+                                <p>Esports</p>
+                            </div>
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <div class="header-breadcrumbs">
+                                <div class="flags-img">
+                                    <img src="/img/esports/nba2.png" alt="philippines_flag" class="img-fluid">
+                                </div>
+                                <p>NBA</p>
+                            </div>
+                        </div>
+                        <!--center-->
+                        <div class="header-center">
+                            <div class="header-center-img-wrapper">
+                                <div class="header-center-img">
+                                    <img src="/img/esports/nba.png" alt="pba_logo" class="img-fluid">
+                                </div>
+                                <div class="header-center-title">
+                                    <p>2k Players Tournament</p>
+                                    <small>2020</small>
+                                </div>
+                            </div>
+                            <span class="material-icons">push_pin</span>
+                        </div>
+                        <!--bottom-->
+                        <div class="header-bottom">
+                            <button data-set="summary" class="tab-btn tab-button header-tab-active">Summary</button>
+                            <button data-set="results" class="tab-btn tab-button">Results</button>
+                            <button data-set="fixtures" class="tab-btn tab-button">Fixtures</button>
+                            <button data-set="draw" class="tab-btn tab-button">Draw</button>
+                            <button data-set="archive" class="tab-btn tab-button">Archive</button>
+                        </div>
+                    </div>
+
+                    
+
+                    <!--L A T E S T  C O N T E N T  W R A P P E R-->
+                    <div id="summary" class="tab content-wrapper">
+                        <div class="content-wrapper-heading">
+                            <p>Latest Scores</p>
+                        </div>
+
+                        <div class="esports-content-wrapper-top">
+                            <!--team name-->
+                            <div class="team-div">
+                                <div class="team-logo">
+                                    <img src="/img/esports/nba2.png" alt="team_logo" class="img-fluid">
+                                </div>
+                                <p class="team-name">NBA: 2k Players Tournament (USA)</p>
+                                <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                            </div>
+
+                            <!--standing button-->
+                            <button class="esports-draw-btn">Draw<i class="fa-solid fa-chevron-down"></i></p>
+                        </div>
+
+                        <!-- C O N T E N T  C O N T A I N E R-->
+                        <div class="content-container basketball-content-container">
+                            <div class="standing-wrapper">
+
+                                <!--DROPDOWN CONTAINER-->
+                                <div class="dropdown-container">
+
+                                    <!--- D R O P D O W N  B U T T O N-->
+                                    <div class="dropdown-btn basketball-dropdown-btn fc">
+                                        <!--team name-->
+                                        <div class="team-div">
+                                            <div class="basketball-dropdown-title esports-dropdown-title">
+                                                <p>Finals</p>
+                                            </div>
+                                        </div>
+
+                                        <!--standing button-->
+                                        <button class="standing-btn" style="display: none;">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                    </div>
+
+                                    <!--NESTED STANDING LIST-->
+                                    <div class="standing-list-box dropdown-standing-content">
+                                        <div class="standing-list basketball-standing-list">
+                                            <!--favorite button-->
+                                            <div class="standing-favorite"></div>
+
+                                            <!--quarter-->
+                                            <div class="standing-quarter basketball-standing-quarter">
+                                                <p class="s1">18.08</p>
+                                                <p class="s2">19.08</p>
+                                            </div>
+
+                                            <!--team-->
+                                            <div class="standing-team basketball-standing-team">
+
+                                                <div class="first-team">
+                                                    <p class="team-name">Ayton D.</p>
+                                                </div>
+
+                                                <div class="second-team">
+                                                    <p class="team-name">Booker D.</p>
+                                                </div>
+                                            </div>
+
+                                            <!--scores-->
+                                            <div class="standing-scores basketball-standing-scores">
+                                                <div class="first-team-scores">
+                                                    <p class="s1">78</p>
+                                                </div>
+
+                                                <div class="second-team-scores">
+                                                    <p class="s1">78</p>
+                                                </div>
+                                            </div>
+
+                                            <!--livestream | lineup-->
+                                            <div class="standing-list-btn basketball-standing-list-btn">
+                                                <button class="btn-info"><i class="fa-solid fa-info"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                </div>
+
+
+
+                                <!-----  *** ----->
+
+                                <!--DROPDOWN CONTAINER-->
+                                <div class="dropdown-container">
+
+                                    <!--- D R O P D O W N  B U T T O N-->
+                                    <div class="dropdown-btn basketball-dropdown-btn fc">
+                                        <!--team name-->
+                                        <div class="team-div">
+                                            <div class="basketball-dropdown-title esports-dropdown-title">
+                                                <p>Semi-Finals</p>
+                                            </div>
+                                        </div>
+
+                                        <!--standing button-->
+                                        <button class="standing-btn" style="display: none;">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                    </div>
+
+                                    <!--NESTED STANDING LIST-->
+                                    <div class="standing-list-box dropdown-standing-content">
+                                        <div class="standing-list basketball-standing-list">
+                                            <!--favorite button-->
+                                            <div class="standing-favorite"></div>
+
+                                            <!--quarter-->
+                                            <div class="standing-quarter basketball-standing-quarter">
+                                                <p class="s1">18.08</p>
+                                                <p class="s2">19.08</p>
+                                            </div>
+
+                                            <!--team-->
+                                            <div class="standing-team basketball-standing-team">
+
+                                                <div class="first-team">
+                                                    <p class="team-name">Beverley P.</p>
+                                                </div>
+
+                                                <div class="second-team">
+                                                    <p class="team-name">Ayton D.</p>
+                                                </div>
+                                            </div>
+
+                                            <!--scores-->
+                                            <div class="standing-scores basketball-standing-scores">
+                                                <div class="first-team-scores">
+                                                    <p class="s1">78</p>
+                                                </div>
+
+                                                <div class="second-team-scores">
+                                                    <p class="s1">78</p>
+                                                </div>
+                                            </div>
+
+                                            <!--livestream | lineup-->
+                                            <div class="standing-list-btn basketball-standing-list-btn">
+                                                <button class="btn-info"><i class="fa-solid fa-info"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                </div>
+
+
+                                <!-----  *** ----->
+
+                                <!--DROPDOWN CONTAINER-->
+                                <div class="dropdown-container">
+
+                                    <!--- D R O P D O W N  B U T T O N-->
+                                    <div class="dropdown-btn basketball-dropdown-btn fc">
+                                        <!--team name-->
+                                        <div class="team-div">
+                                            <div class="basketball-dropdown-title esports-dropdown-title">
+                                                <p>Quarter-Finals</p>
+                                            </div>
+                                        </div>
+
+                                        <!--standing button-->
+                                        <button class="standing-btn" style="display: none;">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                    </div>
+
+                                    <!--NESTED STANDING LIST-->
+                                    <div class="standing-list-box dropdown-standing-content">
+                                        <div class="standing-list basketball-standing-list">
+                                            <!--favorite button-->
+                                            <div class="standing-favorite"></div>
+
+                                            <!--quarter-->
+                                            <div class="standing-quarter basketball-standing-quarter">
+                                                <p class="s1">18.08</p>
+                                                <p class="s2">19.08</p>
+                                            </div>
+
+                                            <!--team-->
+                                            <div class="standing-team basketball-standing-team">
+
+                                                <div class="first-team">
+                                                    <p class="team-name">Drummond A.</p>
+                                                </div>
+
+                                                <div class="second-team">
+                                                    <p class="team-name">Young T.</p>
+                                                </div>
+                                            </div>
+
+                                            <!--scores-->
+                                            <div class="standing-scores basketball-standing-scores">
+                                                <div class="first-team-scores">
+                                                    <p class="s1">78</p>
+                                                </div>
+
+                                                <div class="second-team-scores">
+                                                    <p class="s1">78</p>
+                                                </div>
+                                            </div>
+
+                                            <!--livestream | lineup-->
+                                            <div class="standing-list-btn basketball-standing-list-btn">
+                                                <button class="btn-info"><i class="fa-solid fa-info"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                </div>
+
+                                <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
+                            </div>
+                        </div>
+
+                        <!--show more btn-->
+                        <div class="show-more-wrapper">
+                            <p style="color: white;">Show more matches</p>
+                        </div>
+
+                    </div>
+
+
+                    <!--R E S U L T S  C O N T E N T  W R A P P E R-->
+                    <div id="results" class="tab hidden">
+                        <div class="content-wrapper">
+
+                            <div class="esports-content-wrapper-top">
+                                <!--team name-->
+                                <div class="team-div">
+                                    <div class="team-logo">
+                                        <img src="/img/esports/nba2.png" alt="team_logo" class="img-fluid">
+                                    </div>
+                                    <p class="team-name">NBA: 2k Players Tournament (USA)</p>
+                                    <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                </div>
+    
+                                <!--standing button-->
+                                <button class="esports-draw-btn">Draw<i class="fa-solid fa-chevron-down"></i></p>
+                            </div>    
+
+                            <!-- C O N T E N T  C O N T A I N E R-->
+                            <div class="content-container basketball-content-container">
+                                <div class="standing-wrapper">
+
+                                    <!-----  *** ----->
+
+                                <!--DROPDOWN CONTAINER-->
+                                <div class="dropdown-container">
+
+                                    <!--- D R O P D O W N  B U T T O N-->
+                                    <div class="dropdown-btn basketball-dropdown-btn fc">
+                                        <!--team name-->
+                                        <div class="team-div">
+                                            <div class="basketball-dropdown-title esports-dropdown-title">
+                                                <p>Quarter-Finals</p>
+                                            </div>
+                                        </div>
+
+                                        <!--standing button-->
+                                        <button class="standing-btn" style="display: none;">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                    </div>
+
+                                    <!--NESTED STANDING LIST-->
+                                    <div class="standing-list-box dropdown-standing-content">
+                                        <div class="standing-list basketball-standing-list">
+                                            <!--favorite button-->
+                                            <div class="standing-favorite"></div>
+
+                                            <!--quarter-->
+                                            <div class="standing-quarter basketball-standing-quarter">
+                                                <p class="s1">18.08</p>
+                                                <p class="s2">19.08</p>
+                                            </div>
+
+                                            <!--team-->
+                                            <div class="standing-team basketball-standing-team">
+
+                                                <div class="first-team">
+                                                    <p class="team-name">Drummond A.</p>
+                                                </div>
+
+                                                <div class="second-team">
+                                                    <p class="team-name">Young T.</p>
+                                                </div>
+                                            </div>
+
+                                            <!--scores-->
+                                            <div class="standing-scores basketball-standing-scores">
+                                                <div class="first-team-scores">
+                                                    <p class="s1">78</p>
+                                                </div>
+
+                                                <div class="second-team-scores">
+                                                    <p class="s1">78</p>
+                                                </div>
+                                            </div>
+
+                                            <!--livestream | lineup-->
+                                            <div class="standing-list-btn basketball-standing-list-btn">
+                                                <button class="btn-info"><i class="fa-solid fa-info"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                </div>
+
+                                    <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
+                                </div>
+                            </div>
+
+                            <!--show more btn-->
+                            <div class="show-more-wrapper">
+                                <p style="color: white;">Show more matches</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--F I X T U R E S  C O N T E N T  W R A P P E R-->
+                    <div id="fixtures" class="tab hidden">
+                        <div class="content-wrapper">
+
+                            <div class="esports-content-wrapper-top">
+                                <!--team name-->
+                                <div class="team-div">
+                                    <div class="team-logo">
+                                        <img src="/img/esports/nba2.png" alt="team_logo" class="img-fluid">
+                                    </div>
+                                    <p class="team-name">NBA: 2k Players Tournament (USA)</p>
+                                    <button class="pin-btn"><i class="fa-solid fa-thumbtack"></i></button>
+                                </div>
+    
+                                <!--standing button-->
+                                <button class="esports-draw-btn">Draw<i class="fa-solid fa-chevron-down"></i></p>
+                            </div>
+
+                            <!-- C O N T E N T  C O N T A I N E R-->
+                            <div class="content-container basketball-content-container">
+                                <div class="standing-wrapper">
+
+                                    <!-----  *** ----->
+
+                                <!--DROPDOWN CONTAINER-->
+                                <div class="dropdown-container">
+
+                                    <!--- D R O P D O W N  B U T T O N-->
+                                    <div class="dropdown-btn basketball-dropdown-btn fc">
+                                        <!--team name-->
+                                        <div class="team-div">
+                                            <div class="basketball-dropdown-title esports-dropdown-title">
+                                                <p>Finals</p>
+                                            </div>
+                                        </div>
+
+                                        <!--standing button-->
+                                        <button class="standing-btn" style="display: none;">Standings<i class="fa-solid fa-chevron-down"></i></p>
+                                    </div>
+
+                                    <!--NESTED STANDING LIST-->
+                                    <div class="standing-list-box dropdown-standing-content">
+                                        <div class="standing-list basketball-standing-list">
+                                            <!--favorite button-->
+                                            <div class="standing-favorite"></div>
+
+                                            <!--quarter-->
+                                            <div class="standing-quarter basketball-standing-quarter">
+                                                <p class="s1">18.08</p>
+                                                <p class="s2">19.08</p>
+                                            </div>
+
+                                            <!--team-->
+                                            <div class="standing-team basketball-standing-team">
+
+                                                <div class="first-team">
+                                                    <p class="team-name">Drummond A.</p>
+                                                </div>
+
+                                                <div class="second-team">
+                                                    <p class="team-name">Young T.</p>
+                                                </div>
+                                            </div>
+
+                                            <!--scores-->
+                                            <div class="standing-scores basketball-standing-scores">
+                                                <div class="first-team-scores">
+                                                    <p class="s1">78</p>
+                                                </div>
+
+                                                <div class="second-team-scores">
+                                                    <p class="s1">78</p>
+                                                </div>
+                                            </div>
+
+                                            <!--livestream | lineup-->
+                                            <div class="standing-list-btn basketball-standing-list-btn">
+                                                <button class="btn-info"><i class="fa-solid fa-info"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--ADD ANOTHER STANDING LIST BELOW-->
+                                    
+                                </div>
+
+                                    <!--ADD ANOTHER DROPDOWN BELOW-->
+
+
+                                </div>
+                            </div>
+
+                            <!--show more btn-->
+                            <div class="show-more-wrapper">
+                                <p style="color: white;">Show more matches</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--A R C H I V E  C O N T E N T  W R A P P E R-->
+                    <div id="archive" class="tab hidden">
+                        <div class="archive-content-wrapper">
+                            <div class="archive-content-wrapper-title">
+                                <p>season</p>
+                                <p>winner</p>
+                            </div>
+
+                            <div class="archive-div">
+                                <div class="archive-content-wrapper-list">
+                                    <p>2k Players Tournament 2020</p>
+                                    <div class="archive-content-container">
+                                        <div class="archive-content-container-img">
+                                            <img src="/img/flags/united-states.png" alt="pba_logo" class="img-fluid">
+                                        </div>
+                                        <p>Booker Devin</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-----  *****  ----->
+
+                    <!--D R A W  F O R M  C O N T E N T  W R A P P E R-->
+                    <div id="draw" class="tab standing-form-content-wrapper">
+                        
+                        <div class="standing-form-content-wrapper-nested-tab pc-nested-tab">
+                            <div class="tab-container">
+                                <div class="tab-div">
+                                    <button class="tab-btn tab-active">Draw</button>
+                                </div>
+                            </div>
+    
+                            <!-- C O N T E N T  C O N T A I N E R-->
+                            <div class="standing-form-content-container basketballs-standing-form-content-container">
+                                <div class="standing-form-content-container-tab-wrapper basketballs-match-grid-wrapper">
+
+                                    <div class="basketballs-match-top">
+                                        <div class="match-grid">
+                                            <div class="match-grid-title">
+                                                Quarter Finals
+                                            </div>
+                                            <div class="match-grid-title">
+                                                Semi Finals
+                                            </div>
+                                            <div class="match-grid-title">
+                                                Final
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="match-grid">
+                                        <div>
+                                            1
+                                        </div>
+                                        <div>
+                                            2
+                                        </div>
+                                        <div>
+                                            3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- S I D E B A R  R I G H T-->
+                <aside class="sideRight">
+                    <div class="sideright-advertisement-wrapper" style="display: none;">
+                        <div class="sideright-advertisement-top">
+                            <img src="/img/advertisment-top.png" alt="advertisement-img" class="img-fluid">
+                        </div>
+
+                        <div class="sideright-advertisement-bottom">
+                            <img src="/img/advertisement-bottom.png" alt="advertisement-img" class="img-fluid">
+                        </div>
+                    </div>
+                </aside>
+
+            </article>
+        </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

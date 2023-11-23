@@ -76,6 +76,19 @@
     font-size: 0.8rem;
 }
 
+.badminton-standing-team .first-team, .badminton-standing-team .second-team {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.badminton-standing-team .first-team .first-row, .badminton-standing-team .second-team .first-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
 @media only screen and (min-width: 576px) {
     .boxing-team-div .team-name {
         font-size: 0.9rem;
@@ -97,5 +110,21 @@
 
     .boxing-breadcrumbs-name p {
         font-size: 1rem;
+    }
+
+    .standing-team .team-logo {
+        width: 1.5rem;
+    }
+
+    .standing-list-box .standing-list {
+        grid-template-columns: 2rem 1fr 1fr 1fr 2fr;
+    }
+
+    .standing-list .boxing-standing-team {
+        width: 22rem;
+    }
+
+    .standing-list .standing-scores {
+        width: 13rem;
     }
 }

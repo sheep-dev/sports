@@ -541,6 +541,7 @@
     border: none;
 
     background-color: var(--primary-bgColor);
+    border-collapse: collapse;
 }
 
 table thead {
@@ -559,13 +560,13 @@ table thead tr th {
     padding: 0.2rem 0.5rem;
 }
 
-.standing-form-tab-content table thead tr th:nth-child(7), .standing-form-tab-content table thead tr th:nth-child(8) {
+/* .standing-form-tab-content table thead tr th:nth-child(7), .standing-form-tab-content table thead tr th:nth-child(8) {
     display: none;
 }
 
 .standing-form-tab-content table tbody tr td:nth-child(7), .standing-form-tab-content table tbody tr td:nth-child(8) {
     display: none;
-}
+} */
 
 table tbody tr td:nth-child(1) p {
     background-color: var(--pinColor);
@@ -724,13 +725,13 @@ table tbody tr td {
     }
 
     /** TABLE **/
-    .standing-form-tab-content table thead tr th:nth-child(7), .standing-form-tab-content table thead tr th:nth-child(8) {
+    /* .standing-form-tab-content table thead tr th:nth-child(7), .standing-form-tab-content table thead tr th:nth-child(8) {
         display: inline-table;
     }
     
     .standing-form-tab-content table tbody tr td:nth-child(7), .standing-form-tab-content table tbody tr td:nth-child(8) {
         display: inline-table;
-    }
+    } */
 
     .td-wrapper .team-name {
         width: 11rem;
@@ -827,10 +828,6 @@ table tbody tr td {
         display: flex;
     }
 
-    /* .standing-form-content-container-tab-wrapper .standing-form-tab-content {
-        border: 1px solid  red;
-    } */
-
     /** M A I N  C O N T E N T **/
     .main-content .content-header {
         border-radius: 10px;
@@ -856,7 +853,7 @@ table tbody tr td {
         color: var(--secondary-txtColor);
         padding: 0.5rem 0.8rem;
         font-weight: 400;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     
     .basketball-team-pinned-list .team-pinned-name:hover {
@@ -951,6 +948,10 @@ table tbody tr td {
         grid-template-columns: 0.5rem 5fr 1fr 10fr 5fr;
     }
 
+    .basketball-standing-list .basketball-standing-team {
+        width: 20rem;
+    }
+
     .standing-list .basketball-standing-quarter {
         order: 0;
     }
@@ -1030,5 +1031,9 @@ table tbody tr td {
 
     .td-wrapper .team-name {
         width: 15rem;
+    }
+
+    .basketball-team-pinned-list .team-pinned-name {
+        font-size: 0.9rem;
     }
 }
