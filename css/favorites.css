@@ -162,7 +162,7 @@
 
 .slider-menu-wrapper .slider-menu-content {
     position: absolute;
-    top: 2rem;
+    top: 2.2rem;
     right: 0;
     z-index: 9999;
 
@@ -187,15 +187,15 @@
 
 .slider-menu-div p{
     font-size: 0.75rem;
+    color: var(--tertiary-txtColor);
 }
 
 
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
-    margin-right: 10px; /* Add some spacing between switches */
+    width: 2rem;
+    height: 1.1rem;
   }
 
   .switch input {
@@ -209,37 +209,38 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: var(--tab-bgColor);
     -webkit-transition: .4s;
     transition: .4s;
-    border-radius: 34px;
+    border-radius: 1rem;
   }
 
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
+    height: 0.9rem;
+    width: 0.9rem;
+    top: 0.35px;
+    left: 2.5px;
     bottom: 4px;
-    background-color: white;
+    background-color: var(--tab-bgHover);
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 50%;
   }
 
   input:checked + .slider {
-    background-color: #4CAF50;
+    background-color: var(--pinColor);
   }
 
   input:focus + .slider {
-    box-shadow: 0 0 1px #4CAF50;
+    box-shadow: 0 0 1px var(--pinColor);
   }
 
   input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(0.9rem);
+    -ms-transform: translateX(0.9rem);
+    transform: translateX(0.9rem);
   }
 
   /* Rounded sliders */
