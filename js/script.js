@@ -210,12 +210,17 @@ function nextDate() {
   displayDate();
 }
 
-// Initial display
 displayDate();
 
+
+
+// ---------
 
 // NOTIFICATION
 function closeParagraph() {
   var paragraph = document.getElementById('notification');
   paragraph.style.display = 'none';
 }
+
+
+// ---------
