@@ -114,67 +114,169 @@
     box-sizing: border-box;
   }
 
-  /*** ****/
+  /*** tournament playoff****/
+  .match-grid-finals .match-grid-title {
+    font-size: 0.7rem;
+    font-weight: 600;
 
-  .g_gracket {
-    width: 9999px;
-    background-color: #fff;
-    padding: 55px 15px 5px;
-    line-height: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .g_round {
-    float: left;
-    margin-right: 70px;
-  }
-  
-  .g_game {
-    position: relative;
-    margin-bottom: 15px;
-  }
-  
-  .g_gracket h3 {
-    margin: 0;
-    padding: 10px 8px 8px;
-    font-size: 18px;
-    font-weight: normal;
-    color: #fff
-  }
-  
-  .g_team {
-    background: #3597AE;
-  }
-  
-  .g_team:last-child {
-    background: #FCB821;
-  }
-  
-  .g_round:last-child {
-    margin-right: 20px;
-  }
-  
-  .g_winner {
-    background: #444;
-  }
-  
-  .g_winner .g_team {
-    background: none;
-  }
-  
-  .g_current {
-    cursor: pointer;
-    background: #A0B43C!important;
-  }
-  
-  .g_round_label {
-    top: -5px;
-    font-weight: normal;
-    color: #CCC;
+    text-transform: uppercase;
     text-align: center;
-    font-size: 18px;
-  }
+
+    background-color: var(--primary-bgColor);
+    color: var(--tertiary-txtColor);
+
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.match-grid .match-grid-finals {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.match-grid-finals .quarter-finals-container {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.match-grid-finals .semi-finals-container {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+    gap: 1rem;
+}
+
+.match-grid-finals .finals {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    place-items: center;
+}
+
+.finals .finals-container {
+    width: 100%;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.finals-container .finals-place {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--tab-bgColor);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.finals-place p {
+    text-transform: uppercase;
+    color: var(--tertiary-txtColor);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.quarter-finals-container .quarter-finals-wrapper, .semi-finals-container .semi-finals-wrapper, .finals-container .finals-wrapper {
+    width: 100%;
+    padding: 0.8rem 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    border: 1px solid rgba(181,229,207, 0.1);
+    border-radius: 10px;
+
+    position: relative;
+}
+
+.quarter-finals-wrapper::after, .semi-finals-wrapper::after {
+    content: '---';
+    color: rgba(181,229,207, 0.1);
+
+    position: absolute;
+    top: 1.5rem;
+    right: -0.9rem;
+}
+
+.semi-finals-wrapper::before, .finals-wrapper::before {
+    content: '---';
+    color: rgba(181,229,207, 0.1);
+
+    position: absolute;
+    top: 1.5rem;
+    left: -0.9rem;
+}
+
+.quarter-finals-wrapper .quarter-finals-box, .semi-finals-wrapper .semi-finals-box, .finals-wrapper .finals-box {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.quarter-finals-box .quarter-finals-box-stats, .semi-finals-box .semi-finals-box-stats, .finals-box .finals-box-stats {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.quarter-finals-box-stats .team-logo, .semi-finals-box-stats .team-logo, .finals-box-stats .team-logo {
+    height: 1rem;
+    width: 1rem;
+}
+
+.team-logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.quarter-finals-box-stats p, .semi-finals-box-stats p, .finals-box-stats p {
+    color: var(--tertiary-txtColor);
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    width: 8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.quarter-finals-box .quarter-finals-scores, .semi-finals-box .semi-finals-scores, .finals-box .finals-scores {
+    width: 25%;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quarter-finals-scores p, .semi-finals-scores p, .finals-scores p {
+    color: var(--tertiary-txtColor);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
 
 /****** B R E A K P O I N T S ********/
 @media only screen and (min-width: 576px) {
@@ -207,7 +309,7 @@
     
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 0;
         
         width: 100%;
     }
@@ -243,23 +345,20 @@
     
     .cpa-match-grid-wrapper .match-grid {
         width: 100%;
-        padding: 0.5rem 0;
-        border-radius: 5px;
-    
-        background-color: var(--primary-bgColor);
+        overflow: auto;
+
+        background-color: var(--tertiary-bgColor);
         
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
     
-    .match-grid .match-grid-title {
-        font-size: 0.7rem;
-        font-weight: 600;
-    
-        text-transform: uppercase;
-        color: var(--tertiary-txtColor);
-        text-align: center;
+    .cpa-match-grid-wrapper .match-grid::-webkit-scrollbar {
+        display: none;
+        scrollbar-width: none;
     }
+    
+    
 }
 
 @media only screen and (min-width: 768px) {
@@ -300,20 +399,46 @@
     .cpa-standing-form-content-container .cpa-match-grid-wrapper {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 0rem;
         
         width: 100%;
+    }
+
+    .cpa-match-grid-wrapper .cpa-match-top {
+        width: 100%;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        overflow: hidden;
     }
     
     .cpa-match-grid-wrapper .match-grid {
         width: 100%;
-    
-        background-color: var(--primary-bgColor);
+        background-color: var(--tertiary-bgColor);
         
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
+    .match-grid-finals .mgt-qf {
+        border-bottom-left-radius: 5px;
+    }
+
+    .match-grid-finals .mgt-final {
+        border-bottom-right-radius: 5px;
+    }
+
+    .quarter-finals-box-stats p, .semi-finals-box-stats p, .finals-box-stats p {
+        width: 4.37rem;
+        font-size: 0.75rem;
+    }
+
+    .quarter-finals-scores p, .semi-finals-scores p, .finals-scores p {
+        font-size: 0.75rem;
+    }
+
+    .finals-place p {
+        font-size: 0.7rem;
+    }
 }
 
 
@@ -347,5 +472,25 @@
      /** match **/
      .cpa-match-top .cpa-match-prev-next {
         display: none;
+    }
+
+    .match-grid-finals .mgt-qf {
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+
+    .match-grid-finals .mgt-final {
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .quarter-finals-box-stats p, .semi-finals-box-stats p, .finals-box-stats p {
+        width: 7rem;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .quarter-finals-box-stats p, .semi-finals-box-stats p, .finals-box-stats p {
+        width: 8rem;
     }
 }
