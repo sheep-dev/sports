@@ -1635,6 +1635,11 @@ html, body {
     }
 
     .standing-team .team-name {
-        width: 25rem;
+        width: 23rem;
+    }
+    
+    .standing-team .team-logo {
+        height: 1.5rem;
+        width: 1.5rem;
     }
 }

@@ -18,6 +18,25 @@ dropdowns.forEach(dropdown => {
 });
 
 
+// ESPORTS SIDEBAR
+const esportsSideLeftCenter = document.querySelectorAll('.esports-categories-dropdown');
+
+esportsSideLeftCenter.forEach(esportsDrop => {
+  const esportsBtn = esportsDrop.querySelector('.esports-btn')
+  const esportsContent = esportsDrop.querySelector('.esports-categories-dropdown-content')
+
+  esportsContent.style.display = 'none'
+
+  esportsBtn.addEventListener('click', () => {
+    if (esportsContent.style.display === 'block') {
+      esportsContent.style.display = 'none'
+      console.log('hide')
+    } else {
+      esportsContent.style.display = 'block'
+      console.log('show')
+    }
+  })
+})
 
 
 // MULTIPLE DROPDOWN

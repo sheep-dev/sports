@@ -63,6 +63,7 @@
 }
 
 .esports-sideleft-center .esports-categories-dropdown-content {
+    display: none;
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
@@ -166,4 +167,8 @@
 .header-top .header-breadcrumbs .flags-img {
     background-color: var(--tertiary-txtColor);
     width: 1.5rem;
+}
+
+.drop {
+    display: none;
 }

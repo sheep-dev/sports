@@ -952,6 +952,10 @@ table tbody tr td {
         width: 20rem;
     }
 
+    .basketball-standing-team .team-logo {
+        width: 2rem;
+    }
+
     .standing-list .basketball-standing-quarter {
         order: 0;
     }
@@ -1039,5 +1043,9 @@ table tbody tr td {
 
     .basketball-team-pinned-list .team-pinned-name {
         font-size: 0.9rem;
+    }
+
+    .basketball-standing-list .basketball-standing-team {
+        width: 20rem;
     }
 }
