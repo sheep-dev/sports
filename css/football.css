@@ -116,6 +116,11 @@
 
   /*** ****/
 
+  .hovered {
+    background-color: #27ae60 !important;
+    color: #fff;
+  }
+
 /****** B R E A K P O I N T S ********/
 @media only screen and (min-width: 576px) {
     .cpa-standing-form-content-wrapper .cpa-tab-container {
@@ -296,6 +301,12 @@
 
         border: 1px solid rgba(181,229,207, 0.1);
         border-radius: 10px;
+
+        cursor: pointer;
+    }
+
+    .quarter-finals-container .quarter-finals-wrapper:hover, .semi-finals-container .semi-finals-wrapper:hover, .finals-container .finals-wrapper:hover {
+        background-color: #27ae60;
     }
 
     .quarter-finals-container .quarter-finals-wrapper::after {

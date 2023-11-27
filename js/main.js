@@ -1,63 +1,3 @@
- // Function to handle click events for dropdowns
-//  const handleDropdownEvents = (dropdown) => {
-//     dropdown.addEventListener('click', () => {
-   
-//       dropdown.classList.toggle('active');
-
-   
-//       document.querySelectorAll('.dropdown').forEach((otherDropdown) => {
-//         if (otherDropdown !== dropdown) {
-//           otherDropdown.classList.remove('active');
-//         }
-//       });
-//     });
-//   };
-
-  
-//   const dropdowns = document.querySelectorAll('.dropdown');
-//   dropdowns.forEach(handleDropdownEvents);
-
-
-//TAB
- 
-//   function openTab(tabId) {
-
-//     const tabs = document.querySelectorAll('.tab');
-//     tabs.forEach(tab => tab.classList.remove('active-tab'));
-
-  
-//     const selectedTab = document.getElementById(tabId);
-//     selectedTab.classList.add('active-tab');
-//   }
-
- 
-//   function openSubTab(subTabId) {
-  
-//     const subtabs = document.querySelectorAll('.subtab');
-//     subtabs.forEach(subtab => subtab.classList.remove('active-subtab'));
-
-
-//     const selectedSubTab = document.getElementById(subTabId);
-//     selectedSubTab.classList.add('active-subtab');
-//   }
-
-
-//   const mainTabs = document.querySelectorAll('#mainTabs button');
-//   mainTabs.forEach(mainTab => {
-//     mainTab.addEventListener('click', () => {
-//       openTab(mainTab.getAttribute('data-tab'));
-//     });
-//   });
-
- 
-//   const subTabButtons = document.querySelectorAll('.tab button');
-//   subTabButtons.forEach(subTabButton => {
-//     subTabButton.addEventListener('click', () => {
-//       openSubTab(subTabButton.getAttribute('data-subtab'));
-//     });
-//   });
-
-
 //   document.addEventListener('DOMContentLoaded', function () {
 //     var imageContainer = document.getElementById('image-container');
 //     var scrollImage = document.getElementById('scroll-image');
@@ -69,6 +9,30 @@
 //         scrollImage.style.opacity = opacity.toFixed(2);
 //     });
 // });
+
+
+ // Add event listener for hover effect
+ var allBoxes = document.querySelectorAll('.quarter-finals-box, .semi-finals-box, .finals-box');
+
+ allBoxes.forEach(function(box) {
+     box.addEventListener('mouseover', function() {
+         var teamName = this.querySelector('.bracket-team-name').innerText.trim();
+
+         // Apply hover effect to all boxes with the same team name
+         allBoxes.forEach(function(otherBox) {
+             if (otherBox.querySelector('.bracket-team-name').innerText.trim() === teamName) {
+                 otherBox.parentElement.classList.add('hovered');
+             }
+         });
+     });
+
+     box.addEventListener('mouseout', function() {
+         // Remove hover effect from all boxes
+         allBoxes.forEach(function(otherBox) {
+             otherBox.parentElement.classList.remove('hovered');
+         });
+     });
+ });
 
 
 
