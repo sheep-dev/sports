@@ -126,6 +126,28 @@ childTabBtn.forEach(childBtn => {
   })
 })
 
+// MULTIPLE NESTED CHILD TABS
+const nestChildTabBtn = document.querySelectorAll('.nested-child-tab-btn')
+const nestChildContent = document.querySelectorAll('.nested-child-tab')
+
+nestChildTabBtn.forEach(nestedChildBtn => {
+  nestedChildBtn.addEventListener('click', function() {
+
+    nestChildTabBtn.forEach(nestedChildButtons => {
+      nestedChildButtons.classList.remove('tab-active', 'header-tab-active')
+    })
+
+    this.classList.add('tab-active', 'header-tab-active')
+
+    const tabNestedChild = this.dataset.set;
+    nestChildContent.forEach(tabChildContent => {
+      tabChildContent.style.display = 'none';
+    })
+
+    document.getElementById(tabNestedChild).style.display = 'none'
+  })
+})
+
 
 // MOBILE SLIDER PAGES
 document.addEventListener('DOMContentLoaded', function () {

@@ -531,6 +531,11 @@
     scrollbar-width: none;
 }
 
+.standing-form-content-container-tab-wrapper .pfl-standing-form-tab-content::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+}
+
 .standing-form-tab-content table, .pfl-standing-form-tab-content table {
     width: 100%;
     border: none;
@@ -693,9 +698,14 @@ table tbody tr td {
 
 
 /** nested tab **/
-.nested-tab {
+.nested-tab, .nested-child-tab {
     width: 100%;
 }
+
+.hovered {
+    background-color: var(--notification-bgColor)!important;
+    color: var(--tertiary-txtColor);
+  }
 
 /*********** B R E A K P O I N T S ****************/
 @media only screen and (min-width: 576px) {
@@ -914,6 +924,7 @@ table tbody tr td {
 
         border: 1px solid rgba(181,229,207, 0.1);
         border-radius: 10px;
+        cursor: pointer;
     }
 
     .quarter-finals-container .quarter-finals-wrapper::after {
@@ -947,6 +958,10 @@ table tbody tr td {
         position: absolute;
         left: -0.1rem;
         color: var(--tab-bgColor);
+    }
+
+    .quarter-finals-container .quarter-finals-wrapper:hover, .semi-finals-container .semi-finals-wrapper:hover, .finals-container .finals-wrapper:hover {
+        background-color: var(--notification-bgColor);
     }
 
     .quarter-finals-wrapper .quarter-finals-box, .semi-finals-wrapper .semi-finals-box, .finals-wrapper .finals-box {

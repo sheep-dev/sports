@@ -103,7 +103,7 @@
     display: flex;
     overflow: hidden;
     width: 300px; /* Adjust the width as needed */
-    border: 1px solid #ccc;
+    border: 1px solid var(--tertiary-txtColor);
     margin: 20px;
   }
 
@@ -117,8 +117,8 @@
   /*** ****/
 
   .hovered {
-    background-color: #27ae60 !important;
-    color: #fff;
+    background-color: var(--notification-bgColor)!important;
+    color: var(--tertiary-txtColor);
   }
 
 /****** B R E A K P O I N T S ********/
@@ -306,7 +306,7 @@
     }
 
     .quarter-finals-container .quarter-finals-wrapper:hover, .semi-finals-container .semi-finals-wrapper:hover, .finals-container .finals-wrapper:hover {
-        background-color: #27ae60;
+        background-color: var(--notification-bgColor);
     }
 
     .quarter-finals-container .quarter-finals-wrapper::after {
