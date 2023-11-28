@@ -564,6 +564,8 @@ table tbody tr td:nth-child(1) p {
     background-color: var(--pinColor);
     border-radius: 3px;
     padding: 0.1rem 0;
+    width: 1.5rem;
+    text-align: center;
 }
 
 table tbody {
@@ -705,7 +707,11 @@ table tbody tr td {
 .hovered {
     background-color: var(--notification-bgColor)!important;
     color: var(--tertiary-txtColor);
-  }
+}
+
+.tab-container .tab-active {
+    background-color: var(--bgRed);
+}
 
 /*********** B R E A K P O I N T S ****************/
 @media only screen and (min-width: 576px) {

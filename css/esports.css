@@ -172,3 +172,12 @@
 .drop {
     display: none;
 }
+
+.hovered {
+    background-color: var(--notification-bgColor)!important;
+    color: var(--tertiary-txtColor);
+  }
+
+  .quarter-finals-container .quarter-finals-wrapper:hover, .semi-finals-container .semi-finals-wrapper:hover, .finals-container .finals-wrapper:hover {
+    background-color: var(--notification-bgColor);
+}

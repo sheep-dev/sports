@@ -10,7 +10,6 @@
 //     });
 // });
 
-
  // Add event listener for hover effect
  var allBoxes = document.querySelectorAll('.quarter-finals-box, .semi-finals-box, .finals-box');
 

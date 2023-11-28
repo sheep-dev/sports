@@ -524,4 +524,13 @@
         border-bottom-right-radius: 5px;
         border-top-right-radius: 5px;
     }
+
+    .quarter-finals-box-stats p, .semi-finals-box-stats p, .finals-box-stats p {
+        width: 8rem;
+        font-size: 0.85rem;
+    }
+
+    .quarter-finals-scores p, .semi-finals-scores p, .finals-scores p {
+        font-size: 0.85rem;
+    }
 }

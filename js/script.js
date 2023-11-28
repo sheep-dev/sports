@@ -126,6 +126,7 @@ childTabBtn.forEach(childBtn => {
   })
 })
 
+
 // MULTIPLE NESTED CHILD TABS
 const nestChildTabBtn = document.querySelectorAll('.nested-child-tab-btn')
 const nestChildContent = document.querySelectorAll('.nested-child-tab')
@@ -142,11 +143,13 @@ nestChildTabBtn.forEach(nestedChildBtn => {
     const tabNestedChild = this.dataset.set;
     nestChildContent.forEach(tabChildContent => {
       tabChildContent.style.display = 'none';
+      
     })
 
-    document.getElementById(tabNestedChild).style.display = 'none'
+    document.getElementById(tabNestedChild).style.display = 'flex'
   })
 })
+
 
 
 // MOBILE SLIDER PAGES

@@ -848,7 +848,7 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>1.</td>
+                                                            <td><p>1.</p></td>
                                                             <td>
                                                                 <div class="td-wrapper">
                                                                     <div class="td-team-img">
@@ -1059,19 +1059,9 @@
                                     <button data-set="top-scorer" class="tab-btn nested-child-tab-btn">Top Scorers</button>
                                 </div>
                             </div>
-
-                            <div>
-                                <div id="draws" class="nested-child-tab">
-                                    <div style="color: aliceblue;">draws</div>
-                                </div>
-    
-                                <div id="top-scorer" class="nested-child-tab hidden">
-                                    <div style="color: aliceblue;">top-scorers</div>
-                                </div>
-                            </div>
     
                             <!-- C O N T E N T  C O N T A I N E R-->
-                            <div style="display: none;" class="standing-form-content-container cpa-standing-form-content-container">
+                            <div id="draws" class="nested-child-tab standing-form-content-container cpa-standing-form-content-container">
                                 <div class="standing-form-content-container-tab-wrapper cpa-match-grid-wrapper">
 
                                     <div class="cpa-match-top">
@@ -1374,67 +1364,69 @@
                             </div>
 
                             <!--T O P  S C O R E R S  C O N T E N T  C O N T A I N E R-->
-                            <div style="display: none;" class="standing-form-content-container">
-                                <div class="standing-form-content-container-tab-wrapper">
-                                    <div class="tab-container-wrapper tnp-tab-container-wrapper">
-                                        <div class="tab-container tnp-container">
-                                            <select name="" id="" class="tnp-btn">
-                                                <option value="">Team<i class="fa-solid fa-chevron-down"></i></option>
-                                                <option value="">Azkals<i class="fa-solid fa-chevron-down"></i></option>
-                                                <option value="">Cebu FC<i class="fa-solid fa-chevron-down"></i></option>
-                                                <option value="">Kaya<i class="fa-solid fa-chevron-down"></i></option>
-                                                <option value="">Maharlika <i class="fa-solid fa-chevron-down"></i></option>
-                                                <option value="">Mendiola FC 1991<i class="fa-solid fa-chevron-down"></i></option>
-                                                <option value="">Stallion<i class="fa-solid fa-chevron-down"></i></option>
-                                                <option value="">United City<i class="fa-solid fa-chevron-down"></i></option>
-                                            </select>
-                                            <select name="" id="" class="tnp-btn">
-                                                <option value="">Nationality<i class="fa-solid fa-chevron-down"></i></option>
-                                            <option value="">Philippines<i class="fa-solid fa-chevron-down"></i></option>
-                                            </select>
-                                            <select name="" id="" class="tnp-btn">
-                                                <option value="">Position<i class="fa-solid fa-chevron-down"></i></option>
-                                                <option value="">Defender<i class="fa-solid fa-chevron-down"></i></option>
-                                                <option value="">Midfielder<i class="fa-solid fa-chevron-down"></i></option>
-                                                <option value="">Forward<i class="fa-solid fa-chevron-down"></i></option>
-                                            </select>
+                            <div id="top-scorer" class="nested-child-tab hidden">
+                                <div class="standing-form-content-container">
+                                    <div class="standing-form-content-container-tab-wrapper">
+                                        <div class="tab-container-wrapper tnp-tab-container-wrapper">
+                                            <div class="tab-container tnp-container">
+                                                <select name="" id="" class="tnp-btn">
+                                                    <option value="">Team<i class="fa-solid fa-chevron-down"></i></option>
+                                                    <option value="">Azkals<i class="fa-solid fa-chevron-down"></i></option>
+                                                    <option value="">Cebu FC<i class="fa-solid fa-chevron-down"></i></option>
+                                                    <option value="">Kaya<i class="fa-solid fa-chevron-down"></i></option>
+                                                    <option value="">Maharlika <i class="fa-solid fa-chevron-down"></i></option>
+                                                    <option value="">Mendiola FC 1991<i class="fa-solid fa-chevron-down"></i></option>
+                                                    <option value="">Stallion<i class="fa-solid fa-chevron-down"></i></option>
+                                                    <option value="">United City<i class="fa-solid fa-chevron-down"></i></option>
+                                                </select>
+                                                <select name="" id="" class="tnp-btn">
+                                                    <option value="">Nationality<i class="fa-solid fa-chevron-down"></i></option>
+                                                <option value="">Philippines<i class="fa-solid fa-chevron-down"></i></option>
+                                                </select>
+                                                <select name="" id="" class="tnp-btn">
+                                                    <option value="">Position<i class="fa-solid fa-chevron-down"></i></option>
+                                                    <option value="">Defender<i class="fa-solid fa-chevron-down"></i></option>
+                                                    <option value="">Midfielder<i class="fa-solid fa-chevron-down"></i></option>
+                                                    <option value="">Forward<i class="fa-solid fa-chevron-down"></i></option>
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
-
-                                    <!-----T A B L E-->
-                                    <div class="pfl-standing-form-tab-content">
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>PLAYER</th>
-                                                    <th>TEAM</th>
-                                                    <th>G</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><p>1.</p></td>
-                                                    <td>
-                                                        <div class="td-wrapper">
-                                                            <div class="td-team-img">
-                                                                <img src="/img/flags/philippines_flag.png" alt="pba_logo" class="img-fluid">
+    
+                                        <!-----T A B L E-->
+                                        <div class="pfl-standing-form-tab-content">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>PLAYER</th>
+                                                        <th>TEAM</th>
+                                                        <th>G</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><p>1.</p></td>
+                                                        <td>
+                                                            <div class="td-wrapper">
+                                                                <div class="td-team-img">
+                                                                    <img src="/img/flags/philippines_flag.png" alt="pba_logo" class="img-fluid">
+                                                                </div>
+                                                                <p class="team-name">Gayoso J.</p>
                                                             </div>
-                                                            <p class="team-name">Gayoso J.</p>
-                                                        </div>
-                                                    </td>
-                                                    <td>Kaya</td>
-                                                    <td>12</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                                        </td>
+                                                        <td>Kaya</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+    
                                     </div>
-
-                                </div>
-
-                                <!--show more btn-->
-                                <div class="show-more-wrapper">
-                                    <p style="color: white; text-align: center;">Show more</p>
+    
+                                    <!--show more btn-->
+                                    <div class="show-more-wrapper" style="margin-top: 1rem;">
+                                        <p style="color: white; text-align: center;">Show more</p>
+                                    </div>
                                 </div>
                             </div>
 
