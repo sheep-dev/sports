@@ -1,32 +1,40 @@
-// fetch('https://reqres.in/api/users', {
-//     method: 'POST',
-//     headers: {
-//         'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify ({
-//         name: 'User 1'
-//     })
-// }).then(res => {
-//     return res.json()
-// })
-// .then(data => console.log(data))
-// .catch(error => console.log('ERROR'))
+function resizeIframe(obj) {
 
+    setTimeout(() => {
 
-// const axios = require('axios');
+        obj.style.height=(obj.contentWindow.document.body.scrollHeight+100)+'px';
 
-// const options = {
-//   method: 'GET',
-//   url: 'https://api-basketball.p.rapidapi.com/timezone',
-//   headers: {
-//     'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
-//     'X-RapidAPI-Host': 'api-basketball.p.rapidapi.com'
-//   }
-// };
+    }, 500)
+}
 
-// try {
-// 	const response = await axios.request(options);
-// 	console.log(response.data);
-// } catch (error) {
-// 	console.error(error);
-// }
+function get_parameter(param) {
+
+    var vars = {};
+
+    window.location.href.replace( location.hash, '' ).replace(/[?&]+([^=&]+)=?([^&]*)?/gi,
+        function( m, key, value ) {
+
+            vars[key] = value !==  undefined  ? value :  '';
+        }
+    );
+
+    if ( param ) {
+
+        return vars[param] ? vars[param] :  null;
+    }
+    return vars;
+}
+
+fetch("https://v1.volleyball.api-sports.io/standings?league=3&season=2021", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "v1.volleyball.api-sports.io",
+		"x-rapidapi-key": "8b912b9af546a04cd711925ae8570350"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.log(err);
+});

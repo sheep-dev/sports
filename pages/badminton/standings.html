@@ -6,8 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="wg-api-basketball-standings"
-        data-host="v1.basketball.api-sports.io"
+    <div id="wg-api-badminton-standings"
+        data-host="v1.badminton.api-sports.io"
         data-key="8b912b9af546a04cd711925ae8570350"
         data-league=""
         data-season=""
@@ -21,7 +21,7 @@
 <script src="/js/api.js"></script>
 
 <script>
-    let standings = document.getElementById('wg-api-basketball-standings')
+    let standings = document.getElementById('wg-api-badminton-standings')
     let league = get_parameter('league')
     let season = get_parameter('season')
     standings.setAttribute('data-league', league)

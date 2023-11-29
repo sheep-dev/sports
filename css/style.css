@@ -470,6 +470,11 @@ html, body {
     scrollbar-width: none;
 }
 
+.main-content .main-content-games-api {
+    height: auto;
+    width: 100%;
+}
+
 /** notif **/
 .main-content .notification-wrapper {
     width: 100%;
@@ -519,6 +524,7 @@ html, body {
 
 /** content wrapper **/
 .content-wrapper {
+    height: auto;
     width: 100%;
 
     display: flex;
@@ -1545,15 +1551,17 @@ html, body {
         display: flex;
     }
 
-    .main-content .content-wrapper {
+    /* .main-content .content-wrapper {
         background-color: var(--tertiary-bgColor);
         padding: 1rem 1rem 0 1rem;
         border-radius: 10px;
-    }
+    } */
     
 
     .content-wrapper .content-container {
         background-color: transparent;
+        width: 100%;
+        height: 100%;
     }
 
     .content-wrapper .tab-container {
