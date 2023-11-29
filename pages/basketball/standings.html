@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wg-api-basketball-standings"
+        data-host="v1.basketball.api-sports.io"
+        data-key="8b912b9af546a04cd711925ae8570350"
+        data-league=""
+        data-season=""
+        data-refresh="15"
+        data-theme="dark"
+        data-show-errors="false"
+        data-show-logos="true"
+        class="wg_loader">
+    </div>
+
+<script src="scripts.js"></script>
+
+<script>
+    let standings = document.getElementById('wg-api-basketball-standings')
+    let league = get_parameter('league')
+    let season = get_parameter('season')
+    standings.setAttribute('data-league', league)
+    standings.setAttribute('data-season', season)
+</script>
+
+<script
+    type="module"
+    src="https://widgets.api-sports.io/2.0.3/widgets.js">
+</script>
+</body>
+</html>
