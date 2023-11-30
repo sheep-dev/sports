@@ -19,6 +19,26 @@
 
 }
 
+.all-standings {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.all-standings::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+}
+
+iframe {
+    height: 100vh;
+}
+
+iframe::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+}
+
 /** S I D E B A R  L E F T **/
 .article .football-sideLeft {
     display: none;

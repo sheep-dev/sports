@@ -28,6 +28,26 @@ html, body {
 
 }
 
+.all-standings {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.all-standings::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+}
+
+iframe {
+    height: 100vh;
+}
+
+iframe::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+}
+
 .hidden {
     display: none;
 }

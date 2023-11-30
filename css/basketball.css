@@ -22,6 +22,42 @@
 
 }
 
+.all-standings {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.all-standings::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+}
+
+iframe {
+    height: 100vh;
+}
+
+iframe::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+}
+
+.cc-standings {
+    height: 21rem;
+}
+
+.fc-standings {
+    height: 17rem;
+}
+
+.pc-standings {
+    height: 21rem;
+}
+
+.gc-standings {
+    height: 20.5rem;
+}
+
 /** S I D E B A R  L E F T **/
 .article .basketball-sideLeft {
     display: none;
@@ -331,7 +367,7 @@
 
 .standing-form-content-wrapper-nested-tab .standing-form-content-container {
     /* border-radius: 8px; */
-    padding: 0 0.5rem;
+    /* padding: 0 0.5rem; */
     width: 100%;
 
     /* background-color: var(--primary-bgColor); */
@@ -715,6 +751,22 @@ table tbody tr td {
 
 /*********** B R E A K P O I N T S ****************/
 @media only screen and (min-width: 576px) {
+    .cc-standings {
+        height: 22rem;
+    }
+
+    .fc-standings {
+        height: 18.5rem;
+    }
+
+    .pc-standings {
+        height: 21rem;
+    }
+
+    .gc-standings {
+        height: 21.5rem;
+    }
+
     .standing-list-box .basketball-standing-list {
         grid-template-columns: 1fr 20fr 1fr 1fr 1fr;
     }
@@ -1040,6 +1092,10 @@ table tbody tr td {
 }
 
 @media only screen and (min-width: 768px) {
+    .fc-standings {
+        height: 28.5rem;
+    }
+
     /** S I D E B A R  L E F T **/
     .article .basketball-sideLeft {
         display: flex;
@@ -1142,6 +1198,14 @@ table tbody tr td {
 }
 
 @media only screen and (min-width: 992px) {
+    .cc-standings {
+        height: 21.5rem;
+    }
+
+    .fc-standings {
+        height: 18.5rem;
+    }
+
     .content-header .header-bottom {
         gap: 2rem;
     }
